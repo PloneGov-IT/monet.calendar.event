@@ -7,6 +7,7 @@
   <five:registerPackage package="." initialize=".initialize" />
 
   <include package="monet.recurring_event" />
+  <include package="rt.calendarinandout" />
   
   <!-- Include the sub-packages that use their own configure.zcml files. -->
   <include package=".browser" />
