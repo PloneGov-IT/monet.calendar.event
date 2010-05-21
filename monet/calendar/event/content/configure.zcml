@@ -6,7 +6,7 @@
   <!-- configure your content components here -->
   
   <!-- -*- extra stuff goes here -*- -->
-  <class class=".event.Event">
+  <class class=".event.MonetEvent">
     <require
         permission="zope2.View"
         interface="..interfaces.IEvent"

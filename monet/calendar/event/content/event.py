@@ -11,7 +11,10 @@ from monet.calendar.event import eventMessageFactory as _
 from monet.calendar.event.interfaces import IEvent
 from monet.calendar.event.config import PROJECTNAME
 
-EventSchema = schemata.ATContentTypeSchema.copy() + atapi.Schema((
+from monet.recurring_event.content.event import EventSchema as RecurringEventSchema
+from monet.recurring_event.content.event import RecurringEvent
+
+EventSchema = RecurringEventSchema.copy() + atapi.Schema((
 
     # -*- Your Archetypes field definitions here ... -*-
 
@@ -25,11 +28,11 @@ EventSchema['description'].storage = atapi.AnnotationStorage()
 
 schemata.finalizeATCTSchema(EventSchema, moveDiscussion=False)
 
-class Event(base.ATCTContent):
+class MonetEvent(RecurringEvent):
     """Description of the Example Type"""
     implements(IEvent)
 
-    meta_type = "Event"
+    meta_type = "ATEvent"
     schema = EventSchema
 
     title = atapi.ATFieldProperty('title')
@@ -37,4 +40,4 @@ class Event(base.ATCTContent):
     
     # -*- Your ATSchema to Python Property Bridges Here ... -*-
 
-atapi.registerType(Event, PROJECTNAME)
+atapi.registerType(MonetEvent, PROJECTNAME)

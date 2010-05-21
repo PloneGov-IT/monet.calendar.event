@@ -19,6 +19,14 @@
       description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+      
+   <genericsetup:registerProfile
+      name="uninstall"
+      title="Uninstall Monet Calendar Event"
+      directory="profiles/uninstall"
+      description=""
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
   
   <!-- -*- extra stuff goes here -*- -->
 

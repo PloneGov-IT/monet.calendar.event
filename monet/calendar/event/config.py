@@ -1,9 +1,8 @@
-"""Common configuration constants
-"""
+from Products.ATContentTypes.permission import permissions
 
 PROJECTNAME = 'monet.calendar.event'
 
 ADD_PERMISSIONS = {
     # -*- extra stuff goes here -*-
-    'Event': 'monet_calendar.event: Add Event',
+    'MonetEvent': permissions['Event'],
 }
