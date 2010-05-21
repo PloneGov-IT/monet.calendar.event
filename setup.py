@@ -22,7 +22,7 @@ setup(name='monet.calendar.event',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          # -*- Extra requirements: -*-
+          'rt.calendarinandout',
       ],
       entry_points="""
       # -*- Entry points: -*-
