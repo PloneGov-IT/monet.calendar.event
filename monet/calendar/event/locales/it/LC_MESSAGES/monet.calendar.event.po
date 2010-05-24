@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-05-24 10:28+0000\n"
+"POT-Creation-Date: 2010-05-24 12:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,8 +14,34 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
+#: ./content/event.py:95
+msgid "Afternoon"
+msgstr "Pomeriggio"
+
+#: ./content/event.py:97
+msgid "All day"
+msgstr "Tutto il giorno"
+
+#: ./content/event.py:94
+msgid "Morning"
+msgstr "Mattina"
+
+#: ./content/event.py:96
+msgid "Night"
+msgstr "Sera"
+
 #. Default: "Event Type(s)"
-#: ./content/event.py:35
+#: ./content/event.py:37
 msgid "label_event_type"
 msgstr "Tipo di evento"
+
+#. Default: "Time slots"
+#: ./content/event.py:46
+msgid "label_slots"
+msgstr "Fasce orarie"
+
+#. Default: "Time"
+#: ./content/event.py:72
+msgid "label_time"
+msgstr "Orario"
 

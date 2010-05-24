@@ -30,11 +30,21 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                required=False,
                searchable=True,
                languageIndependent=True,
-               vocabulary="getEventTypeVocab",
+               vocabulary='getEventTypeVocab',
                widget = MultiSelectionWidget(
                         format = 'checkbox',
                         description='',
                         label = _(u'label_event_type', default=u'Event Type(s)')
+                        )),
+    
+    StringField('slots',
+                required=False,
+                searchable=False,
+                languageIndependent=True,
+                vocabulary='getSlotsVocab',
+                widget=SelectionWidget(
+                        format = 'select',
+                        label = _(u'label_slots', default=u'Time slots')
                         )),
 
 ))
@@ -56,6 +66,12 @@ imageField.validators = None
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 
+EventSchema.moveField('startDate', after='image')
+EventSchema.moveField('endDate', after='startDate')
+
+EventSchema.moveField('slots', before='text')
+EventSchema['text'].widget.label = _(u'label_time', default=u'Time')
+
 class MonetEvent(RecurringEvent,ATCTImageTransform):
     """Description of the Example Type"""
     implements(IEvent)
@@ -72,6 +88,14 @@ class MonetEvent(RecurringEvent,ATCTImageTransform):
         vocab = DisplayList()
         for item in items:
             vocab.add(item,item)
+        return vocab
+    
+    def getSlotsVocab(self):
+        vocab = DisplayList()
+        vocab.add('morning',_(u'Morning'))
+        vocab.add('afternoon',_(u'Afternoon'))
+        vocab.add('night',_(u'Night'))
+        vocab.add('allday',_(u'All day'))
         return vocab
 
 registerType(MonetEvent, PROJECTNAME)
