@@ -1,9 +1,14 @@
 """Definition of the Event content type
 """
 
-from zope.interface import implements, directlyProvides
+from zope.interface import implements #, directlyProvides
 
-from Products.Archetypes import atapi
+try:
+    from Products.LinguaPlone.public import *
+except ImportError:
+    # No multilingual support
+    from Products.Archetypes.atapi import *
+
 from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
 
@@ -14,19 +19,33 @@ from monet.calendar.event.config import PROJECTNAME
 from monet.recurring_event.content.event import EventSchema as RecurringEventSchema
 from monet.recurring_event.content.event import RecurringEvent
 
-EventSchema = RecurringEventSchema.copy() + atapi.Schema((
+from Products.CMFCore.utils import getToolByName
+from Products.Archetypes.atapi import DisplayList
 
-    # -*- Your Archetypes field definitions here ... -*-
+EventSchema = RecurringEventSchema.copy() + Schema((
+
+    LinesField('eventType',
+               required=False,
+               searchable=True,
+               languageIndependent=True,
+               vocabulary="getEventType",
+               widget = MultiSelectionWidget(
+                        format = 'checkbox',
+                        description='',
+                        label = _(u'label_event_type', default=u'Event Type(s)')
+                        )),
 
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
 # they work well with the python bridge properties.
 
-EventSchema['title'].storage = atapi.AnnotationStorage()
-EventSchema['description'].storage = atapi.AnnotationStorage()
+EventSchema['title'].storage = AnnotationStorage()
+EventSchema['description'].storage = AnnotationStorage()
 
 schemata.finalizeATCTSchema(EventSchema, moveDiscussion=False)
+
+EventSchema.moveField('eventType', after='description')
 
 class MonetEvent(RecurringEvent):
     """Description of the Example Type"""
@@ -35,9 +54,15 @@ class MonetEvent(RecurringEvent):
     meta_type = "ATEvent"
     schema = EventSchema
 
-    title = atapi.ATFieldProperty('title')
-    description = atapi.ATFieldProperty('description')
+    title = ATFieldProperty('title')
+    description = ATFieldProperty('description')
     
-    # -*- Your ATSchema to Python Property Bridges Here ... -*-
+    def getEventType(self):
+        mp = getToolByName(self,'portal_properties')
+        items = mp.monet_calendar_event_properties.event_types
+        vocab = DisplayList()
+        for item in items:
+            vocab.add(item,item)
+        return vocab
 
-atapi.registerType(MonetEvent, PROJECTNAME)
+registerType(MonetEvent, PROJECTNAME)

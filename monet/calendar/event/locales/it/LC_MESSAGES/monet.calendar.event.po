@@ -1,0 +1,21 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: monet.calendar.event\n"
+"POT-Creation-Date: 2010-05-24 10:28+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: monet.calendar.event\n"
+
+#. Default: "Event Type(s)"
+#: ./content/event.py:35
+msgid "label_event_type"
+msgstr "Tipo di evento"
+

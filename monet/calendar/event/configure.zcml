@@ -2,9 +2,12 @@
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
     i18n_domain="monet.calendar.event">
 
   <five:registerPackage package="." initialize=".initialize" />
+  
+  <i18n:registerTranslations directory="locales" />
 
   <include package="monet.recurring_event" />
   <include package="rt.calendarinandout" />
@@ -31,6 +34,11 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
   
-  <!-- -*- extra stuff goes here -*- -->
+  <genericsetup:importStep
+	  name="monet.calendar.event"
+	  title="Monet Calendar Event configuration"
+	  description="Configures Monet Calendar Event properties"
+	  handler="monet.calendar.event.exportimport.import_various"
+	  />
 
 </configure>
