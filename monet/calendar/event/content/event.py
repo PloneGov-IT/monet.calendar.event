@@ -46,6 +46,13 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         format = 'select',
                         label = _(u'label_slots', default=u'Time slots')
                         )),
+                        
+    StringField('cost',
+                required=False,
+                searchable=False,
+                widget=StringField(
+                        label = _(u'label_cost', default=u'Cost')
+                        )),
 
 ))
 
@@ -71,6 +78,7 @@ EventSchema.moveField('endDate', after='startDate')
 
 EventSchema.moveField('slots', before='text')
 EventSchema['text'].widget.label = _(u'label_time', default=u'Time')
+EventSchema.moveField('cost', after='text')
 
 class MonetEvent(RecurringEvent,ATCTImageTransform):
     """Description of the Example Type"""

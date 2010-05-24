@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-05-24 12:42+0000\n"
+"POT-Creation-Date: 2010-05-24 12:58+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,25 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:95
+#: ./content/event.py:103
 msgid "Afternoon"
 msgstr ""
 
-#: ./content/event.py:97
+#: ./content/event.py:105
 msgid "All day"
 msgstr ""
 
-#: ./content/event.py:94
+#: ./content/event.py:102
 msgid "Morning"
 msgstr ""
 
-#: ./content/event.py:96
+#: ./content/event.py:104
 msgid "Night"
+msgstr ""
+
+#. Default: "Cost"
+#: ./content/event.py:54
+msgid "label_cost"
 msgstr ""
 
 #. Default: "Event Type(s)"
@@ -39,12 +44,12 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Time slots"
-#: ./content/event.py:46
+#: ./content/event.py:47
 msgid "label_slots"
 msgstr ""
 
 #. Default: "Time"
-#: ./content/event.py:72
+#: ./content/event.py:80
 msgid "label_time"
 msgstr ""
 
