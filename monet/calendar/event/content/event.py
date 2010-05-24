@@ -50,7 +50,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
     StringField('cost',
                 required=False,
                 searchable=False,
-                widget=StringField(
+                widget=StringWidget(
                         label = _(u'label_cost', default=u'Cost')
                         )),
 
