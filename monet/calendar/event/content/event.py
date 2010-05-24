@@ -21,6 +21,8 @@ from monet.recurring_event.content.event import RecurringEvent
 
 from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.atapi import DisplayList
+from Products.ATContentTypes.content.image import ATImageSchema
+from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 
 EventSchema = RecurringEventSchema.copy() + Schema((
 
@@ -28,7 +30,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                required=False,
                searchable=True,
                languageIndependent=True,
-               vocabulary="getEventType",
+               vocabulary="getEventTypeVocab",
                widget = MultiSelectionWidget(
                         format = 'checkbox',
                         description='',
@@ -47,7 +49,14 @@ schemata.finalizeATCTSchema(EventSchema, moveDiscussion=False)
 
 EventSchema.moveField('eventType', after='description')
 
-class MonetEvent(RecurringEvent):
+imageField = ATImageSchema['image'].copy()
+imageField.required = False
+imageField.primary = False
+imageField.validators = None
+EventSchema.addField(imageField)
+EventSchema.moveField('image', after='eventType')
+
+class MonetEvent(RecurringEvent,ATCTImageTransform):
     """Description of the Example Type"""
     implements(IEvent)
 
@@ -57,7 +66,7 @@ class MonetEvent(RecurringEvent):
     title = ATFieldProperty('title')
     description = ATFieldProperty('description')
     
-    def getEventType(self):
+    def getEventTypeVocab(self):
         mp = getToolByName(self,'portal_properties')
         items = mp.monet_calendar_event_properties.event_types
         vocab = DisplayList()
