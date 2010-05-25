@@ -25,6 +25,8 @@ from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.ATContentTypes.permission import ChangeEvents
 from Products.ATContentTypes.configuration import zconf
+from AccessControl import ClassSecurityInfo
+from Products.CMFCore.permissions import View
 
 EventSchema = RecurringEventSchema.copy() + Schema((
 
@@ -195,6 +197,8 @@ class MonetEvent(RecurringEvent,ATCTImageTransform):
     title = ATFieldProperty('title')
     description = ATFieldProperty('description')
     
+    security = ClassSecurityInfo()
+    
     def getEventTypeVocab(self):
         mp = getToolByName(self,'portal_properties')
         items = mp.monet_calendar_event_properties.event_types
@@ -213,6 +217,12 @@ class MonetEvent(RecurringEvent,ATCTImageTransform):
     
     def getCountry(self):
         return _(u'label_Italy', default=u'Italy')
+    
+    security.declareProtected(View, 'tag')
+    def tag(self, **kwargs):
+        """Generate image tag using the api of the ImageField
+        """
+        return self.getField('image').tag(self, **kwargs)
 
     def __bobo_traverse__(self, REQUEST, name):
         """Transparent access to image scales

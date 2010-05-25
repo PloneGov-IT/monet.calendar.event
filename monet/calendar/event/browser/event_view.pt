@@ -133,6 +133,14 @@
         </table>
         </div>
 
+		<div class="eventImageContainer"
+             tal:condition="here/image_mini|nothing">
+            <a href="#"
+               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               id="parent-fieldname-image">
+               <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage')" src="" alt="" />
+            </a>
+        </div>
 
         <metal:field use-macro="python:here.widget('text', mode='view')">
         Body text
