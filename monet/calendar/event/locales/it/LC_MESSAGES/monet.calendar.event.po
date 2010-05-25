@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-05-25 09:48+0000\n"
+"POT-Creation-Date: 2010-05-25 13:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -30,65 +30,45 @@ msgstr "Mattina"
 msgid "Night"
 msgstr "Sera"
 
-#. Default: "Attendees"
-#: ./browser/event_view.pt:145
-msgid "contact_attendees"
-msgstr ""
-
-#. Default: "Contact Name"
-#: ./browser/event_view.pt:125
-msgid "contact_name"
-msgstr ""
-
-#. Default: "Contact Phone"
-#: ./browser/event_view.pt:137
-msgid "contact_phone"
-msgstr ""
-
-#. Default: "from"
-#: ./browser/event_view.pt:77
-msgid "event_from"
-msgstr ""
+#. Default: "For details"
+#: ./browser/event_view.pt:94
+msgid "event_details"
+msgstr "Per informazioni"
 
 #. Default: "More information about this event…"
-#: ./browser/event_view.pt:179
+#: ./browser/event_view.pt:144
 msgid "event_more_information"
 msgstr ""
 
-#. Default: "to"
-#: ./browser/event_view.pt:59
-msgid "event_to"
-msgstr ""
+#. Default: "Phone:"
+#: ./browser/event_view.pt:97
+msgid "event_ph"
+msgstr "Tel:"
 
-#. Default: "What"
-#: ./browser/event_view.pt:107
-msgid "event_what"
-msgstr ""
-
-#. Default: "When"
-#: ./browser/event_view.pt:45
-msgid "event_when"
-msgstr ""
+#. Default: "Time"
+#: ./browser/event_view.pt:83
+msgid "event_time"
+msgstr "Orario"
 
 #. Default: "From"
-#: ./browser/event_view.pt:43
+#: ./browser/event_view.pt:42
 msgid "event_when_from"
 msgstr "Da"
 
 #. Default: "To"
-#: ./browser/event_view.pt:44
+#: ./browser/event_view.pt:57
 msgid "event_when_to"
 msgstr "A"
 
 #. Default: "Where"
-#: ./browser/event_view.pt:115
+#: ./browser/event_view.pt:72
 msgid "event_where"
 msgstr "Dove"
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:153
+#: ./browser/event_view.pt:118
 msgid "heading_add_to_calendar"
-msgstr ""
+msgstr "Aggiungi l'evento al calendario"
 
 #. Default: "Enter here your notes about the event."
 #: ./content/event.py:132
@@ -131,14 +111,14 @@ msgid "label_Italy"
 msgstr "Italia"
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:166
+#: ./browser/event_view.pt:131
 msgid "label_add_to_ical"
-msgstr ""
+msgstr "iCal"
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:160
+#: ./browser/event_view.pt:125
 msgid "label_add_to_vcal"
-msgstr ""
+msgstr "vCal"
 
 #. Default: "Address"
 #: ./content/event.py:88
@@ -201,12 +181,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:161
+#: ./browser/event_view.pt:126
 msgid "title_add_to_ical"
-msgstr ""
+msgstr "Scarica questo evento in formato iCal"
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:155
+#: ./browser/event_view.pt:120
 msgid "title_add_to_vcal"
-msgstr ""
+msgstr "Scarica questo evento in formato vCal"
 
