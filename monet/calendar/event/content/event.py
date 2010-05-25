@@ -23,6 +23,8 @@ from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.atapi import DisplayList
 from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
+from Products.ATContentTypes.permission import ChangeEvents
+from Products.ATContentTypes.configuration import zconf
 
 EventSchema = RecurringEventSchema.copy() + Schema((
 
@@ -33,7 +35,6 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                vocabulary='getEventTypeVocab',
                widget = MultiSelectionWidget(
                         format = 'checkbox',
-                        description='',
                         label = _(u'label_event_type', default=u'Event Type(s)')
                         )),
     
@@ -44,16 +45,92 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 vocabulary='getSlotsVocab',
                 widget=SelectionWidget(
                         format = 'select',
-                        label = _(u'label_slots', default=u'Time slots')
+                        label = _(u'label_slots', default=u'Time slots'),
+                        description = _(u'help_slots', default=u'Select the time slot of the day on which the event takes place.')
+                        )),
+                        
+    TextField('time',
+              required=False,
+              searchable=True,
+              storage = AnnotationStorage(migrate=True),
+              validators = ('isTidyHtmlWithCleanup',),
+              default_output_type = 'text/x-html-safe',
+              widget = RichWidget(
+                        label = _(u'label_time', default=u'Time'),
+                        description = _(u'help_time', default=u'Add event details.'),
+                        rows = 25,
+                        allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
                         
     StringField('cost',
                 required=False,
                 searchable=False,
                 widget=StringWidget(
-                        label = _(u'label_cost', default=u'Cost')
+                        label = _(u'label_cost', default=u'Cost'),
+                        description = _(u'help_cost', default=u'Add details about the cost of the event.'),
+                        size=70
                         )),
-
+    
+    StringField('location',
+               required=False,
+               searchable=True,
+               write_permission = ChangeEvents,
+               widget=StringWidget(
+                        label = _(u'label_location', default=u'Location'),
+                        size=70
+                        )),       
+    
+    StringField('address',
+                required=False,
+                searchable=False,
+                languageIndependent=True,
+                widget=StringWidget(
+                        label = _(u'label_address', default=u'Address'),
+                        size=70
+                        )),
+                        
+    StringField('country',
+                required=False,
+                searchable=False,
+                languageIndependent=True,
+                default_method='getCountry',
+                widget=StringWidget(
+                        label = _(u'label_country', default=u'Country'),
+                        )),
+                        
+    StringField('zipcode',
+                required=False,
+                searchable=False,
+                languageIndependent=True,
+                validators=("isInt"),
+                widget=StringWidget(
+                        label = _(u'label_zipcode', default=u'ZIP code'),
+                        size=10
+                        )),
+                        
+    StringField('fax',
+                required=False,
+                searchable=False,
+                languageIndependent=True,
+                widget=StringWidget(
+                        label = _(u'label_fax', default=u'Contact Fax'),
+                        )),
+  
+    LinesField('referenceEntities',
+               required=False,
+               searchable=False,
+               widget=LinesWidget(
+                        label = _(u'label_referenceentities', default=u'Reference entities'),
+                        description = _(u'help_referenceentities', default=u'In this field you can specify the reference entities, one after another.')
+                        )),
+                        
+    TextField('annotations',
+              required=False,
+              searchable=False,
+              widget = TextAreaWidget(
+                        label = _(u'label_annotations', default=u'Annotations'),
+                        description = _(u'help_annotations', default=u'Enter here your notes about the event.')
+                        )),
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
@@ -70,15 +147,43 @@ imageField = ATImageSchema['image'].copy()
 imageField.required = False
 imageField.primary = False
 imageField.validators = None
+imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 
+EventSchema['startDate'].widget.show_hm = False
+EventSchema['endDate'].widget.show_hm = False
 EventSchema.moveField('startDate', after='image')
-EventSchema.moveField('endDate', after='startDate')
 
-EventSchema.moveField('slots', before='text')
-EventSchema['text'].widget.label = _(u'label_time', default=u'Time')
-EventSchema.moveField('cost', after='text')
+EventSchema.moveField('slots', after='except')
+EventSchema.moveField('time', after='slots')
+EventSchema.moveField('cost', after='time')
+
+EventSchema['location'].widget.description = _(u'help_location',default=u'Enter the event location.')
+EventSchema.changeSchemataForField('location', 'default')
+EventSchema.moveField('location', after='cost')
+EventSchema.moveField('address', after='location')
+EventSchema.moveField('country', after='address')
+EventSchema.moveField('zipcode', after='country')
+
+EventSchema['contactPhone'].languageIndependent=True,
+EventSchema.moveField('contactPhone', after='zipcode')
+
+EventSchema.moveField('fax', after='contactPhone')
+
+EventSchema['eventUrl'].languageIndependent=True,
+EventSchema.moveField('eventUrl', after='fax')
+
+EventSchema['contactEmail'].languageIndependent=True,
+EventSchema.moveField('contactEmail', after='eventUrl')
+
+EventSchema.moveField('text', after='contactEmail')
+
+EventSchema.moveField('referenceEntities', after='text')
+EventSchema.moveField('annotations', after='referenceEntities')
+
+EventSchema['attendees'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
+EventSchema['contactName'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 
 class MonetEvent(RecurringEvent,ATCTImageTransform):
     """Description of the Example Type"""
@@ -105,5 +210,27 @@ class MonetEvent(RecurringEvent,ATCTImageTransform):
         vocab.add('night',_(u'Night'))
         vocab.add('allday',_(u'All day'))
         return vocab
+    
+    def getCountry(self):
+        return _(u'label_Italy', default=u'Italy')
+
+    def __bobo_traverse__(self, REQUEST, name):
+        """Transparent access to image scales
+        """
+        if name.startswith('image'):
+            field = self.getField('image')
+            image = None
+            if name == 'image':
+                image = field.getScale(self)
+            else:
+                scalename = name[len('image_'):]
+                scalename.replace(".jpg", "")
+                if scalename in field.getAvailableSizes(self):
+                    image = field.getScale(self, scale=scalename)
+            if image is not None and not isinstance(image, basestring):
+                # image might be None or '' for empty images
+                return image
+
+        return base.ATCTContent.__bobo_traverse__(self, REQUEST, name)
 
 registerType(MonetEvent, PROJECTNAME)

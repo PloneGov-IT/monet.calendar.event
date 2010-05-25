@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-05-24 12:58+0000\n"
+"POT-Creation-Date: 2010-05-25 09:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,39 +14,114 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:103
+#: ./content/event.py:209
 msgid "Afternoon"
 msgstr "Pomeriggio"
 
-#: ./content/event.py:105
+#: ./content/event.py:211
 msgid "All day"
 msgstr "Tutto il giorno"
 
-#: ./content/event.py:102
+#: ./content/event.py:208
 msgid "Morning"
 msgstr "Mattina"
 
-#: ./content/event.py:104
+#: ./content/event.py:210
 msgid "Night"
 msgstr "Sera"
 
+#. Default: "Enter here your notes about the event."
+#: ./content/event.py:132
+msgid "help_annotations"
+msgstr "Inserisci qui le tue annotazioni sull'evento."
+
+#. Default: "Add details about the cost of the event."
+#: ./content/event.py:70
+msgid "help_cost"
+msgstr "Aggiungi i dettagli relativi al costo dell'evento."
+
+#. Default: "Insert an image that represents the event."
+#: ./content/event.py:150
+msgid "help_event_image"
+msgstr "Inserisci un'immagine che rappresenti l'evento."
+
+#. Default: "Enter the event location."
+#: ./content/event.py:162
+msgid "help_location"
+msgstr "Inserisci il luogo dell'evento."
+
+#. Default: "In this field you can specify the reference entities, one after another."
+#: ./content/event.py:124
+msgid "help_referenceentities"
+msgstr "In questo campo puoi indicare gli enti di riferimento, uno di seguito all'altro."
+
+#. Default: "Select the time slot of the day on which the event takes place."
+#: ./content/event.py:49
+msgid "help_slots"
+msgstr "Seleziona la fascia oraria della giornata in cui l'evento avrà luogo."
+
+#. Default: "Add event details."
+#: ./content/event.py:60
+msgid "help_time"
+msgstr "Specifica i dettagli riguardanti l'evento."
+
+#. Default: "Italy"
+#: ./content/event.py:215
+msgid "label_Italy"
+msgstr "Italia"
+
+#. Default: "Address"
+#: ./content/event.py:88
+msgid "label_address"
+msgstr "Indirizzo"
+
+#. Default: "Annotations"
+#: ./content/event.py:131
+msgid "label_annotations"
+msgstr "Annotazioni"
+
 #. Default: "Cost"
-#: ./content/event.py:54
+#: ./content/event.py:69
 msgid "label_cost"
 msgstr "Costo"
 
+#. Default: "Country"
+#: ./content/event.py:98
+msgid "label_country"
+msgstr "Nazione"
+
 #. Default: "Event Type(s)"
-#: ./content/event.py:37
+#: ./content/event.py:38
 msgid "label_event_type"
 msgstr "Tipo di evento"
 
+#. Default: "Contact Fax"
+#: ./content/event.py:116
+msgid "label_fax"
+msgstr "Fax contatto"
+
+#. Default: "Location"
+#: ./content/event.py:79
+msgid "label_location"
+msgstr "Sede"
+
+#. Default: "Reference entities"
+#: ./content/event.py:123
+msgid "label_referenceentities"
+msgstr "Enti di riferimento"
+
 #. Default: "Time slots"
-#: ./content/event.py:47
+#: ./content/event.py:48
 msgid "label_slots"
 msgstr "Fasce orarie"
 
 #. Default: "Time"
-#: ./content/event.py:80
+#: ./content/event.py:59
 msgid "label_time"
 msgstr "Orario"
+
+#. Default: "ZIP code"
+#: ./content/event.py:107
+msgid "label_zipcode"
+msgstr "CAP"
 
