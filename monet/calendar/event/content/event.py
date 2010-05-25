@@ -95,7 +95,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 required=False,
                 searchable=False,
                 languageIndependent=True,
-                default_method='getCountry',
+                default_method='getDECountry',
                 widget=StringWidget(
                         label = _(u'label_country', default=u'Country'),
                         )),
@@ -187,7 +187,7 @@ EventSchema.moveField('annotations', after='referenceEntities')
 EventSchema['attendees'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 EventSchema['contactName'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 
-class MonetEvent(RecurringEvent,ATCTImageTransform):
+class MonetEvent(RecurringEvent, ATCTImageTransform):
     """Description of the Example Type"""
     implements(IEvent)
 
@@ -215,7 +215,7 @@ class MonetEvent(RecurringEvent,ATCTImageTransform):
         vocab.add('allday',_(u'All day'))
         return vocab
     
-    def getCountry(self):
+    def getDECountry(self):
         return _(u'label_Italy', default=u'Italy')
     
     security.declareProtected(View, 'tag')
