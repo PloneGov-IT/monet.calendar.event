@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-05-25 09:25+0000\n"
+"POT-Creation-Date: 2010-05-25 09:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,6 +31,66 @@ msgstr ""
 
 #: ./content/event.py:210
 msgid "Night"
+msgstr ""
+
+#. Default: "Attendees"
+#: ./browser/event_view.pt:145
+msgid "contact_attendees"
+msgstr ""
+
+#. Default: "Contact Name"
+#: ./browser/event_view.pt:125
+msgid "contact_name"
+msgstr ""
+
+#. Default: "Contact Phone"
+#: ./browser/event_view.pt:137
+msgid "contact_phone"
+msgstr ""
+
+#. Default: "from"
+#: ./browser/event_view.pt:77
+msgid "event_from"
+msgstr ""
+
+#. Default: "More information about this event…"
+#: ./browser/event_view.pt:179
+msgid "event_more_information"
+msgstr ""
+
+#. Default: "to"
+#: ./browser/event_view.pt:59
+msgid "event_to"
+msgstr ""
+
+#. Default: "What"
+#: ./browser/event_view.pt:107
+msgid "event_what"
+msgstr ""
+
+#. Default: "When"
+#: ./browser/event_view.pt:45
+msgid "event_when"
+msgstr ""
+
+#. Default: "From"
+#: ./browser/event_view.pt:43
+msgid "event_when_from"
+msgstr ""
+
+#. Default: "To"
+#: ./browser/event_view.pt:44
+msgid "event_when_to"
+msgstr ""
+
+#. Default: "Where"
+#: ./browser/event_view.pt:115
+msgid "event_where"
+msgstr ""
+
+#. Default: "Add event to calendar"
+#: ./browser/event_view.pt:153
+msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Enter here your notes about the event."
@@ -71,6 +131,16 @@ msgstr ""
 #. Default: "Italy"
 #: ./content/event.py:215
 msgid "label_Italy"
+msgstr ""
+
+#. Default: "iCal"
+#: ./browser/event_view.pt:166
+msgid "label_add_to_ical"
+msgstr ""
+
+#. Default: "vCal"
+#: ./browser/event_view.pt:160
+msgid "label_add_to_vcal"
 msgstr ""
 
 #. Default: "Address"
@@ -126,5 +196,20 @@ msgstr ""
 #. Default: "ZIP code"
 #: ./content/event.py:107
 msgid "label_zipcode"
+msgstr ""
+
+#. Default: "Event details"
+#: ./browser/event_view.pt:37
+msgid "summary_event_details"
+msgstr ""
+
+#. Default: "Download this event in iCal format"
+#: ./browser/event_view.pt:161
+msgid "title_add_to_ical"
+msgstr ""
+
+#. Default: "Download this event in vCal format"
+#: ./browser/event_view.pt:155
+msgid "title_add_to_vcal"
 msgstr ""
 

@@ -68,19 +68,14 @@
                         </span>
                 	</td>
                 </tr>
-                <tr>
-                    <th i18n:translate="event_what">What</th>
-                    <td>
-                        <metal:field use-macro="python:here.widget('subject', mode='view')">
-                        Categories
-                        </metal:field>
-                    </td>
-                </tr>
-                <tr tal:condition="here/location">
+                <tr tal:condition="python: here.getLocation() or here.getAddress()">
                     <th i18n:translate="event_where">Where</th>
                     <td class="location">
                         <metal:field use-macro="python:here.widget('location', mode='view')">
                         Location
+                        </metal:field>
+                        <metal:field use-macro="python:here.widget('address', mode='view')">
+                        Address
                         </metal:field>
                     </td>
                 </tr>
