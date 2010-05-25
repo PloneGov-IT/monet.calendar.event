@@ -4,7 +4,7 @@
       xmlns:i18n="http://xml.zope.org/namespaces/i18n"
       lang="en"
       metal:use-macro="here/main_template/macros/master"
-      i18n:domain="plone">
+      i18n:domain="monet.calendar.event">
 <body>
 
 <div metal:fill-slot="main">
@@ -38,75 +38,42 @@
                summary="Event details" i18n:attributes="summary summary_event_details;">
 
             <tbody>
-
+            	<tr>
+                	<th i18n:translate="event_when_from">From</th>
+                	<td>
+                		<span metal:define-macro="startdate-field-view"
+							  tal:define="kss_class python:getKssClasses('startDate',
+										  templateId=templateId, macro='startdate-field-view');"
+                              id="parent-fieldname-startDate"
+                              tal:attributes="class string:$kss_class dtstart;
+                                              title python:here.start().ISO8601()">
+                              <span metal:define-slot="inside"
+                                    tal:content="python:here.toLocalizedTime(here.start(),
+                                    long_format=0)">Start Date Time</span>
+						</span>
+                	</td>
+                </tr>
+                <tr>
+                	<th i18n:translate="event_when_to">To</th>
+                	<td>
+                		<span metal:define-macro="enddate-field-view"
+                              tal:define="kss_class python:getKssClasses('endDate',
+                                          templateId=templateId, macro='enddate-field-view');"
+                              id="parent-fieldname-endDate"
+                              tal:attributes="class string:$kss_class dtend;
+                                              title python:here.end().ISO8601()">
+                              <span metal:define-slot="inside"
+                                    tal:content="python:here.toLocalizedTime(here.end(),
+                                    long_format=0)">End Date Time</span>
+                        </span>
+                	</td>
+                </tr>
                 <tr>
                     <th i18n:translate="event_what">What</th>
                     <td>
                         <metal:field use-macro="python:here.widget('subject', mode='view')">
                         Categories
                         </metal:field>
-                    </td>
-                </tr>
-                <tr>
-                    <th i18n:translate="event_when">When</th>
-                    <td>
-                        <tal:differentday tal:condition="python:not here.start().Date() == here.end().Date()">
-                            <abbr metal:define-macro="startdate-field-view"
-                                  tal:define="kss_class python:getKssClasses('startDate',
-                                              templateId=templateId, macro='startdate-field-view');"
-                                  id="parent-fieldname-startDate"
-                                  tal:attributes="class string:$kss_class dtstart;
-                                                  title python:here.start().ISO8601()">
-                                  <span metal:define-slot="inside" 
-                                        class="explain"
-                                        tal:content="python:here.toLocalizedTime(here.start(),
-                                        long_format=1)">Start Date Time</span>
-                            </abbr>
-                            <span i18n:translate="event_to">to</span> <br />
-                            <abbr metal:define-macro="enddate-field-view"
-                                  tal:define="kss_class python:getKssClasses('endDate',
-                                              templateId=templateId, macro='enddate-field-view');"
-                                  id="parent-fieldname-endDate"
-                                  tal:attributes="class string:$kss_class dtend;
-                                                  title python:here.end().ISO8601()">
-                                  <span metal:define-slot="inside" 
-                                          class="explain"
-                                          tal:content="python:here.toLocalizedTime(here.end(),
-                                          long_format=1)">End Date Time</span>
-                            </abbr>
-                        </tal:differentday>
-
-                        <tal:sameday tal:condition="python:here.start().Date() == here.end().Date()"
-                                     tal:define="ampm python:site_properties.getProperty('localLongTimeFormat').find('%p') >= 0">
-                            <span tal:replace="python:toLocalizedTime(here.start())">
-                                Start Date Time</span> <br />
-                            <span i18n:translate="event_from">from</span>  
-                            <abbr metal:define-macro="startdatesame-field-view"
-                                  tal:define="kss_class python:getKssClasses('startDate',
-                                              templateId=templateId, macro='startdatesame-field-view');"
-                                  id="parent-fieldname-startDate"
-                                  tal:attributes="class string:$kss_class dtstart;
-                                                  title python:here.start().ISO8601()">
-                                  <span metal:define-slot="inside" 
-                                        class="explain"
-                                        tal:content="python:here.toLocalizedTime(here.start(), time_only=1)">Start Time</span>
-                            </abbr>
-                            <span i18n:translate="event_to">to</span>
-                            <abbr metal:define-macro="enddatesame-field-view"
-                                  tal:define="kss_class python:getKssClasses('endDate',
-                                              templateId=templateId, macro='enddatesame-field-view');"
-                                  id="parent-fieldname-endDate"
-                                  tal:attributes="class string:$kss_class dtend;
-                                                  title python:here.end().ISO8601()">
-                                  <span metal:define-slot="inside" 
-                                        class="explain"
-                                        tal:content="python:here.toLocalizedTime(here.end(), time_only=1)">End Time</span>
-                            </abbr>
-                            
-                            <!-- <span tal:replace="python:test(ampm, here.end().AMPMMinutes(), here.end().TimeMinutes())">End Time</span> -->
-                            
-                        </tal:sameday>
-
                     </td>
                 </tr>
                 <tr tal:condition="here/location">
