@@ -142,9 +142,42 @@
             </a>
         </div>
 
+		<div class="eventTypesClassification"
+             tal:condition="here/eventType">
+			<label i18n:translate="event_types_classification">Event type:</label>
+			<div class="listypes">
+				<metal:field use-macro="python:here.widget('eventType', mode='view')">
+	        	Event Types
+				</metal:field>
+			</div>
+        </div>
+        
+        <div class="costDetails"
+             tal:condition="here/cost">
+			<label i18n:translate="event_cost_details">Cost:</label>
+			<div class="strcost">
+				<metal:field use-macro="python:here.widget('cost', mode='view')">
+	        	Cost
+				</metal:field>
+			</div>
+        </div>
+        
         <metal:field use-macro="python:here.widget('text', mode='view')">
         Body text
         </metal:field>
+        
+        <div class="listOfReferenceEntities"
+        	 tal:define="referenceEntities here/referenceEntities"
+             tal:condition="referenceEntities">
+			<label i18n:translate="list_of_reference_entities">Reference entities:</label>
+			<div class="listreferenceentities">
+				<span tal:content="python: referenceEntities[0]" />
+				<span tal:repeat="refent python: referenceEntities[1:]">
+					&mdash;
+					<span tal:content="refent" />
+		        </span>
+			</div>
+        </div>
 
         <p tal:condition="here/event_url|nothing">
             <a class="url"

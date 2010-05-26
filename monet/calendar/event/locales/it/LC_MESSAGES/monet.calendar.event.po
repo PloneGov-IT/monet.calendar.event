@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-05-25 13:14+0000\n"
+"POT-Creation-Date: 2010-05-25 16:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,21 +14,26 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:209
+#: ./content/event.py:213
 msgid "Afternoon"
 msgstr "Pomeriggio"
 
-#: ./content/event.py:211
+#: ./content/event.py:215
 msgid "All day"
 msgstr "Tutto il giorno"
 
-#: ./content/event.py:208
+#: ./content/event.py:212
 msgid "Morning"
 msgstr "Mattina"
 
-#: ./content/event.py:210
+#: ./content/event.py:214
 msgid "Night"
 msgstr "Sera"
+
+#. Default: "Cost:"
+#: ./browser/event_view.pt:157
+msgid "event_cost_details"
+msgstr "Costo:"
 
 #. Default: "For details"
 #: ./browser/event_view.pt:94
@@ -36,7 +41,7 @@ msgid "event_details"
 msgstr "Per informazioni"
 
 #. Default: "More information about this event…"
-#: ./browser/event_view.pt:144
+#: ./browser/event_view.pt:180
 msgid "event_more_information"
 msgstr ""
 
@@ -49,6 +54,11 @@ msgstr "Tel:"
 #: ./browser/event_view.pt:83
 msgid "event_time"
 msgstr "Orario"
+
+#. Default: "Event type:"
+#: ./browser/event_view.pt:147
+msgid "event_types_classification"
+msgstr "Tipo di evento:"
 
 #. Default: "From"
 #: ./browser/event_view.pt:42
@@ -66,114 +76,119 @@ msgid "event_where"
 msgstr "Dove"
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:118
+#: ./browser/event_view.pt:116
 msgid "heading_add_to_calendar"
 msgstr "Aggiungi l'evento al calendario"
 
 #. Default: "Enter here your notes about the event."
-#: ./content/event.py:132
+#: ./content/event.py:134
 msgid "help_annotations"
 msgstr "Inserisci qui le tue annotazioni sull'evento."
 
 #. Default: "Add details about the cost of the event."
-#: ./content/event.py:70
+#: ./content/event.py:72
 msgid "help_cost"
 msgstr "Aggiungi i dettagli relativi al costo dell'evento."
 
 #. Default: "Insert an image that represents the event."
-#: ./content/event.py:150
+#: ./content/event.py:152
 msgid "help_event_image"
 msgstr "Inserisci un'immagine che rappresenti l'evento."
 
 #. Default: "Enter the event location."
-#: ./content/event.py:162
+#: ./content/event.py:164
 msgid "help_location"
 msgstr "Inserisci il luogo dell'evento."
 
 #. Default: "In this field you can specify the reference entities, one after another."
-#: ./content/event.py:124
+#: ./content/event.py:126
 msgid "help_referenceentities"
 msgstr "In questo campo puoi indicare gli enti di riferimento, uno di seguito all'altro."
 
 #. Default: "Select the time slot of the day on which the event takes place."
-#: ./content/event.py:49
+#: ./content/event.py:51
 msgid "help_slots"
 msgstr "Seleziona la fascia oraria della giornata in cui l'evento avrà luogo."
 
 #. Default: "Add event details."
-#: ./content/event.py:60
+#: ./content/event.py:62
 msgid "help_time"
 msgstr "Specifica i dettagli riguardanti l'evento."
 
 #. Default: "Italy"
-#: ./content/event.py:215
+#: ./content/event.py:219
 msgid "label_Italy"
 msgstr "Italia"
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:131
+#: ./browser/event_view.pt:129
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:125
+#: ./browser/event_view.pt:123
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
 #. Default: "Address"
-#: ./content/event.py:88
+#: ./content/event.py:90
 msgid "label_address"
 msgstr "Indirizzo"
 
 #. Default: "Annotations"
-#: ./content/event.py:131
+#: ./content/event.py:133
 msgid "label_annotations"
 msgstr "Annotazioni"
 
 #. Default: "Cost"
-#: ./content/event.py:69
+#: ./content/event.py:71
 msgid "label_cost"
 msgstr "Costo"
 
 #. Default: "Country"
-#: ./content/event.py:98
+#: ./content/event.py:100
 msgid "label_country"
 msgstr "Nazione"
 
 #. Default: "Event Type(s)"
-#: ./content/event.py:38
+#: ./content/event.py:40
 msgid "label_event_type"
 msgstr "Tipo di evento"
 
 #. Default: "Contact Fax"
-#: ./content/event.py:116
+#: ./content/event.py:118
 msgid "label_fax"
 msgstr "Fax contatto"
 
 #. Default: "Location"
-#: ./content/event.py:79
+#: ./content/event.py:81
 msgid "label_location"
 msgstr "Sede"
 
 #. Default: "Reference entities"
-#: ./content/event.py:123
+#: ./content/event.py:125
 msgid "label_referenceentities"
 msgstr "Enti di riferimento"
 
 #. Default: "Time slots"
-#: ./content/event.py:48
+#: ./content/event.py:50
 msgid "label_slots"
 msgstr "Fasce orarie"
 
 #. Default: "Time"
-#: ./content/event.py:59
+#: ./content/event.py:61
 msgid "label_time"
 msgstr "Orario"
 
 #. Default: "ZIP code"
-#: ./content/event.py:107
+#: ./content/event.py:109
 msgid "label_zipcode"
 msgstr "CAP"
+
+#. Default: "Reference entities:"
+#: ./browser/event_view.pt:171
+msgid "list_of_reference_entities"
+msgstr "Enti di riferimento:"
 
 #. Default: "Event details"
 #: ./browser/event_view.pt:37
@@ -181,12 +196,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:126
+#: ./browser/event_view.pt:124
 msgid "title_add_to_ical"
 msgstr "Scarica questo evento in formato iCal"
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:120
+#: ./browser/event_view.pt:118
 msgid "title_add_to_vcal"
 msgstr "Scarica questo evento in formato vCal"
 
