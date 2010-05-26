@@ -155,6 +155,10 @@ EventSchema.moveField('image', after='eventType')
 EventSchema['startDate'].widget.show_hm = False
 EventSchema['endDate'].widget.show_hm = False
 EventSchema.moveField('startDate', after='image')
+EventSchema.moveField('endDate', after='startDate')
+
+EventSchema.moveField('cadence', after='endDate')
+EventSchema.moveField('except', after='cadence')
 
 EventSchema.moveField('slots', after='except')
 EventSchema.moveField('time', after='slots')
