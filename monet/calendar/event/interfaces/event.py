@@ -11,3 +11,8 @@ class IMonetEvent(IRecurringEvent):
     """Description of the Example Type"""
     
     # -*- schema definition goes here -*-
+
+class IMonetCalendar(Interface):
+    """Identifies objects on which you can use the calendar feature"""
+    
+    # -*- schema definition goes here -*-

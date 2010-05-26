@@ -13,7 +13,7 @@ from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
 
 from monet.calendar.event import eventMessageFactory as _
-from monet.calendar.event.interfaces import IMonetEvent
+from monet.calendar.event.interfaces import IMonetEvent, IMonetCalendar
 from monet.calendar.event.config import PROJECTNAME
 
 from monet.recurring_event.content.event import EventSchema as RecurringEventSchema
@@ -188,7 +188,7 @@ EventSchema['contactName'].widget.visible = {'view': 'invisible', 'edit': 'invis
 
 class MonetEvent(RecurringEvent, ATCTImageTransform):
     """Description of the Example Type"""
-    implements(IMonetEvent)
+    implements(IMonetEvent,IMonetCalendar)
 
     meta_type = "ATEvent"
     schema = EventSchema
