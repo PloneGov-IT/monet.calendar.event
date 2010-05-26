@@ -161,6 +161,12 @@
 			</metal:field>
         </div>
         
+        <div class="zipCode">
+            <metal:field use-macro="python:here.widget('zipcode', mode='view')">
+	        Zip code
+			</metal:field>
+        </div>
+        
         <div class="bText">
 	        <metal:field use-macro="python:here.widget('text', mode='view')">
 	        Body text
@@ -179,12 +185,14 @@
 		        </span>
 			</div>
         </div>
+        
+        <div class="eventAnnotations">
+            <metal:field use-macro="python:here.widget('annotations', mode='view')">
+	        Annotations
+			</metal:field>
+        </div>
 
 		</div>
-
-        <div metal:use-macro="here/document_relateditems/macros/relatedItems">
-            show related items if they exist
-        </div>
         
         <span class="visualClear"><!-- --></span>
 
