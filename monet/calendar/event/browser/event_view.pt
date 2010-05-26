@@ -155,6 +155,12 @@
 			</div>
         </div>
         
+        <div class="countryIt">
+            <metal:field use-macro="python:here.widget('country', mode='view')">
+	        Country
+			</metal:field>
+        </div>
+        
         <div class="bText">
 	        <metal:field use-macro="python:here.widget('text', mode='view')">
 	        Body text

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-05-26 07:31+0000\n"
+"POT-Creation-Date: 2010-05-26 08:18+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,6 +22,10 @@ msgstr "Pomeriggio"
 msgid "All day"
 msgstr "Tutto il giorno"
 
+#: ./content/event.py:98
+msgid "Italy"
+msgstr "Italia"
+
 #: ./content/event.py:212
 msgid "Morning"
 msgstr "Mattina"
@@ -31,47 +35,47 @@ msgid "Night"
 msgstr "Sera"
 
 #. Default: "Cost:"
-#: ./browser/event_view.pt:157
+#: ./browser/event_view.pt:150
 msgid "event_cost_details"
 msgstr "Costo:"
 
 #. Default: "For details"
-#: ./browser/event_view.pt:94
+#: ./browser/event_view.pt:87
 msgid "event_details"
 msgstr "Per informazioni"
 
 #. Default: "Phone:"
-#: ./browser/event_view.pt:97
+#: ./browser/event_view.pt:90
 msgid "event_ph"
 msgstr "Tel:"
 
 #. Default: "Time"
-#: ./browser/event_view.pt:83
+#: ./browser/event_view.pt:76
 msgid "event_time"
 msgstr "Orario"
 
 #. Default: "Event type:"
-#: ./browser/event_view.pt:147
+#: ./browser/event_view.pt:140
 msgid "event_types_classification"
 msgstr "Tipo di evento:"
 
 #. Default: "From"
-#: ./browser/event_view.pt:42
+#: ./browser/event_view.pt:39
 msgid "event_when_from"
 msgstr "Da"
 
 #. Default: "To"
-#: ./browser/event_view.pt:57
+#: ./browser/event_view.pt:52
 msgid "event_when_to"
 msgstr "A"
 
 #. Default: "Where"
-#: ./browser/event_view.pt:72
+#: ./browser/event_view.pt:65
 msgid "event_where"
 msgstr "Dove"
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:116
+#: ./browser/event_view.pt:109
 msgid "heading_add_to_calendar"
 msgstr "Aggiungi l'evento al calendario"
 
@@ -116,12 +120,12 @@ msgid "label_Italy"
 msgstr "Italia"
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:129
+#: ./browser/event_view.pt:122
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:123
+#: ./browser/event_view.pt:116
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -181,22 +185,22 @@ msgid "label_zipcode"
 msgstr "CAP"
 
 #. Default: "Reference entities:"
-#: ./browser/event_view.pt:174
+#: ./browser/event_view.pt:173
 msgid "list_of_reference_entities"
 msgstr "Enti di riferimento:"
 
 #. Default: "Event details"
-#: ./browser/event_view.pt:37
+#: ./browser/event_view.pt:34
 msgid "summary_event_details"
 msgstr "Dettagli evento"
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:124
+#: ./browser/event_view.pt:117
 msgid "title_add_to_ical"
 msgstr "Scarica questo evento in formato iCal"
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:118
+#: ./browser/event_view.pt:111
 msgid "title_add_to_vcal"
 msgstr "Scarica questo evento in formato vCal"
 

@@ -95,7 +95,6 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 required=False,
                 searchable=False,
                 languageIndependent=True,
-                default_method='getDECountry',
                 widget=StringWidget(
                         label = _(u'label_country', default=u'Country'),
                         )),
@@ -214,9 +213,6 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
         vocab.add('night',_(u'Night'))
         vocab.add('allday',_(u'All day'))
         return vocab
-    
-    def getDECountry(self):
-        return _(u'label_Italy', default=u'Italy')
     
     security.declareProtected(View, 'tag')
     def tag(self, **kwargs):
