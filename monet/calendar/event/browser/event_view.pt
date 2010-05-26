@@ -7,6 +7,14 @@
       i18n:domain="monet.calendar.event">
 <body>
 
+<head>
+    <metal:css fill-slot="css_slot">
+        <style type="text/css" media="all"
+            tal:content="string: @import url(${context/portal_url}/++resource++monet.calendar.event.stylesheets/monetcalendarevent.css)">
+        </style>
+    </metal:css>
+</head>
+
 <div metal:fill-slot="main">
     <tal:main-macro metal:define-macro="main">
 
@@ -122,7 +130,7 @@
         </table>
         </div>
 
-		<div class="eventImageContainer"
+		<div class="fieldEvent eventImageContainer"
              tal:condition="here/image_mini|nothing">
             <a href="#"
                tal:attributes="href string:$here_url/image/image_view_fullscreen"
@@ -131,7 +139,7 @@
             </a>
         </div>
 
-		<div class="eventTypesClassification"
+		<div class="fieldEvent eventTypesClassification"
              tal:condition="here/eventType">
 			<label i18n:translate="event_types_classification">Event type:</label>
 			<div class="listypes">
@@ -141,7 +149,7 @@
 			</div>
         </div>
         
-        <div class="costDetails"
+        <div class="fieldEvent costDetails"
              tal:condition="here/cost">
 			<label i18n:translate="event_cost_details">Cost:</label>
 			<div class="strcost">
@@ -151,25 +159,25 @@
 			</div>
         </div>
         
-        <div class="countryIt">
+        <div class="fieldEvent countryIt">
             <metal:field use-macro="python:here.widget('country', mode='view')">
 	        Country
 			</metal:field>
         </div>
         
-        <div class="zipCode">
+        <div class="fieldEvent zipCode">
             <metal:field use-macro="python:here.widget('zipcode', mode='view')">
 	        Zip code
 			</metal:field>
         </div>
         
-        <div class="bText">
+        <div class="fieldEvent bText">
 	        <metal:field use-macro="python:here.widget('text', mode='view')">
 	        Body text
 	        </metal:field>
         </div>
         
-        <div class="listOfReferenceEntities"
+        <div class="fieldEvent listOfReferenceEntities"
         	 tal:define="referenceEntities here/referenceEntities"
              tal:condition="referenceEntities">
 			<label i18n:translate="list_of_reference_entities">Reference entities:</label>
@@ -182,7 +190,7 @@
 			</div>
         </div>
         
-        <div class="eventAnnotations">
+        <div class="fieldEvent eventAnnotations">
             <metal:field use-macro="python:here.widget('annotations', mode='view')">
 	        Annotations
 			</metal:field>

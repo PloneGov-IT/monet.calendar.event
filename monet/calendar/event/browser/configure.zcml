@@ -11,5 +11,11 @@
 	template="event_view.pt"
 	permission="zope2.View"
 	/>
+	
+ <browser:resourceDirectory
+  	name="monet.calendar.event.stylesheets"
+	directory="stylesheets"
+	/>
+   
 
 </configure>
