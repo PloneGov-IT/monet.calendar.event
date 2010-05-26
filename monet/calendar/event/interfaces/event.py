@@ -7,7 +7,7 @@ from zope.app.container.constraints import containers
 
 from monet.calendar.event import eventMessageFactory as _
 
-class IEvent(IRecurringEvent):
+class IMonetEvent(IRecurringEvent):
     """Description of the Example Type"""
     
     # -*- schema definition goes here -*-

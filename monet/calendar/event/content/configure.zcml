@@ -9,11 +9,11 @@
   <class class=".event.MonetEvent">
     <require
         permission="zope2.View"
-        interface="..interfaces.IEvent"
+        interface="..interfaces.IMonetEvent"
         />
     <require
         permission="cmf.ModifyPortalContent"
-        set_schema="..interfaces.IEvent"
+        set_schema="..interfaces.IMonetEvent"
         />
   </class>
 
