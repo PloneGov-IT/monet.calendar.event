@@ -38,43 +38,39 @@
             	<tr>
                 	<th i18n:translate="event_when_from">From</th>
                 	<td>
-                		<span metal:define-macro="startdate-field-view"
-                              id="parent-fieldname-startDate"
-                              tal:attributes="class string: monetEventDtstart;
-                                              title python:here.start().ISO8601()">
-                              <span metal:define-slot="inside"
-                                    tal:content="python:here.toLocalizedTime(here.start(),
-                                    long_format=0)">Start Date Time</span>
+                		<span id="parent-fieldname-startDate" class="monetEventDtstart"
+                              tal:content="python:here.toLocalizedTime(here.start(),long_format=0)">
+                              Start Date Time
 						</span>
                 	</td>
                 </tr>
                 <tr>
                 	<th i18n:translate="event_when_to">To</th>
                 	<td>
-                		<span metal:define-macro="enddate-field-view"
-                              id="parent-fieldname-endDate"
-                              tal:attributes="class string: monetEventDtend;
-                                              title python:here.end().ISO8601()">
-                              <span metal:define-slot="inside"
-                                    tal:content="python:here.toLocalizedTime(here.end(),
-                                    long_format=0)">End Date Time</span>
+                		<span id="parent-fieldname-endDate" class="monetEventDtend"
+                			  tal:content="python:here.toLocalizedTime(here.end(),long_format=0)">
+                			  End Date Time
                         </span>
                 	</td>
                 </tr>
                 <tr tal:condition="python: here.getLocation() or here.getAddress()">
                     <th i18n:translate="event_where">Where</th>
-                    <td class="location">
-                        <metal:field use-macro="python:here.widget('location', mode='view')">
-                        Location
-                        </metal:field>
-                        <metal:field use-macro="python:here.widget('address', mode='view')">
-                        Address
-                        </metal:field>
+                    <td class="locadd">
+                    	<div class="loc">
+	                        <metal:field use-macro="python:here.widget('location', mode='view')">
+	                        Location
+	                        </metal:field>
+                        </div>
+                        <div class="add">
+	                        <metal:field use-macro="python:here.widget('address', mode='view')">
+	                        Address
+	                        </metal:field>
+                        <div>
                     </td>
                 </tr>
                 <tr tal:condition="python: here.getTime()">
                     <th i18n:translate="event_time">Time</th>
-                    <td class="location">
+                    <td class="time">
                         <metal:field use-macro="python:here.widget('time', mode='view')">
                         Time
                         </metal:field>
