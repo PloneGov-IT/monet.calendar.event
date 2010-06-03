@@ -76,7 +76,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
     
     StringField('location',
                required=False,
-               searchable=True,
+               searchable=False,
                write_permission = ChangeEvents,
                widget=StringWidget(
                         label = _(u'label_location', default=u'Location'),
