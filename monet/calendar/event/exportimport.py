@@ -6,6 +6,7 @@ from Products.CMFCore.utils import getToolByName
 
 _PROPERTIES = [
     dict(name='event_types', type_='lines', value=()),
+    dict(name='special_event_types', type_='lines', value=()),
     ]
 
 def import_various(context):
