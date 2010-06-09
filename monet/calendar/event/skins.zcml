@@ -1,9 +1,0 @@
-<configure
-	xmlns="http://namespaces.zope.org/zope"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
-    i18n_domain="monet.calendar.event">
-
-    <cmf:registerDirectory
-        name="monet.calendar.event.templates"/>
-
- </configure>
