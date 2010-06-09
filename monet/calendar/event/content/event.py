@@ -96,6 +96,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 languageIndependent=True,
                 widget=StringWidget(
                         label = _(u'label_country', default=u'Country'),
+                        size=40
                         )),
                         
     StringField('zipcode',
@@ -105,7 +106,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 validators=("isInt"),
                 widget=StringWidget(
                         label = _(u'label_zipcode', default=u'ZIP code'),
-                        size=10
+                        size=20
                         )),
                         
     StringField('fax',
