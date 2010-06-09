@@ -65,22 +65,20 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
                         
-    StringField('cost',
+    TextField('cost',
                 required=False,
                 searchable=False,
-                widget=StringWidget(
+                widget=TextAreaWidget(
                         label = _(u'label_cost', default=u'Cost'),
                         description = _(u'help_cost', default=u'Add details about the cost of the event.'),
-                        size=70
                         )),
     
-    StringField('location',
+    TextField('location',
                required=False,
                searchable=False,
                write_permission = ChangeEvents,
-               widget=StringWidget(
+               widget=TextAreaWidget(
                         label = _(u'label_location', default=u'Location'),
-                        size=70
                         )),       
     
     StringField('address',
@@ -89,7 +87,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 languageIndependent=True,
                 widget=StringWidget(
                         label = _(u'label_address', default=u'Address'),
-                        size=70
+                        size=80
                         )),
                         
     StringField('country',
@@ -116,6 +114,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 languageIndependent=True,
                 widget=StringWidget(
                         label = _(u'label_fax', default=u'Contact Fax'),
+                        size=50
                         )),
   
     LinesField('referenceEntities',
@@ -129,9 +128,13 @@ EventSchema = RecurringEventSchema.copy() + Schema((
     TextField('annotations',
               required=False,
               searchable=False,
-              widget = TextAreaWidget(
+              storage = AnnotationStorage(migrate=True),
+              validators = ('isTidyHtmlWithCleanup',),
+              default_output_type = 'text/x-html-safe',
+              widget = RichWidget(
                         label = _(u'label_annotations', default=u'Annotations'),
-                        description = _(u'help_annotations', default=u'Enter here your notes about the event.')
+                        description = _(u'help_annotations', default=u'Enter here your notes about the event.'),
+                        allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
 ))
 
@@ -172,14 +175,18 @@ EventSchema.moveField('address', after='location')
 EventSchema.moveField('country', after='address')
 EventSchema.moveField('zipcode', after='country')
 
+EventSchema['contactPhone'].widget.size=50
 EventSchema['contactPhone'].languageIndependent=True,
 EventSchema.moveField('contactPhone', after='zipcode')
 
 EventSchema.moveField('fax', after='contactPhone')
 
+EventSchema['eventUrl'].widget.size=60
+EventSchema['eventUrl'].widget.description=''
 EventSchema['eventUrl'].languageIndependent=True,
 EventSchema.moveField('eventUrl', after='fax')
 
+EventSchema['contactEmail'].widget.size=40
 EventSchema['contactEmail'].languageIndependent=True,
 EventSchema.moveField('contactEmail', after='eventUrl')
 

@@ -98,9 +98,53 @@
                           tal:content="python: view.getTranslatedSchemaLabel(fieldset)"
                           tal:attributes="id string:fieldsetlegend-${fieldsetid}"
                           tal:condition="not:sole_fieldset" />
-                  <tal:fields repeat="field python:schematas[fieldset].editableFields(here, visible_only=True)">
-                    <metal:fieldMacro use-macro="python:here.widget(field.getName(), mode='edit')" />
-                  </tal:fields>
+	                <tal:main_customized condition="python:fieldsetid=='default'">
+	                    <metal:fieldMacro use-macro="python:here.widget('title', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('description', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('eventType', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('image', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('startDate', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('endDate', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('cadence', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('except', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('slots', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('time', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('cost', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('location', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('address', mode='edit')" />
+	                    <table>
+	                    	<tbody>
+	                        	<tr>
+									<td><metal:fieldMacro use-macro="python:here.widget('country', mode='edit')" /></td>
+									<td><metal:fieldMacro use-macro="python:here.widget('zipcode', mode='edit')" /></td>
+	                            </tr>
+	                        </tbody>
+	                	</table>
+	                    <table>
+	                    	<tbody>
+	                            <tr>
+									<td><metal:fieldMacro use-macro="python:here.widget('contactPhone', mode='edit')" /></td>
+									<td><metal:fieldMacro use-macro="python:here.widget('fax', mode='edit')" /></td>
+								</tr>
+							</tbody>
+	                	</table>
+						<table>
+	                    	<tbody>
+								<tr>
+									<td><metal:fieldMacro use-macro="python:here.widget('eventUrl', mode='edit')" /></td>
+									<td><metal:fieldMacro use-macro="python:here.widget('contactEmail', mode='edit')" /></td>
+								</tr>
+	                       	</tbody>
+	                	</table>
+	                	<metal:fieldMacro use-macro="python:here.widget('text', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('referenceEntities', mode='edit')" />
+	                    <metal:fieldMacro use-macro="python:here.widget('annotations', mode='edit')" />
+					</tal:main_customized>
+	                <tal:main_notcustomized condition="python:fieldsetid!='default'">
+	                  <tal:fields repeat="field python:schematas[fieldset].editableFields(here, visible_only=True)">
+	                    <metal:fieldMacro use-macro="python:here.widget(field.getName(), mode='edit')" />
+	                  </tal:fields>
+	                </tal:main_notcustomized>
                 </fieldset>
               </tal:fieldsets>
             </tal:tabbed>
