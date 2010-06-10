@@ -33,7 +33,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
 
     LinesField('eventType',
                required=False,
-               searchable=True,
+               searchable=False,
                languageIndependent=True,
                vocabulary='getEventTypeVocab',
                widget = MultiSelectionWidget(
@@ -54,7 +54,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         
     TextField('time',
               required=False,
-              searchable=True,
+              searchable=False,
               storage = AnnotationStorage(migrate=True),
               validators = ('isTidyHtmlWithCleanup',),
               default_output_type = 'text/x-html-safe',
@@ -164,6 +164,8 @@ EventSchema['endDate'].widget.label= _(u'label_endDate',default=u'To')
 EventSchema.moveField('startDate', after='image')
 EventSchema.moveField('endDate', after='startDate')
 
+EventSchema['cadence'].searchable = False
+EventSchema['except'].searchable = False
 EventSchema.moveField('cadence', after='endDate')
 EventSchema.moveField('except', after='cadence')
 
@@ -178,6 +180,7 @@ EventSchema.moveField('address', after='location')
 EventSchema.moveField('country', after='address')
 EventSchema.moveField('zipcode', after='country')
 
+EventSchema['contactPhone'].searchable = False
 EventSchema['contactPhone'].widget.label = _(u'label_contactPhone',default=u'Telephone')
 EventSchema['contactPhone'].widget.size=50
 EventSchema['contactPhone'].languageIndependent=True,
@@ -185,12 +188,14 @@ EventSchema.moveField('contactPhone', after='zipcode')
 
 EventSchema.moveField('fax', after='contactPhone')
 
+EventSchema['eventUrl'].searchable = False
 EventSchema['eventUrl'].widget.size=60
 EventSchema['eventUrl'].widget.description=''
 EventSchema['eventUrl'].widget.label = _(u'label_eventUrl',default=u'Web site')
 EventSchema['eventUrl'].languageIndependent=True,
 EventSchema.moveField('eventUrl', after='fax')
 
+EventSchema['contactEmail'].searchable = False
 EventSchema['contactEmail'].widget.size=40
 EventSchema['contactEmail'].languageIndependent=True,
 EventSchema['contactEmail'].widget.label = _(u'label_contactEmail',default=u'E-mail')
