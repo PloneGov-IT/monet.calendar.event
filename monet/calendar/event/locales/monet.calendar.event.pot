@@ -237,7 +237,7 @@ msgstr ""
 msgid "label_fax"
 msgstr ""
 
-#. Default: "Location"
+#. Default: "Where"
 #: ./content/event.py:81
 msgid "label_location"
 msgstr ""

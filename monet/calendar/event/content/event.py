@@ -78,7 +78,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                searchable=False,
                write_permission = ChangeEvents,
                widget=TextAreaWidget(
-                        label = _(u'label_location', default=u'Location'),
+                        label = _(u'label_location', default=u'Where'),
                         )),       
     
     StringField('address',

@@ -242,7 +242,7 @@ msgstr "Tipo di evento"
 msgid "label_fax"
 msgstr "Fax contatto"
 
-#. Default: "Location"
+#. Default: "Where"
 #: ./content/event.py:81
 msgid "label_location"
 msgstr "Sede"
