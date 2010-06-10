@@ -289,3 +289,7 @@ msgstr ""
 #. Default: "Web site"
 msgid "label_eventUrl"
 msgstr ""
+
+#. Default: "Event body text"
+msgid "label_text"
+msgstr ""

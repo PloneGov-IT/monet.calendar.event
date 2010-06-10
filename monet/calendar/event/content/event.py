@@ -49,7 +49,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 widget=SelectionWidget(
                         format = 'select',
                         label = _(u'label_slots', default=u'Time slots'),
-                        description = _(u'help_slots', default=u'Select the time slot of the day on which the event takes place.')
+                        #description = _(u'help_slots', default=u'Select the time slot of the day on which the event takes place.')
                         )),
                         
     TextField('time',
@@ -60,7 +60,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               default_output_type = 'text/x-html-safe',
               widget = RichWidget(
                         label = _(u'label_time', default=u'Hours'),
-                        description = _(u'help_time', default=u'Add time details.'),
+                        #description = _(u'help_time', default=u'Add time details.'),
                         rows = 25,
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
@@ -70,7 +70,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 searchable=False,
                 widget=TextAreaWidget(
                         label = _(u'label_cost', default=u'Entrance free'),
-                        description = _(u'help_cost', default=u'Add details about the cost of the event.'),
+                        #description = _(u'help_cost', default=u'Add details about the cost of the event.'),
                         )),
     
     TextField('location',
@@ -123,7 +123,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                searchable=False,
                widget=LinesWidget(
                         label = _(u'label_referenceentities', default=u'Reference organization'),
-                        description = _(u'help_referenceentities', default=u'In this field you can specify the reference entities, one after another.')
+                        #description = _(u'help_referenceentities', default=u'In this field you can specify the reference entities, one after another.')
                         )),
                         
     TextField('annotations',
@@ -134,7 +134,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               default_output_type = 'text/x-html-safe',
               widget = RichWidget(
                         label = _(u'label_annotations', default=u'Annotations'),
-                        description = _(u'help_annotations', default=u'Enter here your notes about the event.'),
+                        #description = _(u'help_annotations', default=u'Enter here your notes about the event.'),
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
 ))
@@ -171,7 +171,7 @@ EventSchema.moveField('slots', after='except')
 EventSchema.moveField('time', after='slots')
 EventSchema.moveField('cost', after='time')
 
-EventSchema['location'].widget.description = _(u'help_location',default=u'Enter the event location.')
+#EventSchema['location'].widget.description = _(u'help_location',default=u'Enter the event location.')
 EventSchema.changeSchemataForField('location', 'default')
 EventSchema.moveField('location', after='cost')
 EventSchema.moveField('address', after='location')
@@ -196,6 +196,7 @@ EventSchema['contactEmail'].languageIndependent=True,
 EventSchema['contactEmail'].widget.label = _(u'label_contactEmail',default=u'E-mail')
 EventSchema.moveField('contactEmail', after='eventUrl')
 
+EventSchema['text'].widget.label = _(u'label_text',default=u'Event body text')
 EventSchema.moveField('text', after='contactEmail')
 
 EventSchema.moveField('referenceEntities', after='text')

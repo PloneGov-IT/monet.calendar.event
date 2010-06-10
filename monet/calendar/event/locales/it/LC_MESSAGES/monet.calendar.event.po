@@ -298,3 +298,7 @@ msgstr "URL"
 #. Default: "E-mail"
 msgid "label_contactEmail"
 msgstr "E-mail"
+
+#. Default: "Event body text"
+msgid "label_text"
+msgstr "Testo dell'evento"
