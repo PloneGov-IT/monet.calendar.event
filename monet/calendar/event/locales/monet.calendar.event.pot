@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2010-06-09 07:41+0000\n"
+"POT-Creation-Date: 2010-06-09 16:31+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,20 +17,104 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:217
+#: ./content/event.py:246
 msgid "Afternoon"
 msgstr ""
 
-#: ./content/event.py:219
+#: ./content/event.py:248
 msgid "All day"
 msgstr ""
 
-#: ./content/event.py:216
+#: ./content/event.py:237
+msgid "Books"
+msgstr ""
+
+#: ./content/event.py:232
+msgid "Children's events"
+msgstr ""
+
+#: ./content/event.py:227
+msgid "Cinema and videos"
+msgstr ""
+
+#: ./content/event.py:230
+msgid "Circuses and street performances"
+msgstr ""
+
+#: ./content/event.py:222
+msgid "Concerts"
+msgstr ""
+
+#: ./content/event.py:221
+msgid "Conferences, seminars and workshops"
+msgstr ""
+
+#: ./content/event.py:220
+msgid "Conventions and round tables"
+msgstr ""
+
+#: ./content/event.py:228
+msgid "Dance"
+msgstr ""
+
+#: ./content/event.py:224
+msgid "Exhibitions"
+msgstr ""
+
+#: ./content/event.py:229
+msgid "Folklore and festivals"
+msgstr ""
+
+#: ./content/event.py:235
+msgid "Guided tours"
+msgstr ""
+
+#: ./content/event.py:219
+msgid "Markets"
+msgstr ""
+
+#: ./content/event.py:234
+msgid "Memorial days"
+msgstr ""
+
+#: ./content/event.py:245
 msgid "Morning"
 msgstr ""
 
-#: ./content/event.py:218
+#: ./content/event.py:226
+msgid "Music"
+msgstr ""
+
+#: ./content/event.py:247
 msgid "Night"
+msgstr ""
+
+#: ./content/event.py:233
+msgid "Openings, unveilings"
+msgstr ""
+
+#: ./content/event.py:238
+msgid "Other events"
+msgstr ""
+
+#: ./content/event.py:223
+msgid "Performances"
+msgstr ""
+
+#: ./content/event.py:236
+msgid "Prizes and competitions"
+msgstr ""
+
+#: ./content/event.py:231
+msgid "Sports and games"
+msgstr ""
+
+#: ./content/event.py:225
+msgid "Theatre"
+msgstr ""
+
+#: ./content/event.py:218
+msgid "Trade fairs, expositions and markets"
 msgstr ""
 
 #. Default: "Cost:"
@@ -79,7 +163,7 @@ msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Enter here your notes about the event."
-#: ./content/event.py:134
+#: ./content/event.py:137
 msgid "help_annotations"
 msgstr ""
 
@@ -89,12 +173,12 @@ msgid "help_cost"
 msgstr ""
 
 #. Default: "Insert an image that represents the event."
-#: ./content/event.py:152
+#: ./content/event.py:156
 msgid "help_event_image"
 msgstr ""
 
 #. Default: "Enter the event location."
-#: ./content/event.py:168
+#: ./content/event.py:172
 msgid "help_location"
 msgstr ""
 
@@ -124,12 +208,12 @@ msgid "label_add_to_vcal"
 msgstr ""
 
 #. Default: "Address"
-#: ./content/event.py:91
+#: ./content/event.py:89
 msgid "label_address"
 msgstr ""
 
 #. Default: "Annotations"
-#: ./content/event.py:133
+#: ./content/event.py:136
 msgid "label_annotations"
 msgstr ""
 
@@ -139,7 +223,7 @@ msgid "label_cost"
 msgstr ""
 
 #. Default: "Country"
-#: ./content/event.py:100
+#: ./content/event.py:98
 msgid "label_country"
 msgstr ""
 
@@ -149,12 +233,12 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Contact Fax"
-#: ./content/event.py:118
+#: ./content/event.py:117
 msgid "label_fax"
 msgstr ""
 
 #. Default: "Location"
-#: ./content/event.py:82
+#: ./content/event.py:81
 msgid "label_location"
 msgstr ""
 
@@ -174,7 +258,7 @@ msgid "label_time"
 msgstr ""
 
 #. Default: "ZIP code"
-#: ./content/event.py:109
+#: ./content/event.py:108
 msgid "label_zipcode"
 msgstr ""
 

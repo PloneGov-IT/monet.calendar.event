@@ -216,7 +216,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
         items = mp.monet_calendar_event_properties.event_types
         vocab = DisplayList()
         for item in items:
-            vocab.add(item,item)
+            vocab.add(item,_(item))
         return vocab
     
     def getSlotsVocab(self):
