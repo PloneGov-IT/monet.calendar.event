@@ -153,7 +153,7 @@ imageField = ATImageSchema['image'].copy()
 imageField.required = False
 imageField.primary = False
 imageField.validators = None
-imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
+#imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 
