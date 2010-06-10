@@ -178,6 +178,7 @@ EventSchema.moveField('address', after='location')
 EventSchema.moveField('country', after='address')
 EventSchema.moveField('zipcode', after='country')
 
+EventSchema['contactPhone'].widget.label = _(u'label_contactPhone',default=u'Telephone')
 EventSchema['contactPhone'].widget.size=50
 EventSchema['contactPhone'].languageIndependent=True,
 EventSchema.moveField('contactPhone', after='zipcode')
