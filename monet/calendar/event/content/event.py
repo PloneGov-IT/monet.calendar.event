@@ -114,7 +114,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 searchable=False,
                 languageIndependent=True,
                 widget=StringWidget(
-                        label = _(u'label_fax', default=u'Contact Fax'),
+                        label = _(u'label_fax', default=u'Fax'),
                         size=50
                         )),
   
@@ -193,6 +193,7 @@ EventSchema.moveField('eventUrl', after='fax')
 
 EventSchema['contactEmail'].widget.size=40
 EventSchema['contactEmail'].languageIndependent=True,
+EventSchema['contactEmail'].widget.label = _(u'label_contactEmail',default=u'E-mail')
 EventSchema.moveField('contactEmail', after='eventUrl')
 
 EventSchema.moveField('text', after='contactEmail')

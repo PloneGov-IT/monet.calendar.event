@@ -237,10 +237,10 @@ msgstr "Nazione"
 msgid "label_event_type"
 msgstr "Tipo di evento"
 
-#. Default: "Contact Fax"
+#. Default: "Fax"
 #: ./content/event.py:117
 msgid "label_fax"
-msgstr "Fax contatto"
+msgstr "Fax"
 
 #. Default: "Where"
 #: ./content/event.py:81
@@ -294,3 +294,7 @@ msgstr "Telefono"
 #. Default: "Web site"
 msgid "label_eventUrl"
 msgstr "URL"
+
+#. Default: "E-mail"
+msgid "label_contactEmail"
+msgstr "E-mail"
