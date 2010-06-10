@@ -114,7 +114,7 @@ msgstr "Teatro"
 msgid "Trade fairs, expositions and markets"
 msgstr "Fiere, Esposizioni e Mostre Mercato"
 
-#. Default: "Cost:"
+#. Default: "Entrance free:"
 #: ./browser/event_view.pt:155
 msgid "event_cost_details"
 msgstr "Costo:"
@@ -222,7 +222,7 @@ msgstr "Indirizzo"
 msgid "label_annotations"
 msgstr "Annotazioni"
 
-#. Default: "Cost"
+#. Default: "Entrance free"
 #: ./content/event.py:72
 msgid "label_cost"
 msgstr "Costo"

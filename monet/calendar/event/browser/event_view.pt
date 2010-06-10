@@ -153,7 +153,7 @@
         
         <div class="fieldEvent costDetails"
              tal:condition="here/cost">
-			<label i18n:translate="event_cost_details">Cost:</label>
+			<label i18n:translate="event_cost_details">Entrance free:</label>
 			<div class="strcost">
 				<metal:field use-macro="python:here.widget('cost', mode='view')">
 	        	Cost

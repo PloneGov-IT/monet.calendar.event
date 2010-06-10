@@ -117,7 +117,7 @@ msgstr ""
 msgid "Trade fairs, expositions and markets"
 msgstr ""
 
-#. Default: "Cost:"
+#. Default: "Entrance free:"
 #: ./browser/event_view.pt:155
 msgid "event_cost_details"
 msgstr ""
@@ -217,7 +217,7 @@ msgstr ""
 msgid "label_annotations"
 msgstr ""
 
-#. Default: "Cost"
+#. Default: "Entrance free"
 #: ./content/event.py:72
 msgid "label_cost"
 msgstr ""
