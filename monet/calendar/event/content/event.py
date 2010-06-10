@@ -225,8 +225,8 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
         vocab = DisplayList()
         vocab.add('morning',_(u'Morning'))
         vocab.add('afternoon',_(u'Afternoon'))
-        vocab.add('night',_(u'Night'))
-        vocab.add('allday',_(u'All day'))
+        vocab.add('night',_(u'Evening'))
+        vocab.add('allday',_(u'All day long'))
         return vocab
     
     security.declareProtected(View, 'tag')

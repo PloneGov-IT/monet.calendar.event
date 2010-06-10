@@ -16,11 +16,11 @@ msgstr ""
 
 #: ./content/event.py:246
 msgid "Afternoon"
-msgstr "Pomeriggio"
+msgstr "pomeriggio"
 
 #: ./content/event.py:248
-msgid "All day"
-msgstr "Tutto il giorno"
+msgid "All day long"
+msgstr "tutto il giorno"
 
 #: ./content/event.py:237
 msgid "Books"
@@ -76,15 +76,15 @@ msgstr "Anniversari e Commemorazioni"
 
 #: ./content/event.py:245
 msgid "Morning"
-msgstr "Mattina"
+msgstr "mattina"
 
 #: ./content/event.py:226
 msgid "Music"
 msgstr "Musica"
 
 #: ./content/event.py:247
-msgid "Night"
-msgstr "Sera"
+msgid "Evening"
+msgstr "sera"
 
 #: ./content/event.py:233
 msgid "Openings, unveilings"
