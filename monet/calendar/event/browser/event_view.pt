@@ -182,7 +182,7 @@
         <div class="fieldEvent listOfReferenceEntities"
         	 tal:define="referenceEntities here/referenceEntities"
              tal:condition="referenceEntities">
-			<label i18n:translate="list_of_reference_entities">Reference entities:</label>
+			<label i18n:translate="list_of_reference_entities">Reference organization:</label>
 			<div class="listreferenceentities">
 				<span tal:content="python: referenceEntities[0]" />
 				<span tal:repeat="refent python: referenceEntities[1:]">

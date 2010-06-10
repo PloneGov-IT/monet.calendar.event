@@ -122,7 +122,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                required=False,
                searchable=False,
                widget=LinesWidget(
-                        label = _(u'label_referenceentities', default=u'Reference entities'),
+                        label = _(u'label_referenceentities', default=u'Reference organization'),
                         description = _(u'help_referenceentities', default=u'In this field you can specify the reference entities, one after another.')
                         )),
                         

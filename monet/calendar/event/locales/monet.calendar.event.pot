@@ -242,7 +242,7 @@ msgstr ""
 msgid "label_location"
 msgstr ""
 
-#. Default: "Reference entities"
+#. Default: "Reference organization"
 #: ./content/event.py:125
 msgid "label_referenceentities"
 msgstr ""
@@ -262,7 +262,7 @@ msgstr ""
 msgid "label_zipcode"
 msgstr ""
 
-#. Default: "Reference entities:"
+#. Default: "Reference organization:"
 #: ./browser/event_view.pt:184
 msgid "list_of_reference_entities"
 msgstr ""

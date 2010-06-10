@@ -247,7 +247,7 @@ msgstr "Fax"
 msgid "label_location"
 msgstr "Sede"
 
-#. Default: "Reference entities"
+#. Default: "Reference organization"
 #: ./content/event.py:125
 msgid "label_referenceentities"
 msgstr "Enti di riferimento"
@@ -267,7 +267,7 @@ msgstr "Orario"
 msgid "label_zipcode"
 msgstr "CAP"
 
-#. Default: "Reference entities:"
+#. Default: "Reference organization:"
 #: ./browser/event_view.pt:184
 msgid "list_of_reference_entities"
 msgstr "Enti di riferimento:"
