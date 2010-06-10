@@ -129,7 +129,7 @@ msgstr "Per informazioni"
 msgid "event_ph"
 msgstr "Tel:"
 
-#. Default: "Time"
+#. Default: "Hours"
 #: ./browser/event_view.pt:81
 msgid "event_time"
 msgstr "Orario"
@@ -148,6 +148,14 @@ msgstr "Da"
 #: ./browser/event_view.pt:57
 msgid "event_when_to"
 msgstr "A"
+
+#. Default: "From"
+msgid "label_startDate"
+msgstr "Data inizio"
+
+#. Default: "To"
+msgid "label_endDate"
+msgstr "Data fine"
 
 #. Default: "Where"
 #: ./browser/event_view.pt:66
@@ -249,7 +257,7 @@ msgstr "Enti di riferimento"
 msgid "label_slots"
 msgstr "Fasce orarie"
 
-#. Default: "Time"
+#. Default: "Hours"
 #: ./content/event.py:62
 msgid "label_time"
 msgstr "Orario"

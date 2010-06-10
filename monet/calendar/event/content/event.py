@@ -59,7 +59,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               validators = ('isTidyHtmlWithCleanup',),
               default_output_type = 'text/x-html-safe',
               widget = RichWidget(
-                        label = _(u'label_time', default=u'Time'),
+                        label = _(u'label_time', default=u'Hours'),
                         description = _(u'help_time', default=u'Add time details.'),
                         rows = 25,
                         allow_file_upload = zconf.ATDocument.allow_document_upload
@@ -158,7 +158,9 @@ EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 
 EventSchema['startDate'].widget.show_hm = False
+EventSchema['startDate'].widget.label= _(u'label_startDate',default=u'From')
 EventSchema['endDate'].widget.show_hm = False
+EventSchema['endDate'].widget.label= _(u'label_endDate',default=u'To')
 EventSchema.moveField('startDate', after='image')
 EventSchema.moveField('endDate', after='startDate')
 

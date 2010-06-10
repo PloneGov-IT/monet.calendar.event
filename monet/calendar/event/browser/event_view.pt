@@ -78,7 +78,7 @@
                     </td>
                 </tr>
                 <tr tal:condition="python: here.getTime()">
-                    <th i18n:translate="event_time">Time</th>
+                    <th i18n:translate="event_time">Hours</th>
                     <td class="time">
                         <metal:field use-macro="python:here.widget('time', mode='view')">
                         Time
