@@ -222,7 +222,7 @@ msgstr ""
 msgid "label_cost"
 msgstr ""
 
-#. Default: "Country"
+#. Default: "Nation"
 #: ./content/event.py:98
 msgid "label_country"
 msgstr ""

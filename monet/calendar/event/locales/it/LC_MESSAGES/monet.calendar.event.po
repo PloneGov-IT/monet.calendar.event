@@ -227,7 +227,7 @@ msgstr "Annotazioni"
 msgid "label_cost"
 msgstr "Costo"
 
-#. Default: "Country"
+#. Default: "Nation"
 #: ./content/event.py:98
 msgid "label_country"
 msgstr "Nazione"

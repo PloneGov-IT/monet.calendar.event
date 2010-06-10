@@ -95,7 +95,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 searchable=False,
                 languageIndependent=True,
                 widget=StringWidget(
-                        label = _(u'label_country', default=u'Country'),
+                        label = _(u'label_country', default=u'Nation'),
                         size=40
                         )),
                         
