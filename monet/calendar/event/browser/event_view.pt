@@ -143,10 +143,11 @@
 		<div class="fieldEvent eventTypesClassification"
              tal:condition="here/eventType">
 			<label i18n:translate="event_types_classification">Event type:</label>
-			<div class="listypes">
-				<metal:field use-macro="python:here.widget('eventType', mode='view')">
-	        	Event Types
-				</metal:field>
+			<div class="listypes" tal:define="event_types here/eventType">
+				<span tal:repeat="event_type python: event_types[:-1]">
+					<span i18n:translate="" tal:content="event_type" />,
+				</span>
+				<span i18n:translate="" tal:content="python: event_types[-1]" />
 			</div>
         </div>
         
