@@ -282,3 +282,10 @@ msgstr ""
 msgid "title_add_to_vcal"
 msgstr ""
 
+#. Default: "Telephone"
+msgid "label_contactPhone"
+msgstr ""
+
+#. Default: "Web site"
+msgid "label_eventUrl"
+msgstr ""

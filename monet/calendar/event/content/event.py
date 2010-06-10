@@ -187,6 +187,7 @@ EventSchema.moveField('fax', after='contactPhone')
 
 EventSchema['eventUrl'].widget.size=60
 EventSchema['eventUrl'].widget.description=''
+EventSchema['eventUrl'].widget.label = _(u'label_eventUrl',default=u'Web site')
 EventSchema['eventUrl'].languageIndependent=True,
 EventSchema.moveField('eventUrl', after='fax')
 

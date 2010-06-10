@@ -288,6 +288,9 @@ msgid "title_add_to_vcal"
 msgstr "Scarica questo evento in formato vCal"
 
 #. Default: "Telephone"
-#: ./browser/event_view.pt:116
 msgid "label_contactPhone"
 msgstr "Telefono"
+
+#. Default: "Web site"
+msgid "label_eventUrl"
+msgstr "URL"
