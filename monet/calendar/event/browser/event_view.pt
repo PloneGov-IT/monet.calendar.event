@@ -161,7 +161,7 @@
 			</div>
         </div>
         
-        <div tal:condition="here/getCountry" class="fieldEvent countryIt">
+        <!-- div tal:condition="here/getCountry" class="fieldEvent countryIt">
             <metal:field use-macro="python:here.widget('country', mode='view')">
 	        Country
 			</metal:field>
@@ -171,7 +171,7 @@
             <metal:field use-macro="python:here.widget('zipcode', mode='view')">
 	        Zip code
 			</metal:field>
-        </div>
+        </div -->
         
         <div tal:condition="here/getText" class="fieldEvent bText">
 	        <metal:field use-macro="python:here.widget('text', mode='view')">
