@@ -5,7 +5,7 @@ from zope.interface import implements #, directlyProvides
 
 try:
     # turn off
-    from Products.LinguaPloneXXX.public import *
+    from Products.LinguaPlone.public import *
 except ImportError:
     # No multilingual support
     from Products.Archetypes.atapi import *
@@ -35,6 +35,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                required=False,
                searchable=False,
                languageIndependent=True,
+               enforceVocabulary=True,
                vocabulary='getEventTypeVocab',
                widget = MultiSelectionWidget(
                         format = 'checkbox',
@@ -55,6 +56,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
     TextField('time',
               required=False,
               searchable=False,
+              languageIndependent=True,
               storage = AnnotationStorage(migrate=True),
               validators = ('isTidyHtmlWithCleanup',),
               default_output_type = 'text/x-html-safe',
@@ -153,6 +155,7 @@ imageField = ATImageSchema['image'].copy()
 imageField.required = False
 imageField.primary = False
 imageField.validators = None
+imageField.languageIndependent= True
 #imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
@@ -183,7 +186,7 @@ EventSchema.moveField('zipcode', after='country')
 EventSchema['contactPhone'].searchable = False
 EventSchema['contactPhone'].widget.label = _(u'label_contactPhone',default=u'Telephone')
 EventSchema['contactPhone'].widget.size=50
-EventSchema['contactPhone'].languageIndependent=True,
+EventSchema['contactPhone'].languageIndependent=True
 EventSchema.moveField('contactPhone', after='zipcode')
 
 EventSchema.moveField('fax', after='contactPhone')
@@ -192,12 +195,12 @@ EventSchema['eventUrl'].searchable = False
 EventSchema['eventUrl'].widget.size=60
 EventSchema['eventUrl'].widget.description=''
 EventSchema['eventUrl'].widget.label = _(u'label_eventUrl',default=u'Web site')
-EventSchema['eventUrl'].languageIndependent=True,
+EventSchema['eventUrl'].languageIndependent=True
 EventSchema.moveField('eventUrl', after='fax')
 
 EventSchema['contactEmail'].searchable = False
 EventSchema['contactEmail'].widget.size=40
-EventSchema['contactEmail'].languageIndependent=True,
+EventSchema['contactEmail'].languageIndependent=True
 EventSchema['contactEmail'].widget.label = _(u'label_contactEmail',default=u'E-mail')
 EventSchema.moveField('contactEmail', after='eventUrl')
 
@@ -207,7 +210,9 @@ EventSchema.moveField('text', after='contactEmail')
 EventSchema.moveField('referenceEntities', after='text')
 EventSchema.moveField('annotations', after='referenceEntities')
 
+EventSchema['attendees'].languageIndependent=True
 EventSchema['attendees'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
+EventSchema['contactName'].languageIndependent=True
 EventSchema['contactName'].widget.visible = {'view': 'invisible', 'edit': 'invisible'}
 
 class MonetEvent(RecurringEvent, ATCTImageTransform):
