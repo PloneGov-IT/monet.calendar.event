@@ -20,6 +20,7 @@ from monet.calendar.event.config import PROJECTNAME
 from monet.recurring_event.content.event import EventSchema as RecurringEventSchema
 from monet.recurring_event.content.event import RecurringEvent
 
+from Products.CMFCore import permissions
 from Products.CMFCore.utils import getToolByName
 from Products.Archetypes.atapi import DisplayList
 from Products.ATContentTypes.content.image import ATImageSchema
@@ -73,6 +74,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 widget=TextAreaWidget(
                         label = _(u'label_cost', default=u'Entrance free'),
                         #description = _(u'help_cost', default=u'Add details about the cost of the event.'),
+                        rows=3,
                         )),
     
     TextField('location',
@@ -81,6 +83,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                write_permission = ChangeEvents,
                widget=TextAreaWidget(
                         label = _(u'label_location', default=u'Where'),
+                        rows=2,
                         )),       
     
     StringField('address',
@@ -134,11 +137,23 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               storage = AnnotationStorage(migrate=True),
               validators = ('isTidyHtmlWithCleanup',),
               default_output_type = 'text/x-html-safe',
+              read_permission=permissions.ModifyPortalContent,
               widget = RichWidget(
                         label = _(u'label_annotations', default=u'Annotations'),
-                        #description = _(u'help_annotations', default=u'Enter here your notes about the event.'),
+                        description = _(u'help_annotations', default=u'Enter here your notes about the event. This field has only internal value and is not displayed'),
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
+
+    TextField('imageAlt',
+               searchable=True,
+               required=False,
+               widget=TextAreaWidget(
+                        label = _(u'label_imagealt', default=u'Image ALT text'),
+                        description = _(u'help_imagealt', default=(u'If the attached image above is somway important, '
+                                                                   u'please put there the alternative text (ALT) for accessibility reason. '
+                                                                   u'Keep this field empty if the image has only layout purpose.')),
+                        )), 
+
 ))
 
 # Set storage on fields copied from ATContentTypeSchema, making sure
@@ -159,12 +174,13 @@ imageField.languageIndependent= True
 #imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
+EventSchema.moveField('imageAlt', after='image')
 
 EventSchema['startDate'].widget.show_hm = False
 EventSchema['startDate'].widget.label= _(u'label_startDate',default=u'From')
 EventSchema['endDate'].widget.show_hm = False
 EventSchema['endDate'].widget.label= _(u'label_endDate',default=u'To')
-EventSchema.moveField('startDate', after='image')
+EventSchema.moveField('startDate', after='imageAlt')
 EventSchema.moveField('endDate', after='startDate')
 
 EventSchema['cadence'].searchable = False

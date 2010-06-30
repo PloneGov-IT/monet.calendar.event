@@ -110,6 +110,41 @@
                			</tal:url>
                     </td>
                 </tr>
+				<tr>
+					<th i18n:translate="heading_attachments">Attachments</th>
+					<td>
+						<div class="relatedItems"
+						    tal:define="getInfoFor python:wtool.getInfoFor;">
+						        <tal:relatedItems tal:define="related python:here.computeRelatedItems();">
+						            <tal:block tal:condition="python:related">
+					                    <ul class="visualNoMarker">
+					                    <tal:related tal:repeat="item related"
+					                                 tal:define="use_view_action site_properties/typesUseViewActionInListings|python:();">
+					                        <li tal:define="
+					                                desc                item/Description;
+					                                item_type           item/portal_type;
+					                                item_icon           python:plone_view.getIcon(item);
+					                                item_type           item/portal_type;
+					                                item_type_class     python:'contenttype-' + normalizeString(item_type);
+					                                item_url            item/absolute_url;
+					                                item_url            python:item_type in use_view_action and item_url+'/view' or item_url">
+					                            <span tal:attributes="class item_type_class">
+					                                <img tal:replace="structure item_icon/html_tag" />
+					                                <a href="" class=""
+					                                   tal:attributes="href  item_url;
+					                                                   title item/Description;"
+					                                   tal:content="item/pretty_title_or_id">
+					                                    Related Item
+					                                </a>
+					                            </span>
+					                        </li>
+					                    </tal:related>
+					                    </ul>
+						            </tal:block>
+						        </tal:relatedItems>
+						</div>
+					</td>
+				</tr>
                 <tr>
                     <th i18n:translate="heading_add_to_calendar">Add event to calendar</th>
                     <td>
@@ -136,7 +171,7 @@
             <a href="#"
                tal:attributes="href string:$here_url/image/image_view_fullscreen"
                id="parent-fieldname-image">
-               <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage')" src="" alt="" />
+               <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage', alt=context.getImageAlt() or ' ')" src="" alt="" />
             </a>
         </div>
 
@@ -160,18 +195,6 @@
 				</metal:field>
 			</div>
         </div>
-        
-        <!-- div tal:condition="here/getCountry" class="fieldEvent countryIt">
-            <metal:field use-macro="python:here.widget('country', mode='view')">
-	        Country
-			</metal:field>
-        </div>
-        
-        <div tal:condition="here/getZipcode" class="fieldEvent zipCode">
-            <metal:field use-macro="python:here.widget('zipcode', mode='view')">
-	        Zip code
-			</metal:field>
-        </div -->
         
         <div tal:condition="here/getText" class="fieldEvent bText">
 	        <metal:field use-macro="python:here.widget('text', mode='view')">
