@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-06-30 14:09+0000\n"
+"POT-Creation-Date: 2010-07-01 14:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,21 +14,84 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:243
+#: ./content/event.py:257
 msgid "Afternoon"
 msgstr "pomeriggio"
 
-#: ./content/event.py:245
+#: ./content/event.py:259
 msgid "All day long"
 msgstr "tutto il giorno"
 
-#: ./content/event.py:244
+msgid "Books"
+msgstr "Libri"
+
+msgid "Children's events"
+msgstr "Iniziative per bambini"
+
+msgid "Cinema and videos"
+msgstr "Cinema, Video e Proiezioni"
+
+msgid "Circuses and street performances"
+msgstr "Circo, Spettacoli di strada e Luna Park"
+
+msgid "Concerts"
+msgstr "Concerti"
+
+msgid "Conferences, seminars and workshops"
+msgstr "Conferenze, Seminari, Incontri e Lezioni"
+
+msgid "Conventions and round tables"
+msgstr "Congressi e Convegni"
+
+msgid "Dance"
+msgstr "Danza"
+
+#: ./content/event.py:258
 msgid "Evening"
 msgstr "sera"
 
-#: ./content/event.py:242
+msgid "Exhibitions"
+msgstr "Mostre"
+
+msgid "Folklore and festivals"
+msgstr "Sagre e Feste"
+
+msgid "Guided tours"
+msgstr "Visite guidate"
+
+msgid "Markets"
+msgstr "Mercati"
+
+msgid "Memorial days"
+msgstr "Anniversari e Commemorazioni"
+
+#: ./content/event.py:256
 msgid "Morning"
 msgstr "mattino"
+
+msgid "Music"
+msgstr "Musica"
+
+msgid "Openings, unveilings"
+msgstr "Inaugurazioni"
+
+msgid "Other events"
+msgstr "Altri eventi"
+
+msgid "Performances"
+msgstr "Spettacoli"
+
+msgid "Prizes and competitions"
+msgstr "Premiazioni di concorsi"
+
+msgid "Sports and games"
+msgstr "Manifestazioni sportive"
+
+msgid "Theatre"
+msgstr "Teatro"
+
+msgid "Trade fairs, expositions and markets"
+msgstr "Fiere, Esposizioni e Mostre Mercato"
 
 #. Default: "Entrance free:"
 #: ./browser/event_view.pt:191
@@ -81,9 +144,38 @@ msgid "heading_attachments"
 msgstr "Allegati"
 
 #. Default: "Enter here your notes about the event. This field has only internal value and is not displayed"
-#: ./content/event.py:141
+#: ./content/event.py:143
 msgid "help_annotations"
 msgstr "Inserisci qui le tue annotazioni sull'evento. Questo campo ha solo valenza interna e non viene visualizzato"
+
+#. Default: "Add details about the cost of the event."
+msgid "help_cost"
+msgstr "Aggiungi i dettagli relativi al costo dell'evento."
+
+#. Default: "Insert an image that represents the event."
+msgid "help_event_image"
+msgstr "Inserisci un'immagine che rappresenti l'evento."
+
+#. Default: "If the attached image above is somway important, please put there the alternative text (ALT) for accessibility reason. Keep this field empty if the image has only layout purpose."
+#: ./content/event.py:152
+msgid "help_imagealt"
+msgstr "Se l'immagine allegata sopra è in qualche modo importante, si prega di inserire il testo alternativo (ALT) per motivi di accessibilità. Tenere questo campo vuoto se l'immagine ha solo funzionalità di layout."
+
+#. Default: "Enter the event location."
+msgid "help_location"
+msgstr "Inserisci il luogo dell'evento."
+
+#. Default: "In this field you can specify the reference entities, one after another."
+msgid "help_referenceentities"
+msgstr "In questo campo puoi indicare gli enti di riferimento, uno di seguito all'altro."
+
+#. Default: "Select the time slot of the day on which the event takes place."
+msgid "help_slots"
+msgstr "Seleziona la fascia oraria della giornata in cui l'evento avrà luogo."
+
+#. Default: "Add time details."
+msgid "help_time"
+msgstr "Specifica i dettagli riguardanti l'orario dell'evento."
 
 #. Default: "iCal"
 #: ./browser/event_view.pt:162
@@ -96,22 +188,22 @@ msgid "label_add_to_vcal"
 msgstr "vCal"
 
 #. Default: "Address"
-#: ./content/event.py:92
+#: ./content/event.py:94
 msgid "label_address"
 msgstr "Indirizzo"
 
 #. Default: "Annotations"
-#: ./content/event.py:140
+#: ./content/event.py:142
 msgid "label_annotations"
 msgstr "Annotazioni"
 
 #. Default: "E-mail"
-#: ./content/event.py:206
+#: ./content/event.py:220
 msgid "label_contactEmail"
 msgstr "E-mail"
 
 #. Default: "Telephone"
-#: ./content/event.py:189
+#: ./content/event.py:203
 msgid "label_contactPhone"
 msgstr "Telefono"
 
@@ -121,17 +213,17 @@ msgid "label_cost"
 msgstr "Costo"
 
 #. Default: "Nation"
-#: ./content/event.py:101
+#: ./content/event.py:103
 msgid "label_country"
 msgstr "Nazione"
 
 #. Default: "To"
-#: ./content/event.py:168
+#: ./content/event.py:182
 msgid "label_endDate"
 msgstr "Data fine"
 
 #. Default: "Web site"
-#: ./content/event.py:199
+#: ./content/event.py:213
 msgid "label_eventUrl"
 msgstr "URL"
 
@@ -141,17 +233,22 @@ msgid "label_event_type"
 msgstr "Tipo di evento"
 
 #. Default: "Fax"
-#: ./content/event.py:120
+#: ./content/event.py:122
 msgid "label_fax"
 msgstr "Fax"
 
+#. Default: "Image ALT text"
+#: ./content/event.py:151
+msgid "label_imagealt"
+msgstr "Testo alternativo dell'immagine"
+
 #. Default: "Where"
-#: ./content/event.py:84
+#: ./content/event.py:85
 msgid "label_location"
 msgstr "Sede"
 
 #. Default: "Reference organization"
-#: ./content/event.py:128
+#: ./content/event.py:130
 msgid "label_referenceentities"
 msgstr "Enti di riferimento"
 
@@ -161,12 +258,12 @@ msgid "label_slots"
 msgstr "Fasce orarie"
 
 #. Default: "From"
-#: ./content/event.py:166
+#: ./content/event.py:180
 msgid "label_startDate"
 msgstr "Data inizio"
 
 #. Default: "Event body text"
-#: ./content/event.py:209
+#: ./content/event.py:223
 msgid "label_text"
 msgstr "Testo dell'evento"
 
@@ -176,7 +273,7 @@ msgid "label_time"
 msgstr "Orario"
 
 #. Default: "ZIP code"
-#: ./content/event.py:111
+#: ./content/event.py:113
 msgid "label_zipcode"
 msgstr "CAP"
 
