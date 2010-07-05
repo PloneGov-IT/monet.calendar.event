@@ -33,7 +33,7 @@ from Products.CMFCore.permissions import View
 EventSchema = RecurringEventSchema.copy() + Schema((
 
     LinesField('eventType',
-               required=False,
+               required=True,
                searchable=False,
                languageIndependent=True,
                enforceVocabulary=True,
@@ -44,7 +44,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         )),
     
     StringField('slots',
-                required=False,
+                required=True,
                 searchable=False,
                 languageIndependent=True,
                 vocabulary='getSlotsVocab',
@@ -55,7 +55,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         )),
                         
     TextField('time',
-              required=False,
+              required=True,
               searchable=False,
               languageIndependent=True,
               storage = AnnotationStorage(migrate=True),
@@ -87,7 +87,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         )),       
     
     StringField('address',
-                required=False,
+                required=True,
                 searchable=False,
                 languageIndependent=True,
                 widget=StringWidget(
@@ -273,6 +273,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     
     def getSlotsVocab(self):
         vocab = DisplayList()
+        vocab.add('unspecified',_(u'-- Unspecified --'))
         vocab.add('morning',_(u'Morning'))
         vocab.add('afternoon',_(u'Afternoon'))
         vocab.add('night',_(u'Evening'))
