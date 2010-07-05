@@ -102,7 +102,3 @@ msgstr ""
 #. Default: "Select the time slot of the day on which the event takes place."
 msgid "help_slots"
 msgstr ""
-
-#. Default: "Add time details."
-msgid "help_time"
-msgstr ""

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-07-01 14:08+0000\n"
+"POT-Creation-Date: 2010-07-05 12:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:257
+#: ./content/event.py:277
 msgid "Afternoon"
 msgstr ""
 
-#: ./content/event.py:259
+#: ./content/event.py:279
 msgid "All day long"
 msgstr ""
 
@@ -46,7 +46,7 @@ msgstr ""
 msgid "Dance"
 msgstr ""
 
-#: ./content/event.py:258
+#: ./content/event.py:278
 msgid "Evening"
 msgstr ""
 
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Memorial days"
 msgstr ""
 
-#: ./content/event.py:256
+#: ./content/event.py:276
 msgid "Morning"
 msgstr ""
 
@@ -94,7 +94,7 @@ msgid "Trade fairs, expositions and markets"
 msgstr ""
 
 #. Default: "Entrance free:"
-#: ./browser/event_view.pt:191
+#: ./browser/event_view.pt:193
 msgid "event_cost_details"
 msgstr ""
 
@@ -104,7 +104,7 @@ msgid "event_details"
 msgstr ""
 
 #. Default: "Phone:"
-#: ./browser/event_view.pt:95
+#: ./browser/event_view.pt:96
 msgid "event_ph"
 msgstr ""
 
@@ -114,7 +114,7 @@ msgid "event_time"
 msgstr ""
 
 #. Default: "Event type:"
-#: ./browser/event_view.pt:180
+#: ./browser/event_view.pt:182
 msgid "event_types_classification"
 msgstr ""
 
@@ -134,17 +134,17 @@ msgid "event_where"
 msgstr ""
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:149
+#: ./browser/event_view.pt:151
 msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Attachments"
-#: ./browser/event_view.pt:114
+#: ./browser/event_view.pt:116
 msgid "heading_attachments"
 msgstr ""
 
 #. Default: "Enter here your notes about the event. This field has only internal value and is not displayed"
-#: ./content/event.py:143
+#: ./content/event.py:178
 msgid "help_annotations"
 msgstr ""
 
@@ -157,7 +157,7 @@ msgid "help_event_image"
 msgstr ""
 
 #. Default: "If the attached image above is somway important, please put there the alternative text (ALT) for accessibility reason. Keep this field empty if the image has only layout purpose."
-#: ./content/event.py:152
+#: ./content/event.py:187
 msgid "help_imagealt"
 msgstr ""
 
@@ -173,17 +173,18 @@ msgstr ""
 msgid "help_slots"
 msgstr ""
 
-#. Default: "Add time details."
+#. Default: "Insert compact text: wrap with Shift + Enter instead of Enter."
+#: ./content/event.py:66
 msgid "help_time"
 msgstr ""
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:162
+#: ./browser/event_view.pt:164
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:156
+#: ./browser/event_view.pt:158
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -193,17 +194,17 @@ msgid "label_address"
 msgstr ""
 
 #. Default: "Annotations"
-#: ./content/event.py:142
+#: ./content/event.py:177
 msgid "label_annotations"
 msgstr ""
 
 #. Default: "E-mail"
-#: ./content/event.py:220
+#: ./content/event.py:157
 msgid "label_contactEmail"
 msgstr ""
 
 #. Default: "Telephone"
-#: ./content/event.py:203
+#: ./content/event.py:124
 msgid "label_contactPhone"
 msgstr ""
 
@@ -218,12 +219,12 @@ msgid "label_country"
 msgstr ""
 
 #. Default: "To"
-#: ./content/event.py:182
+#: ./content/event.py:217
 msgid "label_endDate"
 msgstr ""
 
 #. Default: "Web site"
-#: ./content/event.py:213
+#: ./content/event.py:145
 msgid "label_eventUrl"
 msgstr ""
 
@@ -233,12 +234,12 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Fax"
-#: ./content/event.py:122
+#: ./content/event.py:133
 msgid "label_fax"
 msgstr ""
 
 #. Default: "Image ALT text"
-#: ./content/event.py:151
+#: ./content/event.py:186
 msgid "label_imagealt"
 msgstr ""
 
@@ -248,7 +249,7 @@ msgid "label_location"
 msgstr ""
 
 #. Default: "Reference organization"
-#: ./content/event.py:130
+#: ./content/event.py:165
 msgid "label_referenceentities"
 msgstr ""
 
@@ -258,12 +259,12 @@ msgid "label_slots"
 msgstr ""
 
 #. Default: "From"
-#: ./content/event.py:180
+#: ./content/event.py:215
 msgid "label_startDate"
 msgstr ""
 
 #. Default: "Event body text"
-#: ./content/event.py:223
+#: ./content/event.py:243
 msgid "label_text"
 msgstr ""
 
@@ -278,7 +279,7 @@ msgid "label_zipcode"
 msgstr ""
 
 #. Default: "Reference organization:"
-#: ./browser/event_view.pt:208
+#: ./browser/event_view.pt:210
 msgid "list_of_reference_entities"
 msgstr ""
 
@@ -288,12 +289,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:157
+#: ./browser/event_view.pt:159
 msgid "title_add_to_ical"
 msgstr ""
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:151
+#: ./browser/event_view.pt:153
 msgid "title_add_to_vcal"
 msgstr ""
 

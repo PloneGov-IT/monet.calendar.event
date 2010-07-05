@@ -63,7 +63,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               default_output_type = 'text/x-html-safe',
               widget = RichWidget(
                         label = _(u'label_time', default=u'Hours'),
-                        #description = _(u'help_time', default=u'Add time details.'),
+                        description = _(u'help_time', default=u'Insert compact text: wrap with Shift + Enter instead of Enter.'),
                         rows = 25,
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
