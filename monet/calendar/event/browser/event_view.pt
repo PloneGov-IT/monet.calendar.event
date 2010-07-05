@@ -210,10 +210,10 @@
 			</div>
         </div>
         
-        <div class="fieldEvent eventAnnotations"
+        <!-- div class="fieldEvent eventAnnotations"
 			 tal:content="structure here/getAnnotations">
 	        	Annotations
-        </div>
+        </div -->
 
 		</div>
         
