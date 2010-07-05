@@ -113,7 +113,18 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_zipcode', default=u'ZIP code'),
                         size=20
                         )),
-                        
+                                            
+    LinesField('contactPhone',
+                required=False,
+                searchable=False,
+                accessor='contact_phone',
+                write_permission = ChangeEvents,
+                languageIndependent=True,
+                widget=LinesWidget(
+                        label = _(u'label_contactPhone',default=u'Telephone'),
+                        cols = 50,
+                        )),
+
     StringField('fax',
                 required=False,
                 searchable=False,
@@ -122,7 +133,31 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_fax', default=u'Fax'),
                         size=50
                         )),
-  
+                        
+    LinesField('eventUrl',
+                required=False,
+                searchable=False,
+                accessor='event_url',
+                write_permission = ChangeEvents,
+                languageIndependent = True,
+                widget = LinesWidget(
+                        description = '',
+                        label = _(u'label_eventUrl',default=u'Web site'),
+                        cols = 60,
+                        )),
+                        
+    LinesField('contactEmail',
+                required=False,
+                searchable=False,
+                accessor='contact_email',
+                write_permission = ChangeEvents,
+                languageIndependent = True,
+                widget = LinesWidget(
+                        description = '',
+                        label = _(u'label_contactEmail',default=u'E-mail'),
+                        cols = 40,
+                        )),
+
     LinesField('referenceEntities',
                required=False,
                searchable=False,
@@ -199,25 +234,10 @@ EventSchema.moveField('address', after='location')
 EventSchema.moveField('country', after='address')
 EventSchema.moveField('zipcode', after='country')
 
-EventSchema['contactPhone'].searchable = False
-EventSchema['contactPhone'].widget.label = _(u'label_contactPhone',default=u'Telephone')
-EventSchema['contactPhone'].widget.size=50
-EventSchema['contactPhone'].languageIndependent=True
 EventSchema.moveField('contactPhone', after='zipcode')
-
 EventSchema.moveField('fax', after='contactPhone')
 
-EventSchema['eventUrl'].searchable = False
-EventSchema['eventUrl'].widget.size=60
-EventSchema['eventUrl'].widget.description=''
-EventSchema['eventUrl'].widget.label = _(u'label_eventUrl',default=u'Web site')
-EventSchema['eventUrl'].languageIndependent=True
 EventSchema.moveField('eventUrl', after='fax')
-
-EventSchema['contactEmail'].searchable = False
-EventSchema['contactEmail'].widget.size=40
-EventSchema['contactEmail'].languageIndependent=True
-EventSchema['contactEmail'].widget.label = _(u'label_contactEmail',default=u'E-mail')
 EventSchema.moveField('contactEmail', after='eventUrl')
 
 EventSchema['text'].widget.label = _(u'label_text',default=u'Event body text')

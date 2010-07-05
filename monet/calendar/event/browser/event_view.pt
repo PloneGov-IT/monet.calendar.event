@@ -86,23 +86,25 @@
                     </td>
                 </tr>
                 <tr tal:condition="python: here.contact_phone() or here.contact_email() or here.event_url()"
-                	tal:define="contact_email here/contact_email|nothing;
-                				event_url here/event_url|nothing;
-                				contact_phone here/contact_phone|nothing">
+                	tal:define="contact_emails here/contact_email|nothing;
+                				event_urls here/event_url|nothing;
+                				contact_phones here/contact_phone|nothing">
                     <th i18n:translate="event_details">For details</th>
                     <td class="details">
-                    	<tal:phone condition="contact_phone">
+                    	<div tal:condition="contact_phones"
+                    		 tal:repeat="contact_phone contact_phones">
                     		<span i18n:translate="event_ph">Phone:</span>
                     		<span tal:content="contact_phone"> Contact phone </span>
-        				</tal:phone>
-                    	<tal:email condition="contact_email">
+        				</div>
+                    	<tal:email condition="contact_emails"
+                    			   repeat="contact_email contact_emails">
 	                        <a id="parent-fieldname-contactEmail"
 	                           tal:replace="structure python: here.spamProtect(mailaddress=contact_email, cssclass='email fn')"
 	                           />
                         </tal:email>
-                        <tal:url condition="event_url">
-            				<a class="url"                    
-                        	   id="parent-fieldname-eventUrl"
+                        <tal:url condition="event_urls"
+                        		 repeat="event_url event_urls">
+            				<a class="url"
                         	   tal:content="event_url"
                         	   tal:attributes="href event_url">
                					Event url
