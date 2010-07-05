@@ -48,6 +48,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 searchable=False,
                 languageIndependent=True,
                 vocabulary='getSlotsVocab',
+                default='',
                 widget=SelectionWidget(
                         format = 'select',
                         label = _(u'label_slots', default=u'Time slots'),
