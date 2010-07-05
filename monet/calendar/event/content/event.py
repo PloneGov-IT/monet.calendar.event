@@ -131,7 +131,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 languageIndependent=True,
                 widget=StringWidget(
                         label = _(u'label_fax', default=u'Fax'),
-                        size=50
+                        size= 45,
                         )),
                         
     LinesField('eventUrl',
