@@ -62,27 +62,23 @@
                         </span>
                 	</td>
                 </tr>
-                <tr tal:condition="python: here.getLocation() or here.getAddress()">
+                <tr tal:condition="python: here.getLocation() or here.getAddress()"
+                	tal:define="location here/getLocation|nothing;
+                				address here/getAddress|nothing">
                     <th i18n:translate="event_where">Where</th>
-                    <td class="locadd">
-                    	<div class="loc">
-	                        <metal:field use-macro="python:here.widget('location', mode='view')">
-	                        Location
-	                        </metal:field>
+                    <td class="LocAdd">
+                    	<div class="Loc" tal:content="location">
+                    		Location
                         </div>
-                        <div class="add">
-	                        <metal:field use-macro="python:here.widget('address', mode='view')">
-	                        Address
-	                        </metal:field>
-                        <div>
+                        <div class="Add" tal:content="address">
+							Address
+                        </div>
                     </td>
                 </tr>
                 <tr tal:condition="python: here.getTime()">
                     <th i18n:translate="event_time">Hours</th>
-                    <td class="time">
-                        <metal:field use-macro="python:here.widget('time', mode='view')">
+                    <td class="time" tal:content="structure here/getTime">
                         Time
-                        </metal:field>
                     </td>
                 </tr>
                 <tr tal:condition="python: here.contact_phone() or here.contact_email() or here.event_url()"
@@ -98,8 +94,7 @@
         				</div>
                     	<tal:email condition="contact_emails"
                     			   repeat="contact_email contact_emails">
-	                        <a id="parent-fieldname-contactEmail"
-	                           tal:replace="structure python: here.spamProtect(mailaddress=contact_email, cssclass='email fn')"
+	                        <a tal:replace="structure python: here.spamProtect(mailaddress=contact_email, cssclass='email fn')"
 	                           />
                         </tal:email>
                         <tal:url condition="event_urls"
@@ -112,7 +107,7 @@
                			</tal:url>
                     </td>
                 </tr>
-				<tr>
+				<tr tal:condition="python: here.computeRelatedItems()">
 					<th i18n:translate="heading_attachments">Attachments</th>
 					<td>
 						<div class="relatedItems"
@@ -191,17 +186,15 @@
         <div class="fieldEvent costDetails"
              tal:condition="here/cost">
 			<label i18n:translate="event_cost_details">Entrance free:</label>
-			<div class="strcost">
-				<metal:field use-macro="python:here.widget('cost', mode='view')">
+			<div class="strcost" tal:content="here/cost">
 	        	Cost
-				</metal:field>
 			</div>
         </div>
         
-        <div tal:condition="here/getText" class="fieldEvent bText">
-	        <metal:field use-macro="python:here.widget('text', mode='view')">
-	        Body text
-	        </metal:field>
+        <div class="fieldEvent bText"
+			 tal:condition="here/getText"
+			 tal:content="structure here/getText">
+			 Body text
         </div>
         
         <div class="fieldEvent listOfReferenceEntities"
@@ -217,10 +210,9 @@
 			</div>
         </div>
         
-        <div class="fieldEvent eventAnnotations">
-            <metal:field use-macro="python:here.widget('annotations', mode='view')">
-	        Annotations
-			</metal:field>
+        <div class="fieldEvent eventAnnotations"
+			 tal:content="structure here/getAnnotations">
+	        	Annotations
         </div>
 
 		</div>
