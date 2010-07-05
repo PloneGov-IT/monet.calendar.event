@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-07-05 13:07+0000\n"
+"POT-Creation-Date: 2010-07-05 14:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,27 +98,27 @@ msgid "Trade fairs, expositions and markets"
 msgstr ""
 
 #. Default: "Entrance free:"
-#: ./browser/event_view.pt:193
+#: ./browser/event_view.pt:188
 msgid "event_cost_details"
 msgstr ""
 
 #. Default: "For details"
-#: ./browser/event_view.pt:92
+#: ./browser/event_view.pt:88
 msgid "event_details"
 msgstr ""
 
 #. Default: "Phone:"
-#: ./browser/event_view.pt:96
+#: ./browser/event_view.pt:92
 msgid "event_ph"
 msgstr ""
 
 #. Default: "Hours"
-#: ./browser/event_view.pt:81
+#: ./browser/event_view.pt:79
 msgid "event_time"
 msgstr ""
 
 #. Default: "Event type:"
-#: ./browser/event_view.pt:182
+#: ./browser/event_view.pt:177
 msgid "event_types_classification"
 msgstr ""
 
@@ -133,21 +133,21 @@ msgid "event_when_to"
 msgstr ""
 
 #. Default: "Where"
-#: ./browser/event_view.pt:66
+#: ./browser/event_view.pt:68
 msgid "event_where"
 msgstr ""
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:151
+#: ./browser/event_view.pt:146
 msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Attachments"
-#: ./browser/event_view.pt:116
+#: ./browser/event_view.pt:111
 msgid "heading_attachments"
 msgstr ""
 
-#. Default: "Enter here your notes about the event. This field has only internal value and is not displayed"
+#. Default: "Enter here your notes about the event. This field has only internal value and is not displayed."
 #: ./content/event.py:178
 msgid "help_annotations"
 msgstr ""
@@ -183,12 +183,12 @@ msgid "help_time"
 msgstr ""
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:164
+#: ./browser/event_view.pt:159
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:158
+#: ./browser/event_view.pt:153
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -283,7 +283,7 @@ msgid "label_zipcode"
 msgstr ""
 
 #. Default: "Reference organization:"
-#: ./browser/event_view.pt:210
+#: ./browser/event_view.pt:203
 msgid "list_of_reference_entities"
 msgstr ""
 
@@ -293,12 +293,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:159
+#: ./browser/event_view.pt:154
 msgid "title_add_to_ical"
 msgstr ""
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:153
+#: ./browser/event_view.pt:148
 msgid "title_add_to_vcal"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-07-05 13:07+0000\n"
+"POT-Creation-Date: 2010-07-05 14:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,27 +98,27 @@ msgid "Trade fairs, expositions and markets"
 msgstr "Fiere, Esposizioni e Mostre Mercato"
 
 #. Default: "Entrance free:"
-#: ./browser/event_view.pt:193
+#: ./browser/event_view.pt:188
 msgid "event_cost_details"
 msgstr "Costo:"
 
 #. Default: "For details"
-#: ./browser/event_view.pt:92
+#: ./browser/event_view.pt:88
 msgid "event_details"
 msgstr "Per informazioni"
 
 #. Default: "Phone:"
-#: ./browser/event_view.pt:96
+#: ./browser/event_view.pt:92
 msgid "event_ph"
 msgstr "Tel:"
 
 #. Default: "Hours"
-#: ./browser/event_view.pt:81
+#: ./browser/event_view.pt:79
 msgid "event_time"
 msgstr "Orario"
 
 #. Default: "Event type:"
-#: ./browser/event_view.pt:182
+#: ./browser/event_view.pt:177
 msgid "event_types_classification"
 msgstr "Tipo di evento:"
 
@@ -133,24 +133,24 @@ msgid "event_when_to"
 msgstr "A"
 
 #. Default: "Where"
-#: ./browser/event_view.pt:66
+#: ./browser/event_view.pt:68
 msgid "event_where"
 msgstr "Dove"
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:151
+#: ./browser/event_view.pt:146
 msgid "heading_add_to_calendar"
 msgstr "Aggiungi l'evento al calendario"
 
 #. Default: "Attachments"
-#: ./browser/event_view.pt:116
+#: ./browser/event_view.pt:111
 msgid "heading_attachments"
 msgstr "Allegati"
 
-#. Default: "Enter here your notes about the event. This field has only internal value and is not displayed"
+#. Default: "Enter here your notes about the event. This field has only internal value and is not displayed."
 #: ./content/event.py:178
 msgid "help_annotations"
-msgstr "Inserisci qui le tue annotazioni sull'evento. Questo campo ha solo valenza interna e non viene visualizzato"
+msgstr "Inserisci qui le tue annotazioni sull'evento. Questo campo ha solo valenza interna e non viene visualizzato."
 
 #. Default: "Add details about the cost of the event."
 msgid "help_cost"
@@ -183,12 +183,12 @@ msgid "help_time"
 msgstr "Inserire testo compatto: andare a capo con Shift + Enter invece di Enter."
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:164
+#: ./browser/event_view.pt:159
 msgid "label_add_to_ical"
 msgstr "iCal"
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:158
+#: ./browser/event_view.pt:153
 msgid "label_add_to_vcal"
 msgstr "vCal"
 
@@ -283,7 +283,7 @@ msgid "label_zipcode"
 msgstr "CAP"
 
 #. Default: "Reference organization:"
-#: ./browser/event_view.pt:210
+#: ./browser/event_view.pt:203
 msgid "list_of_reference_entities"
 msgstr "Enti di riferimento:"
 
@@ -293,12 +293,12 @@ msgid "summary_event_details"
 msgstr "Dettagli evento"
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:159
+#: ./browser/event_view.pt:154
 msgid "title_add_to_ical"
 msgstr "Scarica questo evento in formato iCal"
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:153
+#: ./browser/event_view.pt:148
 msgid "title_add_to_vcal"
 msgstr "Scarica questo evento in formato vCal"
 

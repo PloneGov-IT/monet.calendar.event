@@ -175,7 +175,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               read_permission=permissions.ModifyPortalContent,
               widget = RichWidget(
                         label = _(u'label_annotations', default=u'Annotations'),
-                        description = _(u'help_annotations', default=u'Enter here your notes about the event. This field has only internal value and is not displayed'),
+                        description = _(u'help_annotations', default=u'Enter here your notes about the event. This field has only internal value and is not displayed.'),
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
 
@@ -273,7 +273,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     
     def getSlotsVocab(self):
         vocab = DisplayList()
-        vocab.add('unspecified',_(u'-- Unspecified --'))
+        vocab.add('',_(u'-- Unspecified --'))
         vocab.add('morning',_(u'Morning'))
         vocab.add('afternoon',_(u'Afternoon'))
         vocab.add('night',_(u'Evening'))
