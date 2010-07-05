@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-07-05 12:59+0000\n"
+"POT-Creation-Date: 2010-07-05 13:07+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,11 +14,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:277
+#: ./content/event.py:276
+msgid "-- Unspecified --"
+msgstr ""
+
+#: ./content/event.py:278
 msgid "Afternoon"
 msgstr ""
 
-#: ./content/event.py:279
+#: ./content/event.py:280
 msgid "All day long"
 msgstr ""
 
@@ -46,7 +50,7 @@ msgstr ""
 msgid "Dance"
 msgstr ""
 
-#: ./content/event.py:278
+#: ./content/event.py:279
 msgid "Evening"
 msgstr ""
 
@@ -65,7 +69,7 @@ msgstr ""
 msgid "Memorial days"
 msgstr ""
 
-#: ./content/event.py:276
+#: ./content/event.py:277
 msgid "Morning"
 msgstr ""
 
