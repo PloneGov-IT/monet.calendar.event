@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-07-05 14:57+0000\n"
+"POT-Creation-Date: 2010-08-02 10:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,15 +14,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ./content/event.py:276
+#: ./content/event.py:278
 msgid "-- Unspecified --"
 msgstr ""
 
-#: ./content/event.py:278
+#: ./content/event.py:280
 msgid "Afternoon"
 msgstr ""
 
-#: ./content/event.py:280
+#: ./content/event.py:282
 msgid "All day long"
 msgstr ""
 
@@ -50,7 +50,7 @@ msgstr ""
 msgid "Dance"
 msgstr ""
 
-#: ./content/event.py:279
+#: ./content/event.py:281
 msgid "Evening"
 msgstr ""
 
@@ -69,7 +69,7 @@ msgstr ""
 msgid "Memorial days"
 msgstr ""
 
-#: ./content/event.py:277
+#: ./content/event.py:279
 msgid "Morning"
 msgstr ""
 
@@ -147,38 +147,38 @@ msgstr ""
 msgid "heading_attachments"
 msgstr ""
 
-#. Default: "Enter here your notes about the event. This field has only internal value and is not displayed."
+#. Default: "Enter here your notes about the event. This field is only for use by the operator and doesn't appear on the site."
 #: ./content/event.py:178
 msgid "help_annotations"
 msgstr ""
 
-#. Default: "Add details about the cost of the event."
+#. Default: "Indicate whether the event is free or not (in this case indicate the cost and any reductions/discounts)."
+#: ./content/event.py:77
 msgid "help_cost"
 msgstr ""
 
-#. Default: "Insert an image that represents the event."
-msgid "help_event_image"
+#. Default: "A short description of the event"
+#: ./content/event.py:200
+msgid "help_description_event"
 msgstr ""
 
-#. Default: "If the attached image above is somway important, please put there the alternative text (ALT) for accessibility reason. Keep this field empty if the image has only layout purpose."
+#. Default: "If the image is significant for understanding the event, you must enter there the alternative text (ALT) for accessibility reason. Keep this field empty if the image has only layout purpose."
 #: ./content/event.py:187
 msgid "help_imagealt"
 msgstr ""
 
-#. Default: "Enter the event location."
-msgid "help_location"
-msgstr ""
-
-#. Default: "In this field you can specify the reference entities, one after another."
-msgid "help_referenceentities"
-msgstr ""
-
-#. Default: "Select the time slot of the day on which the event takes place."
+#. Default: "Select the time of day on which the event takes place."
+#: ./content/event.py:55
 msgid "help_slots"
 msgstr ""
 
-#. Default: "Insert compact text: wrap with Shift + Enter instead of Enter."
-#: ./content/event.py:66
+#. Default: "Enter all other information about the event."
+#: ./content/event.py:245
+msgid "help_text"
+msgstr ""
+
+#. Default: "Indicate the time of the event. Use a key combination shift + enter to wrap (not just enter)"
+#: ./content/event.py:67
 msgid "help_time"
 msgstr ""
 
@@ -193,7 +193,7 @@ msgid "label_add_to_vcal"
 msgstr ""
 
 #. Default: "Address"
-#: ./content/event.py:94
+#: ./content/event.py:95
 msgid "label_address"
 msgstr ""
 
@@ -203,32 +203,32 @@ msgid "label_annotations"
 msgstr ""
 
 #. Default: "E-mail"
-#: ./content/event.py:157
+#: ./content/event.py:158
 msgid "label_contactEmail"
 msgstr ""
 
 #. Default: "Telephone"
-#: ./content/event.py:124
+#: ./content/event.py:125
 msgid "label_contactPhone"
 msgstr ""
 
 #. Default: "Entrance free"
-#: ./content/event.py:75
+#: ./content/event.py:76
 msgid "label_cost"
 msgstr ""
 
 #. Default: "Nation"
-#: ./content/event.py:103
+#: ./content/event.py:104
 msgid "label_country"
 msgstr ""
 
 #. Default: "To"
-#: ./content/event.py:217
+#: ./content/event.py:218
 msgid "label_endDate"
 msgstr ""
 
 #. Default: "Web site"
-#: ./content/event.py:145
+#: ./content/event.py:146
 msgid "label_eventUrl"
 msgstr ""
 
@@ -238,7 +238,7 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Fax"
-#: ./content/event.py:133
+#: ./content/event.py:134
 msgid "label_fax"
 msgstr ""
 
@@ -248,37 +248,37 @@ msgid "label_imagealt"
 msgstr ""
 
 #. Default: "Where"
-#: ./content/event.py:85
+#: ./content/event.py:86
 msgid "label_location"
 msgstr ""
 
 #. Default: "Reference organization"
-#: ./content/event.py:165
+#: ./content/event.py:166
 msgid "label_referenceentities"
 msgstr ""
 
 #. Default: "Time slots"
-#: ./content/event.py:53
+#: ./content/event.py:54
 msgid "label_slots"
 msgstr ""
 
 #. Default: "From"
-#: ./content/event.py:215
+#: ./content/event.py:216
 msgid "label_startDate"
 msgstr ""
 
 #. Default: "Event body text"
-#: ./content/event.py:243
+#: ./content/event.py:244
 msgid "label_text"
 msgstr ""
 
 #. Default: "Hours"
-#: ./content/event.py:65
+#: ./content/event.py:66
 msgid "label_time"
 msgstr ""
 
 #. Default: "ZIP code"
-#: ./content/event.py:113
+#: ./content/event.py:114
 msgid "label_zipcode"
 msgstr ""
 

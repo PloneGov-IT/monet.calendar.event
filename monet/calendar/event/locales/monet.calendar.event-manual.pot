@@ -83,22 +83,4 @@ msgstr ""
 msgid "Other events"
 msgstr ""
 
-#. Default: "Add details about the cost of the event."
-msgid "help_cost"
-msgstr ""
 
-#. Default: "Insert an image that represents the event."
-msgid "help_event_image"
-msgstr ""
-
-#. Default: "Enter the event location."
-msgid "help_location"
-msgstr ""
-
-#. Default: "In this field you can specify the reference entities, one after another."
-msgid "help_referenceentities"
-msgstr ""
-
-#. Default: "Select the time slot of the day on which the event takes place."
-msgid "help_slots"
-msgstr ""

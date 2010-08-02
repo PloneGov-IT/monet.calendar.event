@@ -52,7 +52,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 widget=SelectionWidget(
                         format = 'select',
                         label = _(u'label_slots', default=u'Time slots'),
-                        #description = _(u'help_slots', default=u'Select the time slot of the day on which the event takes place.')
+                        description = _(u'help_slots', default=u'Select the time of day on which the event takes place.')
                         )),
                         
     TextField('time',
@@ -64,7 +64,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               default_output_type = 'text/x-html-safe',
               widget = RichWidget(
                         label = _(u'label_time', default=u'Hours'),
-                        description = _(u'help_time', default=u'Insert compact text: wrap with Shift + Enter instead of Enter.'),
+                        description = _(u'help_time', default=u'Indicate the time of the event. Use a key combination shift + enter to wrap (not just enter)'),
                         rows = 25,
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
@@ -74,7 +74,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 searchable=False,
                 widget=TextAreaWidget(
                         label = _(u'label_cost', default=u'Entrance free'),
-                        #description = _(u'help_cost', default=u'Add details about the cost of the event.'),
+                        description = _(u'help_cost', default=u'Indicate whether the event is free or not (in this case indicate the cost and any reductions/discounts).'),
                         rows=3,
                         )),
     
@@ -164,7 +164,6 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                searchable=False,
                widget=LinesWidget(
                         label = _(u'label_referenceentities', default=u'Reference organization'),
-                        #description = _(u'help_referenceentities', default=u'In this field you can specify the reference entities, one after another.')
                         )),
                         
     TextField('annotations',
@@ -176,7 +175,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
               read_permission=permissions.ModifyPortalContent,
               widget = RichWidget(
                         label = _(u'label_annotations', default=u'Annotations'),
-                        description = _(u'help_annotations', default=u'Enter here your notes about the event. This field has only internal value and is not displayed.'),
+                        description = _(u'help_annotations', default=u"Enter here your notes about the event. This field is only for use by the operator and doesn't appear on the site."),
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
 
@@ -185,8 +184,8 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                required=False,
                widget=TextAreaWidget(
                         label = _(u'label_imagealt', default=u'Image ALT text'),
-                        description = _(u'help_imagealt', default=(u'If the attached image above is somway important, '
-                                                                   u'please put there the alternative text (ALT) for accessibility reason. '
+                        description = _(u'help_imagealt', default=(u'If the image is significant for understanding the event, '
+                                                                   u'you must enter there the alternative text (ALT) for accessibility reason. '
                                                                    u'Keep this field empty if the image has only layout purpose.')),
                         )), 
 
@@ -198,6 +197,8 @@ EventSchema = RecurringEventSchema.copy() + Schema((
 EventSchema['title'].storage = AnnotationStorage()
 EventSchema['description'].storage = AnnotationStorage()
 
+EventSchema['description'].widget.description= _(u'help_description_event',default=u'A short description of the event')
+
 schemata.finalizeATCTSchema(EventSchema, moveDiscussion=False)
 
 EventSchema.moveField('eventType', after='description')
@@ -207,7 +208,6 @@ imageField.required = False
 imageField.primary = False
 imageField.validators = None
 imageField.languageIndependent= True
-#imageField.widget.description = _(u'help_event_image',default=u'Insert an image that represents the event.')
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 EventSchema.moveField('imageAlt', after='image')
@@ -242,6 +242,7 @@ EventSchema.moveField('eventUrl', after='fax')
 EventSchema.moveField('contactEmail', after='eventUrl')
 
 EventSchema['text'].widget.label = _(u'label_text',default=u'Event body text')
+EventSchema['text'].widget.description = _(u'help_text',default=u'Enter all other information about the event.')
 EventSchema.moveField('text', after='contactEmail')
 
 EventSchema.moveField('referenceEntities', after='text')
