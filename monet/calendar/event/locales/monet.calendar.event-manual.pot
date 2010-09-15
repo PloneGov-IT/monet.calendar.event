@@ -80,6 +80,9 @@ msgstr ""
 msgid "Openings, unveilings"
 msgstr ""
 
+msgid "Festivals"
+msgstr ""
+
 msgid "Other events"
 msgstr ""
 

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-08-02 10:23+0000\n"
+"POT-Creation-Date: 2010-09-15 15:11+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,6 +55,9 @@ msgid "Evening"
 msgstr ""
 
 msgid "Exhibitions"
+msgstr ""
+
+msgid "Festivals"
 msgstr ""
 
 msgid "Folklore and festivals"
