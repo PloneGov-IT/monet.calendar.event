@@ -31,60 +31,7 @@
 
         <div tal:replace="structure provider:plone.belowcontenttitle" />
 
-        <p class="documentDescription">
-            <metal:field use-macro="python:here.widget('description', mode='view')">
-            Description
-            </metal:field>
-        </p>
-                
-        <div tal:replace="structure provider:plone.abovecontentbody" />
-
-        <div class="fieldEvent eventImageContainer"
-             tal:condition="here/image_mini|nothing">
-            <a href="#"
-               tal:attributes="href string:$here_url/image/image_view_fullscreen"
-               id="parent-fieldname-image">
-               <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage', alt=context.getImageAlt() or ' ')" src="" alt="" />
-            </a>
-        </div>
-
-                <div class="fieldEvent eventTypesClassification"
-             tal:condition="here/eventType">
-                        <label i18n:translate="event_types_classification">Event type:</label>
-                        <div class="listypes" tal:define="event_types here/eventType">
-                                <span tal:repeat="event_type python: event_types[:-1]">
-                                        <span i18n:translate="" tal:content="event_type" />,
-                                </span>
-                                <span i18n:translate="" tal:content="python: event_types[-1]" />
-                        </div>
-        </div>
-
-        <div class="fieldEvent costDetails"
-             tal:condition="here/cost">
-                        <label i18n:translate="event_cost_details">Entrance free:</label>
-                        <div class="strcost" tal:content="here/cost">
-                        Cost
-                        </div>
-        </div>
-
-        <div class="fieldEvent bText"
-                         tal:condition="here/getText"
-                         tal:content="structure here/getText">
-                         Body text
-        </div>
-
-        <div class="fieldEvent listOfReferenceEntities"
-                 tal:define="referenceEntities here/referenceEntities"
-             tal:condition="referenceEntities">
-                        <label i18n:translate="list_of_reference_entities">Reference organization:</label>
-                        <div class="listreferenceentities">
-                                <span tal:content="python: referenceEntities[0]" />
-                                <span tal:repeat="refent python: referenceEntities[1:]">
-                                        &mdash;
-                                        <span tal:content="refent" />
-                        </span>
-                        </div>
-        </div>
+       
 
         <div class="eventDetails vcard">
         <table class="vertical listing"
@@ -209,6 +156,64 @@
             </tbody>
         </table>
         </div>
+
+ <p class="documentDescription">
+            <metal:field use-macro="python:here.widget('description', mode='view')">
+            Description
+            </metal:field>
+        </p>
+                
+        <div tal:replace="structure provider:plone.abovecontentbody" />
+
+        <div class="fieldEvent eventImageContainer"
+             tal:condition="here/image_mini|nothing">
+            <a href="#"
+               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               id="parent-fieldname-image">
+               <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage', alt=context.getImageAlt() or ' ')" src="" alt="" />
+            </a>
+        </div>
+
+                <div class="fieldEvent eventTypesClassification"
+             tal:condition="here/eventType">
+                        <label i18n:translate="event_types_classification">Event type:</label>
+                        <div class="listypes" tal:define="event_types here/eventType">
+                                <span tal:repeat="event_type python: event_types[:-1]">
+                                        <span i18n:translate="" tal:content="event_type" />,
+                                </span>
+                                <span i18n:translate="" tal:content="python: event_types[-1]" />
+                        </div>
+        </div>
+
+        <div class="fieldEvent costDetails"
+             tal:condition="here/cost">
+                        <label i18n:translate="event_cost_details">Entrance free:</label>
+                        <div class="strcost" tal:content="here/cost">
+                        Cost
+                        </div>
+        </div>
+
+        <div class="fieldEvent bText"
+                         tal:condition="here/getText"
+                         tal:content="structure here/getText">
+                         Body text
+        </div>
+
+        <div class="fieldEvent listOfReferenceEntities"
+                 tal:define="referenceEntities here/referenceEntities"
+             tal:condition="referenceEntities">
+                        <label i18n:translate="list_of_reference_entities">Reference organization:</label>
+                        <div class="listreferenceentities">
+                                <span tal:content="python: referenceEntities[0]" />
+                                <span tal:repeat="refent python: referenceEntities[1:]">
+                                        &mdash;
+                                        <span tal:content="refent" />
+                        </span>
+                        </div>
+        </div>
+
+
+
 
         <!-- div class="fieldEvent eventAnnotations"
 			 tal:content="structure here/getAnnotations">
