@@ -255,7 +255,7 @@ EventSchema['contactName'].widget.visible = {'view': 'invisible', 'edit': 'invis
 
 class MonetEvent(RecurringEvent, ATCTImageTransform):
     """Description of the Example Type"""
-    implements(IMonetEvent,IMonetCalendar)
+    implements(IMonetEvent, IMonetCalendar)
 
     meta_type = "ATEvent"
     schema = EventSchema
