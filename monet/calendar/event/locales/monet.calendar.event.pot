@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2010-09-15 15:11+0000\n"
+"POT-Creation-Date: 2011-01-17 08:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -101,52 +101,52 @@ msgid "Trade fairs, expositions and markets"
 msgstr ""
 
 #. Default: "Entrance free:"
-#: ./browser/event_view.pt:188
+#: ./browser/event_view.pt:190
 msgid "event_cost_details"
 msgstr ""
 
 #. Default: "For details"
-#: ./browser/event_view.pt:88
+#: ./browser/event_view.pt:82
 msgid "event_details"
 msgstr ""
 
 #. Default: "Phone:"
-#: ./browser/event_view.pt:92
+#: ./browser/event_view.pt:86
 msgid "event_ph"
 msgstr ""
 
 #. Default: "Hours"
-#: ./browser/event_view.pt:79
+#: ./browser/event_view.pt:73
 msgid "event_time"
 msgstr ""
 
 #. Default: "Event type:"
-#: ./browser/event_view.pt:177
+#: ./browser/event_view.pt:179
 msgid "event_types_classification"
 msgstr ""
 
 #. Default: "From"
-#: ./browser/event_view.pt:48
+#: ./browser/event_view.pt:42
 msgid "event_when_from"
 msgstr ""
 
 #. Default: "To"
-#: ./browser/event_view.pt:57
+#: ./browser/event_view.pt:51
 msgid "event_when_to"
 msgstr ""
 
 #. Default: "Where"
-#: ./browser/event_view.pt:68
+#: ./browser/event_view.pt:62
 msgid "event_where"
 msgstr ""
 
 #. Default: "Add event to calendar"
-#: ./browser/event_view.pt:146
+#: ./browser/event_view.pt:140
 msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Attachments"
-#: ./browser/event_view.pt:111
+#: ./browser/event_view.pt:105
 msgid "heading_attachments"
 msgstr ""
 
@@ -186,12 +186,12 @@ msgid "help_time"
 msgstr ""
 
 #. Default: "iCal"
-#: ./browser/event_view.pt:159
+#: ./browser/event_view.pt:153
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: ./browser/event_view.pt:153
+#: ./browser/event_view.pt:147
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -286,22 +286,22 @@ msgid "label_zipcode"
 msgstr ""
 
 #. Default: "Reference organization:"
-#: ./browser/event_view.pt:203
+#: ./browser/event_view.pt:205
 msgid "list_of_reference_entities"
 msgstr ""
 
 #. Default: "Event details"
-#: ./browser/event_view.pt:43
+#: ./browser/event_view.pt:37
 msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ./browser/event_view.pt:154
+#: ./browser/event_view.pt:148
 msgid "title_add_to_ical"
 msgstr ""
 
 #. Default: "Download this event in vCal format"
-#: ./browser/event_view.pt:148
+#: ./browser/event_view.pt:142
 msgid "title_add_to_vcal"
 msgstr ""
 

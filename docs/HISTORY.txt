@@ -6,7 +6,7 @@ Changelog
 
 * some code refactorging [keul]
 * egg clean-up [keul]
-* product has is how browserlayer and also register the monet_recurring_event ones [keul]
+* product has is own browserlayer and also register the monet_recurring_event ones [keul]
 
 0.1.3 (2010-10-19)
 ------------------
