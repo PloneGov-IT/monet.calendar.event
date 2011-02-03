@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.1.4'
+version = '0.2.0dev'
 
 setup(name='monet.calendar.event',
       version=version,
