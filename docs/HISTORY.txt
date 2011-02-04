@@ -4,7 +4,7 @@ Changelog
 0.2.0 (Unreleased)
 ------------------
 
-* Plone 4 compatibility
+* Plone 4 compatibility [keul]
 * some code refactorging [keul]
 * egg clean-up [keul]
 * product has is own browserlayer and also register the monet.recurring_event ones [keul]

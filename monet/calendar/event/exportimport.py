@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from Products.CMFCore.utils import getToolByName
 
 # Properties are defined here, because if they are defined in propertiestool.xml,
