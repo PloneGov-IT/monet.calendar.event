@@ -9,6 +9,21 @@ _PROPERTIES = [
     dict(name='special_event_types', type_='lines', value=()),
     ]
 
+INDEXES_TO_ADD = (
+                  ('getEventType','KeywordIndex',{'indexed_attrs': 'getEventType', }),
+                  )
+
+def _addKeysToCatalog(portal):
+    portal_catalog = portal.portal_catalog
+
+    indexes = portal_catalog.indexes()
+    for idx in INDEXES_TO_ADD:
+        if idx[0] in indexes:
+            print "Found the '%s' index in the catalog, nothing changed." % idx[0]
+        else:
+            portal_catalog.addIndex(name=idx[0], type=idx[1], extra=idx[2])
+            print "Added '%s' (%s) to the catalog." % (idx[0], idx[1])
+
 def import_various(context):
     if context.readDataFile('monet.calendar.event-various.txt') is None:
         return
@@ -20,3 +35,5 @@ def import_various(context):
     for prop in _PROPERTIES:
         if not props.hasProperty(prop['name']):
             props.manage_addProperty(prop['name'], prop['value'], prop['type_'])
+    
+    _addKeysToCatalog(site)
