@@ -24,6 +24,7 @@ setup(name='monet.calendar.event',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'monet.recurring_event',
           'rt.calendarinandout',
       ],
       entry_points="""
