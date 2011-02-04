@@ -140,13 +140,13 @@
                     <th i18n:translate="heading_add_to_calendar">Add event to calendar</th>
                     <td>
                         <a href="#"
-                           tal:attributes="href string:$here_url/vcs_view"
+                           tal:attributes="href string:${context/absolute_url}/vcs_view"
                            title="Download this event in vCal format"
                            i18n:attributes="title title_add_to_vcal;">
                             <img tal:replace="structure here/icon_export_vcal.png" src="" alt="" />
                             <span i18n:translate="label_add_to_vcal">vCal</span></a><br />
                         <a href="#"
-                           tal:attributes="href string:$here_url/ics_view"
+                           tal:attributes="href string:${context/absolute_url}/ics_view"
                            title="Download this event in iCal format"
                            i18n:attributes="title title_add_to_ical;">
                             <img tal:replace="structure here/icon_export_ical.png" src="" alt="" />
@@ -168,7 +168,7 @@
         <div class="fieldEvent eventImageContainer"
              tal:condition="here/image_mini|nothing">
             <a href="#"
-               tal:attributes="href string:$here_url/image/image_view_fullscreen"
+               tal:attributes="href string:${context/absolute_url}/image/image_view_fullscreen"
                id="parent-fieldname-image">
                <img tal:replace="structure python: here.tag(scale='mini', css_class='eventImage', alt=context.getImageAlt() or ' ')" src="" alt="" />
             </a>
