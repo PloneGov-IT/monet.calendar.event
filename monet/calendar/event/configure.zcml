@@ -21,7 +21,7 @@
       name="default"
       title="Monet Calendar Event"
       directory="profiles/default"
-      description=""
+      description="A replacement for the event content, with more field and week recurring and exceptions"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
       

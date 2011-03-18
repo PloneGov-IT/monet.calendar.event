@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.2.0'
+version = '0.3.0'
 
 setup(name='monet.calendar.event',
       version=version,
-      description="An advanced Event type for Plone with additional date fields and features for appointments",
+      description="An advanced Event type for Plone with additional date fields and features like days exceptions and week days",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -16,7 +16,7 @@ setup(name='monet.calendar.event',
         ],
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.net',
-      url='http://plone.comune.modena.it/svn/monet/monet.calendar.event',
+#      url='http://plone.comune.modena.it/svn/monet/monet.calendar.event',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['monet', 'monet.calendar'],
