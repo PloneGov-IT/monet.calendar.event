@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from Products.CMFCore.utils import getToolByName
-
+from Products.CMFPlone.utils import getFSVersionTuple
 # Properties are defined here, because if they are defined in propertiestool.xml,
 # all properties are re-set the their initial state if you reinstall product
 # in the quickinstaller.
@@ -25,8 +25,19 @@ def _addKeysToCatalog(portal):
         else:
             portal_catalog.addIndex(name=idx[0], type=idx[1], extra=idx[2])
             print "Added '%s' (%s) to the catalog." % (idx[0], idx[1])
-
-def import_various(context):
+            
+def unregisterIcon(portal):
+    """Remove icon expression from Event type"""
+    log = portal.plone_log
+    portal_types = portal.portal_types
+    t = portal_types.getTypeInfo("Event")
+    #t.icon_expr = ''
+    if t:
+        t.content_icon = ''
+        t.manage_changeProperties(content_icon='', icon_expr='')
+        log("Removing icon type info")
+        
+def extensions(context):
     if context.readDataFile('monet.calendar.event-various.txt') is None:
         return
     # Define portal properties
@@ -39,3 +50,5 @@ def import_various(context):
             props.manage_addProperty(prop['name'], prop['value'], prop['type_'])
     
     _addKeysToCatalog(site)
+    if getFSVersionTuple()[0]>=4:
+        unregisterIcon(site)

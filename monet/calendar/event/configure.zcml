@@ -35,9 +35,10 @@
   
   <genericsetup:importStep
 	  name="monet.calendar.event"
-	  title="Monet Calendar Event configuration"
-	  description="Configures Monet Calendar Event properties"
-	  handler="monet.calendar.event.exportimport.import_various">
+	  title="Monet Calendar Event extensions"
+	  description="Configures Monet Calendar Event extensions"
+	  handler="monet.calendar.event.setuphandler.extensions">
+	  	<depends name="types" />
 	  	<depends name="propertiestool" />
   </genericsetup:importStep>
 
