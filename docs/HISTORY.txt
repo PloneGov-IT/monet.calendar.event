@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.3.2-turismo (2011-07-07)
+------------------
+
+* aggiunte tradusione per le categorie turismo
+
 0.3.1 (2011-04-28)
 ------------------
 
