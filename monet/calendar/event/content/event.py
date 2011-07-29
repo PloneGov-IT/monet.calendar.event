@@ -58,7 +58,6 @@ EventSchema = RecurringEventSchema.copy() + Schema((
     TextField('time',
               required=True,
               searchable=False,
-              languageIndependent=True,
               storage = AnnotationStorage(migrate=True),
               validators = ('isTidyHtmlWithCleanup',),
               default_output_type = 'text/x-html-safe',
