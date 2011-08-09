@@ -26,79 +26,13 @@ msgstr "pomeriggio"
 msgid "All day long"
 msgstr "tutto il giorno"
 
-msgid "Books"
-msgstr "Libri"
-
-msgid "Children's events"
-msgstr "Iniziative per bambini"
-
-msgid "Cinema and videos"
-msgstr "Cinema, Video e Proiezioni"
-
-msgid "Circuses and street performances"
-msgstr "Circo, Spettacoli di strada e Luna Park"
-
-msgid "Concerts"
-msgstr "Concerti"
-
-msgid "Conferences, seminars and workshops"
-msgstr "Conferenze, Seminari, Incontri e Lezioni"
-
-msgid "Conventions and round tables"
-msgstr "Congressi e Convegni"
-
-msgid "Dance"
-msgstr "Danza"
-
 #: ./content/event.py:281
 msgid "Evening"
 msgstr "sera"
 
-msgid "Exhibitions"
-msgstr "Mostre"
-
-msgid "Festivals"
-msgstr "Festival, rassegna"
-
-msgid "Folklore and festivals"
-msgstr "Sagre e Feste"
-
-msgid "Guided tours"
-msgstr "Visite guidate"
-
-msgid "Markets"
-msgstr "Mercati"
-
-msgid "Memorial days"
-msgstr "Anniversari e Commemorazioni"
-
 #: ./content/event.py:279
 msgid "Morning"
 msgstr "mattino"
-
-msgid "Music"
-msgstr "Musica"
-
-msgid "Openings, unveilings"
-msgstr "Inaugurazioni"
-
-msgid "Other events"
-msgstr "Altri eventi"
-
-msgid "Performances"
-msgstr "Spettacoli"
-
-msgid "Prizes and competitions"
-msgstr "Premiazioni di concorsi"
-
-msgid "Sports and games"
-msgstr "Manifestazioni sportive"
-
-msgid "Theatre"
-msgstr "Teatro"
-
-msgid "Trade fairs, expositions and markets"
-msgstr "Fiere, Esposizioni e Mostre Mercato"
 
 #. Default: "Entrance free:"
 #: ./browser/event_view.pt:202
