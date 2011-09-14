@@ -33,10 +33,10 @@ msgid "Children's events"
 msgstr "Iniziative per bambini"
 
 msgid "Cinema and videos"
-msgstr "Cinema, Video e Proiezioni"
+msgstr "Cinema, Video"
 
 msgid "Circuses and street performances"
-msgstr "Circo, Spettacoli di strada e Luna Park"
+msgstr "Circo, Spettacoli di strada"
 
 msgid "Concerts"
 msgstr "Concerti"
@@ -61,7 +61,7 @@ msgid "Festivals"
 msgstr "Festival, rassegna"
 
 msgid "Folklore and festivals"
-msgstr "Sagre e Feste"
+msgstr "Sagre, Feste"
 
 msgid "Guided tours"
 msgstr "Visite guidate"
@@ -79,7 +79,7 @@ msgid "Conferences, conventions and seminars"
 msgstr "Congressi, convegni, conferenze, seminari"
 
 msgid "Street and exhibition markets"
-msgstr "Circo, spettacoli di strada"
+msgstr "Mercatini, mostre mercato"
 
 msgid "Multiple events"
 msgstr "Eventi multipli"
@@ -107,10 +107,10 @@ msgid "Performances"
 msgstr "Spettacoli"
 
 msgid "Prizes and competitions"
-msgstr "Premiazioni di concorsi"
+msgstr "Premi, concorsi"
 
 msgid "Sports and games"
-msgstr "Manifestazioni sportive"
+msgstr "Sport, giochi"
 
 msgid "Theatre"
 msgstr "Teatro"
