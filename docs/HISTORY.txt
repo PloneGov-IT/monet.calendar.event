@@ -1,6 +1,19 @@
 Changelog
 =========
 
+0.4.0 (Unreleased)
+------------------
+
+* removed deprecated compatibility code for Plone 3.2 [keul]
+* removed dependency from `monet.recurring_event`__,
+  importing it's code in the ``base_recurring_event`` module [keul]
+* added a new ``Including`` field, for adding specific days
+  where the event is held, ignoring all other filters [keul]
+* added a new ``EventDuration`` KeywordIndex that index all days
+  where the event occurs [keul]
+
+__ http://pypi.python.org/pypi/monet.recurring_event
+
 0.3.3 (2011-08-09)
 ------------------
 

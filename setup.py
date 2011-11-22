@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.3.3'
+version = '0.4.0'
 
 setup(name='monet.calendar.event',
       version=version,
@@ -15,8 +15,8 @@ setup(name='monet.calendar.event',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
       author='RedTurtle Technology',
-      author_email='sviluppoplone@redturtle.net',
-#      url='http://plone.comune.modena.it/svn/monet/monet.calendar.event',
+      author_email='sviluppoplone@redturtle.it',
+      url='http://plone.org/products/monet.calendar.star',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['monet', 'monet.calendar'],
@@ -24,8 +24,7 @@ setup(name='monet.calendar.event',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'monet.recurring_event',
-          'rt.calendarinandout',
+          'rt.calendarinandout'
       ],
       entry_points="""
       # -*- Entry points: -*-

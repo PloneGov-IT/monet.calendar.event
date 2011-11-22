@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+	xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="monet.calendar.event">
 
   <include package="plone.app.contentmenu" />
@@ -16,6 +17,24 @@
   	name="monet.calendar.event.stylesheets"
 	directory="stylesheets"
 	/>
-   
+
+  <browser:page
+	for="Products.ATContentTypes.interface.topic.IATTopic"
+	name="vcs_view"
+	class=".calendar.TopicCalendarVCSView"
+	permission="zope2.View"
+	/>
+
+  <configure zcml:condition="installed dateable.chronos">
+  	  <!-- compatibility with p4a -->
+	  <browser:page
+	      name="month.html"
+	      for="dateable.chronos.interfaces.ICalendarEnhanced"
+	      permission="dateable.chronos.ViewContent"
+	      class=".monthrecurringevent.MonthRecurringEventView"
+	      template="monthrecurringevent.pt"
+	      layer="..interfaces.IMonetEventLayer"
+	      />
+  </configure>
 
 </configure>

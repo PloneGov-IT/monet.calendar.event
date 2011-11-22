@@ -68,6 +68,18 @@
 						</ul>
                 	</td>
                 </tr>				
+                <tr tal:condition="context/getIncluding">
+                	<th i18n:translate="event_includings">Including also</th>
+                	<td>
+                		<ul>
+	                		<li class="monetEventDtincluding"
+							      tal:repeat="includingDate context/getIncluding"
+	                			  tal:content="python:here.toLocalizedTime(includingDate, long_format=0)">
+	                			  Including dates
+	                        </li>
+						</ul>
+                	</td>
+                </tr>
                 <tr tal:condition="python: here.getLocation() or here.getAddress()"
                 	tal:define="location here/getLocation|nothing;
                 				address here/getAddress|nothing">

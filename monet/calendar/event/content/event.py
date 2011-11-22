@@ -17,8 +17,8 @@ from monet.calendar.event import eventMessageFactory as _
 from monet.calendar.event.interfaces import IMonetEvent, IMonetCalendar
 from monet.calendar.event.config import PROJECTNAME
 
-from monet.recurring_event.content.event import EventSchema as RecurringEventSchema
-from monet.recurring_event.content.event import RecurringEvent
+from monet.calendar.event.content.base_recurring_event import EventSchema as RecurringEventSchema
+from monet.calendar.event.content.base_recurring_event import RecurringEvent
 
 from Products.CMFCore import permissions
 from Products.CMFCore.utils import getToolByName
@@ -218,12 +218,11 @@ EventSchema['endDate'].widget.label= _(u'label_endDate',default=u'To')
 EventSchema.moveField('startDate', after='imageAlt')
 EventSchema.moveField('endDate', after='startDate')
 
-EventSchema['cadence'].searchable = False
-EventSchema['except'].searchable = False
 EventSchema.moveField('cadence', after='endDate')
 EventSchema.moveField('except', after='cadence')
+EventSchema.moveField('including', after='except')
 
-EventSchema.moveField('slots', after='except')
+EventSchema.moveField('slots', after='including')
 EventSchema.moveField('time', after='slots')
 EventSchema.moveField('cost', after='time')
 

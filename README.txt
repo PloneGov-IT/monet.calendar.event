@@ -45,11 +45,19 @@ additional fields will be available only for future contents.
 Dependencies
 ============
 
-* this product has an historical dependency over `monet.recurring_event`__ product
-* for "Except" days selection, `rt.calendarinandout`__ widget is needed
+For "Except" days selection, `rt.calendarinandout`__ widget is needed
 
-__ http://pypi.python.org/pypi/monet.recurring_event
 __ http://pypi.python.org/pypi/rt.calendarinandout
+
+Plone 3.3 or better is needed.
+
+Migrating from older release
+============================
+
+If you have a Plone site where you used and old version of ``monet.calendar.event`` (older than 0.4)
+you probably need to add to your buildout the historical `monet.recurring_event`__ (0.7 or better.)
+
+__ http://pypi.python.org/pypi/monet.recurring_event/0.7.0
 
 Credits
 =======
@@ -68,6 +76,6 @@ Authors
 
 This product was developed by RedTurtle Technology team.
 
-.. image:: http://www.redturtle.net/redturtle_banner.png
+.. image:: http://www.redturtle.it/redturtle_banner.png
    :alt: RedTurtle Technology Site
-   :target: http://www.redturtle.net/
+   :target: http://www.redturtle.it/

@@ -9,7 +9,6 @@
   
   <i18n:registerTranslations directory="locales" />
 
-  <include package="monet.recurring_event" />
   <include package="rt.calendarinandout" />
   
   <!-- Include the sub-packages that use their own configure.zcml files. -->
