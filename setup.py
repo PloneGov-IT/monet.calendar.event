@@ -10,7 +10,10 @@ setup(name='monet.calendar.event',
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        'Framework :: Plone',
+        "Framework :: Plone",
+        "Framework :: Plone :: 3.3",
+        "Framework :: Plone :: 4.0",
+        "Framework :: Plone :: 4.1",
         "Programming Language :: Python",
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
