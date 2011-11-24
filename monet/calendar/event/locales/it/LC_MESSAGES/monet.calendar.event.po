@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: monet.calendar.event\n"
-"POT-Creation-Date: 2011-11-22 16:06+0000\n"
+"POT-Creation-Date: 2011-11-24 11:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Federica D'Elia <federica.delia@redturtle.it>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -243,7 +243,7 @@ msgstr "E-mail"
 msgid "label_contactPhone"
 msgstr "Telefono"
 
-#. Default: "Entrance free"
+#. Default: "Entrance fee"
 #: ../content/event.py:75
 msgid "label_cost"
 msgstr "Costo"

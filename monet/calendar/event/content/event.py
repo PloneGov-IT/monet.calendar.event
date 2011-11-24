@@ -72,7 +72,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                 required=False,
                 searchable=False,
                 widget=TextAreaWidget(
-                        label = _(u'label_cost', default=u'Entrance free'),
+                        label = _(u'label_cost', default=u'Entrance fee'),
                         description = _(u'help_cost', default=u'Indicate whether the event is free or not (in this case indicate the cost and any reductions/discounts).'),
                         rows=3,
                         )),

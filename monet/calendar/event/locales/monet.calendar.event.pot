@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-22 16:06+0000\n"
+"POT-Creation-Date: 2011-11-24 11:56+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -240,7 +240,7 @@ msgstr ""
 msgid "label_contactPhone"
 msgstr ""
 
-#. Default: "Entrance free"
+#. Default: "Entrance fee"
 #: ../content/event.py:75
 msgid "label_cost"
 msgstr ""
