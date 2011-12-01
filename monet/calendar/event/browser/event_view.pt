@@ -129,7 +129,9 @@
 					<th i18n:translate="heading_attachments">Attachments</th>
 					<td>
 						<div class="relatedItems"
-						    tal:define="getInfoFor python:wtool.getInfoFor;">
+						    tal:define="wtool context/portal_workflow;
+							            normalizeString nocall:context/@@plone/normalizeString;
+							            getInfoFor python:wtool.getInfoFor;">
 						        <tal:relatedItems tal:define="related python:here.computeRelatedItems();">
 						            <tal:block tal:condition="python:related">
 					                    <ul class="visualNoMarker">
@@ -248,7 +250,7 @@
         
         <span class="visualClear"><!-- --></span>
 
-        <div tal:replace="structure provider:plone.belowcontentbody" />
+        <!--div tal:replace="structure provider:plone.belowcontentbody" /-->
 
     </tal:main-macro>
 </div>

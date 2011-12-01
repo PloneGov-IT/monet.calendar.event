@@ -344,6 +344,8 @@ class RecurringEvent(ATEvent):
         """
         if value is None:
             return
+        if not isinstance(value,list):
+            value = [value,]
         f = self.getField('except')
         f.set(self, sorted(set(value)), **kw) # set is ok
         

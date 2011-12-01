@@ -11,6 +11,9 @@ Changelog
   where the event is held, ignoring all other filters [keul]
 * added a new ``EventDuration`` KeywordIndex that index all days
   where the event occurs [keul]
+* fixed the setter for the except field, must be always a list [mirco]
+* fixed the Plone 4 compatibility [mirco]
+* hide the viewlet plone.belowcontentbody into the event view template [mirco]
 
 __ http://pypi.python.org/pypi/monet.recurring_event
 
