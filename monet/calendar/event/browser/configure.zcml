@@ -25,7 +25,7 @@
 	permission="zope2.View"
 	/>
 
-  <configure zcml:condition="installed dateable.chronos">
+  <configure zcml:condition="installed p4a.calendar">
   	  <!-- compatibility with p4a -->
 	  <browser:page
 	      name="month.html"
