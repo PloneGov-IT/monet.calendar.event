@@ -25,16 +25,4 @@
 	permission="zope2.View"
 	/>
 
-  <configure zcml:condition="installed p4a.calendar">
-  	  <!-- compatibility with p4a -->
-	  <browser:page
-	      name="month.html"
-	      for="dateable.chronos.interfaces.ICalendarEnhanced"
-	      permission="dateable.chronos.ViewContent"
-	      class=".monthrecurringevent.MonthRecurringEventView"
-	      template="monthrecurringevent.pt"
-	      layer="..interfaces.IMonetEventLayer"
-	      />
-  </configure>
-
 </configure>
