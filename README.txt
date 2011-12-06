@@ -12,7 +12,8 @@ system.
 Apart new content data, and an image field, you can now choose:
 
 * `Cadence` - weekdays where the event really happen
-* `Except` - specific days where the event is not available
+* `Except` - specific days where the event *is not* available
+* `Including` - specific days where the event *is* available (apart from other filters)
 * ...other
 
 .. figure:: http://keul.it/images/plone/monet.calendar.event-0.3.0-01.png
@@ -62,13 +63,25 @@ __ http://pypi.python.org/pypi/monet.recurring_event/0.7.0
 Credits
 =======
   
-Developed with the support of `Rete Civica Mo-Net - Comune di Modena`__;
-Rete Civica Mo-Net supports the `PloneGov initiative`__.
+Developed with the support of:
 
-.. image:: http://www.comune.modena.it/grafica/logoComune/logoComunexweb.jpg 
-   :alt: Comune di Modena - logo
+* `Rete Civica Mo-Net - Comune di Modena`__
+
+  .. image:: http://www.comune.modena.it/grafica/logoComune/logoComunexweb.jpg 
+     :alt: Comune di Modena - logo
+
+* `Provincia di Ferrara`__
+
+  .. image:: http://people.provincia.fe.it/people/img/logo_provincia.png
+     :alt: Provincia di Ferrara - logo
+
+* `Regione Emilia Romagna`__
+
+All of them supports the `PloneGov initiative`__.
 
 __ http://www.comune.modena.it/
+__ http://www.provincia.fe.it/
+__ http://www.regione.emilia-romagna.it/
 __ http://www.plonegov.it/
 
 Authors
