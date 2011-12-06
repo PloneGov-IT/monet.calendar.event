@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.0 (Unreleased)
+0.4.0 (2011-12-06)
 ------------------
 
 * removed deprecated compatibility code for Plone 3.2 [keul]
