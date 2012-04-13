@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.4.2 (Unreleased)
+0.4.2 (2012-04-13)
 ------------------
 
 * supporting `plone.app.imaging`__ when present [keul]
