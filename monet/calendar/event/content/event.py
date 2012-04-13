@@ -1,7 +1,7 @@
 """Definition of the Event content type
 """
 
-from zope.interface import implements #, directlyProvides
+from zope.interface import implements
 
 try:
     # turn off
@@ -210,6 +210,13 @@ imageField.languageIndependent= True
 EventSchema.addField(imageField)
 EventSchema.moveField('image', after='eventType')
 EventSchema.moveField('imageAlt', after='image')
+
+try:
+    import plone.app.imaging
+    # required to make plone.app.imaging works
+    EventSchema['image'].sizes = None
+except ImportError:
+    pass
 
 EventSchema['startDate'].widget.show_hm = False
 EventSchema['startDate'].widget.label= _(u'label_startDate',default=u'From')

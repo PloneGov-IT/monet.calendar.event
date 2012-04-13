@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.4.2 (Unreleased)
+------------------
+
+* supporting `plone.app.imaging`__ when present [keul]
+
+__ http://pypi.python.org/pypi/plone.app.imaging
+
 0.4.1 (2012-01-11)
 ------------------
 
