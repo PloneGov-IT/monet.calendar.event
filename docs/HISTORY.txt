@@ -1,6 +1,11 @@
 Changelog
 =========
 
+0.4.3 (Unreleased)
+------------------
+
+* removed the ATFieldProperty usage for "title" field [keul]
+
 0.4.2 (2012-04-13)
 ------------------
 

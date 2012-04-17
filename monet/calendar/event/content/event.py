@@ -265,7 +265,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     meta_type = "ATEvent"
     schema = EventSchema
 
-    title = ATFieldProperty('title')
+    #title = ATFieldProperty('title')
     #description = ATFieldProperty('description')
     
     security = ClassSecurityInfo()
