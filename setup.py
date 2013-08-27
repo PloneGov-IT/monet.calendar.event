@@ -5,8 +5,9 @@ version = '0.4.3'
 
 setup(name='monet.calendar.event',
       version=version,
-      description="An advanced Event type for Plone with additional date fields and features like days exceptions and week days",
-      long_description=open("README.txt").read() + "\n" +
+      description="An advanced Event type for Plone with additional date fields and features "
+                  "like days exceptions and week days",
+      long_description=open("README.rst").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
