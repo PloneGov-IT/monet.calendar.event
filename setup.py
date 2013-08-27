@@ -31,7 +31,7 @@ setup(name='monet.calendar.event',
           'setuptools',
           'rt.calendarinandout',
           'archetypes.schemaextender',
-          'plone.aoo.blob',
+          'plone.app.blob',
       ],
       entry_points="""
       # -*- Entry points: -*-
