@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '0.4.3'
+version = '0.5.0.dev0'
 
 setup(name='monet.calendar.event',
       version=version,
@@ -15,6 +15,7 @@ setup(name='monet.calendar.event',
         "Framework :: Plone :: 3.3",
         "Framework :: Plone :: 4.0",
         "Framework :: Plone :: 4.1",
+        "Framework :: Plone :: 4.2",
         "Programming Language :: Python",
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
@@ -28,7 +29,9 @@ setup(name='monet.calendar.event',
       zip_safe=False,
       install_requires=[
           'setuptools',
-          'rt.calendarinandout'
+          'rt.calendarinandout',
+          'archetypes.schemaextender',
+          'plone.aoo.blob',
       ],
       entry_points="""
       # -*- Entry points: -*-

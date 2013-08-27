@@ -25,4 +25,11 @@
 	permission="zope2.View"
 	/>
 
+  <browser:page
+      zcml:condition="installed Products.contentmigration"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      name="monetevent-blob-migration"
+      class=".migrateblobs.MigrateBlobs"
+      permission="cmf.ManagePortal" />
+
 </configure>

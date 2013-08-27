@@ -12,7 +12,7 @@ _PROPERTIES = [
     ]
 
 INDEXES_TO_ADD = (
-                  ('getEventType','KeywordIndex',{'indexed_attrs': 'getEventType', }),
+                  ('getEventType', 'KeywordIndex', {'indexed_attrs': 'getEventType', }),
                   )
 
 def _addKeysToCatalog(portal):
