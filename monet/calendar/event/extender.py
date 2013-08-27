@@ -42,7 +42,7 @@ class ImageExtender(object):
             widget = ImageWidget(
                                  label= _(u'label_imagedevent_image', default=u'Image'),
                                  description = _(u'help_imagedevent_image',
-                                                 default=u"Will be shown views that render content's "
+                                                 default=u"Will be shown in views that render content's "
                                                          u"images and in the event view itself"),
                                  show_content_type=False,
             ),

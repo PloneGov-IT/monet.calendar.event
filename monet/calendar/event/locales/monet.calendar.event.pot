@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2011-11-24 11:56+0000\n"
+"POT-Creation-Date: 2013-08-27 13:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,19 +17,27 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ../content/event.py:276
+#: ../content/event.py:283
 msgid "-- Unspecified --"
 msgstr ""
 
-#: ../content/event.py:278
+#: ../content/event.py:285
 msgid "Afternoon"
 msgstr ""
 
-#: ../content/event.py:280
+#: ../content/event.py:287
 msgid "All day long"
 msgstr ""
 
-#: ../content/event.py:279
+#: ../browser/migrateblobs.py:20
+msgid "Blobs Migration"
+msgstr ""
+
+#: ../browser/migrateblobs.py:29
+msgid "Cancel"
+msgstr ""
+
+#: ../content/event.py:286
 msgid "Evening"
 msgstr ""
 
@@ -37,11 +45,19 @@ msgstr ""
 msgid "Friday"
 msgstr ""
 
+#: ../browser/migrateblobs.py:21
+msgid "Migrate all events images, making them use plone.app.blob"
+msgstr ""
+
+#: ../browser/migrateblobs.py:23
+msgid "Migrate events images"
+msgstr ""
+
 #: ../content/base_recurring_event.py:111
 msgid "Monday"
 msgstr ""
 
-#: ../content/event.py:277
+#: ../content/event.py:284
 msgid "Morning"
 msgstr ""
 
@@ -66,12 +82,12 @@ msgid "Wednesday"
 msgstr ""
 
 #. Default: "The end date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:410
+#: ../content/base_recurring_event.py:412
 msgid "cadence_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:406
+#: ../content/base_recurring_event.py:408
 msgid "cadence_bound_except_start"
 msgstr ""
 
@@ -81,7 +97,7 @@ msgid "description_cadence"
 msgstr ""
 
 #. Default: "Enter the dates in the form yyyy-mm-dd"
-#: ../content/base_recurring_event.py:363
+#: ../content/base_recurring_event.py:365
 msgid "description_except"
 msgstr ""
 
@@ -96,7 +112,7 @@ msgid "description_field_including"
 msgstr ""
 
 #. Default: "Entrance free:"
-#: ../browser/event_view.pt:214
+#: ../browser/event_view.pt:216
 msgid "event_cost_details"
 msgstr ""
 
@@ -126,7 +142,7 @@ msgid "event_time"
 msgstr ""
 
 #. Default: "Event type:"
-#: ../browser/event_view.pt:203
+#: ../browser/event_view.pt:205
 msgid "event_types_classification"
 msgstr ""
 
@@ -146,17 +162,17 @@ msgid "event_where"
 msgstr ""
 
 #. Default: "The end date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:424
+#: ../content/base_recurring_event.py:426
 msgid "except_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:420
+#: ../content/base_recurring_event.py:422
 msgid "except_bound_except_start"
 msgstr ""
 
 #. Default: "Add event to calendar"
-#: ../browser/event_view.pt:164
+#: ../browser/event_view.pt:166
 msgid "heading_add_to_calendar"
 msgstr ""
 
@@ -185,13 +201,18 @@ msgstr ""
 msgid "help_imagealt"
 msgstr ""
 
+#. Default: "Will be shown in views that render content's images and in the event view itself"
+#: ../extender.py:44
+msgid "help_imagedevent_image"
+msgstr ""
+
 #. Default: "Select the time of day on which the event takes place."
 #: ../content/event.py:55
 msgid "help_slots"
 msgstr ""
 
 #. Default: "Enter all other information about the event."
-#: ../content/event.py:243
+#: ../content/event.py:250
 msgid "help_text"
 msgstr ""
 
@@ -201,17 +222,17 @@ msgid "help_time"
 msgstr ""
 
 #. Default: "One or more dates are not in the previous range [Start event - End event]"
-#: ../content/base_recurring_event.py:387
+#: ../content/base_recurring_event.py:389
 msgid "interval_except"
 msgstr ""
 
 #. Default: "iCal"
-#: ../browser/event_view.pt:177
+#: ../browser/event_view.pt:179
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: ../browser/event_view.pt:171
+#: ../browser/event_view.pt:173
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -251,7 +272,7 @@ msgid "label_country"
 msgstr ""
 
 #. Default: "To"
-#: ../content/event.py:217
+#: ../content/event.py:224
 msgid "label_endDate"
 msgstr ""
 
@@ -280,6 +301,11 @@ msgstr ""
 msgid "label_imagealt"
 msgstr ""
 
+#. Default: "Image"
+#: ../extender.py:43
+msgid "label_imagedevent_image"
+msgstr ""
+
 #. Default: "Including"
 #: ../content/base_recurring_event.py:68
 msgid "label_including"
@@ -301,12 +327,12 @@ msgid "label_slots"
 msgstr ""
 
 #. Default: "From"
-#: ../content/event.py:215
+#: ../content/event.py:222
 msgid "label_startDate"
 msgstr ""
 
 #. Default: "Event body text"
-#: ../content/event.py:242
+#: ../content/event.py:249
 msgid "label_text"
 msgstr ""
 
@@ -321,7 +347,7 @@ msgid "label_zipcode"
 msgstr ""
 
 #. Default: "Reference organization:"
-#: ../browser/event_view.pt:229
+#: ../browser/event_view.pt:231
 msgid "list_of_reference_entities"
 msgstr ""
 
@@ -331,12 +357,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ../browser/event_view.pt:172
+#: ../browser/event_view.pt:174
 msgid "title_add_to_ical"
 msgstr ""
 
 #. Default: "Download this event in vCal format"
-#: ../browser/event_view.pt:166
+#: ../browser/event_view.pt:168
 msgid "title_add_to_vcal"
 msgstr ""
 
