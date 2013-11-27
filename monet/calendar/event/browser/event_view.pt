@@ -38,16 +38,16 @@
                summary="Event details" i18n:attributes="summary summary_event_details;">
 
             <tbody>
-            	<tr>
+            	<tr tal:condition="context/start">
                 	<th i18n:translate="event_when_from">From</th>
                 	<td>
                 		<span id="parent-fieldname-startDate" class="monetEventDtstart"
-                              tal:content="python:here.toLocalizedTime(here.start(),long_format=0)">
+                              tal:content="python:here.toLocalizedTime(here.start(), long_format=0)">
                               Start Date Time
 						</span>
                 	</td>
                 </tr>
-                <tr>
+                <tr tal:condition="context/end">
                 	<th i18n:translate="event_when_to">To</th>
                 	<td>
                 		<span id="parent-fieldname-endDate" class="monetEventDtend"
@@ -67,7 +67,7 @@
 	                        </li>
 						</ul>
                 	</td>
-                </tr>				
+                </tr>
                 <tr tal:condition="context/getIncluding">
                 	<th i18n:translate="event_includings">Including also</th>
                 	<td>
@@ -125,43 +125,6 @@
                			</tal:url>
                     </td>
                 </tr>
-				<tr tal:condition="python: here.computeRelatedItems()">
-					<th i18n:translate="heading_attachments">Attachments</th>
-					<td>
-						<div class="relatedItems"
-						    tal:define="wtool context/portal_workflow;
-							            normalizeString nocall:context/@@plone/normalizeString;
-							            getInfoFor python:wtool.getInfoFor;">
-						        <tal:relatedItems tal:define="related python:here.computeRelatedItems();">
-						            <tal:block tal:condition="python:related">
-					                    <ul class="visualNoMarker">
-					                    <tal:related tal:repeat="item related"
-					                                 tal:define="use_view_action site_properties/typesUseViewActionInListings|python:();">
-					                        <li tal:define="
-					                                desc                item/Description;
-					                                item_type           item/portal_type;
-					                                item_icon           python:plone_view.getIcon(item);
-					                                item_type           item/portal_type;
-					                                item_type_class     python:'contenttype-' + normalizeString(item_type);
-					                                item_url            item/absolute_url;
-					                                item_url            python:item_type in use_view_action and item_url+'/view' or item_url">
-					                            <span tal:attributes="class item_type_class">
-					                                <img tal:replace="structure item_icon/html_tag" />
-					                                <a href="" class=""
-					                                   tal:attributes="href  item_url;
-					                                                   title item/Description;"
-					                                   tal:content="item/pretty_title_or_id">
-					                                    Related Item
-					                                </a>
-					                            </span>
-					                        </li>
-					                    </tal:related>
-					                    </ul>
-						            </tal:block>
-						        </tal:relatedItems>
-						</div>
-					</td>
-				</tr>
                 <tr>
                     <th i18n:translate="heading_add_to_calendar">Add event to calendar</th>
                     <td>

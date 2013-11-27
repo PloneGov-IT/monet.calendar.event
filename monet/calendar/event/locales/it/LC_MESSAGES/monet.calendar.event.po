@@ -152,12 +152,12 @@ msgstr "Tipo di evento:"
 #. Default: "From"
 #: ../browser/event_view.pt:42
 msgid "event_when_from"
-msgstr "Da"
+msgstr "Dal"
 
 #. Default: "To"
 #: ../browser/event_view.pt:51
 msgid "event_when_to"
-msgstr "A"
+msgstr "Al"
 
 #. Default: "Where"
 #: ../browser/event_view.pt:86

@@ -28,7 +28,7 @@ from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.ATContentTypes.permission import ChangeEvents
 from Products.ATContentTypes.configuration import zconf
 from AccessControl import ClassSecurityInfo
-from Products.CMFCore.permissions import View
+from Products.CMFCore import permissions
 
 EventSchema = RecurringEventSchema.copy() + Schema((
 
@@ -195,7 +195,6 @@ EventSchema = RecurringEventSchema.copy() + Schema((
 
 EventSchema['title'].storage = AnnotationStorage()
 EventSchema['description'].storage = AnnotationStorage()
-
 EventSchema['description'].widget.description= _(u'help_description_event',default=u'A short description of the event')
 
 schemata.finalizeATCTSchema(EventSchema, moveDiscussion=False)
@@ -218,10 +217,20 @@ try:
 except ImportError:
     pass
 
+EventSchema['startDate'].required = False
+EventSchema['endDate'].required = False
 EventSchema['startDate'].widget.show_hm = False
-EventSchema['startDate'].widget.label= _(u'label_startDate',default=u'From')
+EventSchema['startDate'].widget.label= _(u'label_startDate', default=u'From')
+EventSchema['startDate'].widget.description= _(u'help_startDate',
+                                               default=u'Start/End dates of the event are commonly required, '
+                                                       u'but you can simply provide single dates using the '
+                                                       u'"Including" field below')
 EventSchema['endDate'].widget.show_hm = False
-EventSchema['endDate'].widget.label= _(u'label_endDate',default=u'To')
+EventSchema['endDate'].widget.label= _(u'label_endDate', default=u'To')
+EventSchema['endDate'].widget.description= _(u'help_startDate',
+                                             default=u'Start/End dates of the event are commonly required, '
+                                                     u'but you can simply provide single dates using the '
+                                                     u'"Including" field below')
 EventSchema.moveField('startDate', after='imageAlt')
 EventSchema.moveField('endDate', after='startDate')
 
@@ -265,9 +274,6 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     meta_type = "ATEvent"
     schema = EventSchema
 
-    #title = ATFieldProperty('title')
-    #description = ATFieldProperty('description')
-    
     security = ClassSecurityInfo()
     
     def getEventTypeVocab(self):
@@ -280,14 +286,14 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     
     def getSlotsVocab(self):
         vocab = DisplayList()
-        vocab.add('',_(u'-- Unspecified --'))
-        vocab.add('morning',_(u'Morning'))
-        vocab.add('afternoon',_(u'Afternoon'))
-        vocab.add('night',_(u'Evening'))
-        vocab.add('allday',_(u'All day long'))
+        vocab.add('', _(u'-- Unspecified --'))
+        vocab.add('morning', _(u'Morning'))
+        vocab.add('afternoon', _(u'Afternoon'))
+        vocab.add('night', _(u'Evening'))
+        vocab.add('allday', _(u'All day long'))
         return vocab
     
-    security.declareProtected(View, 'tag')
+    security.declareProtected(permissions.View, 'tag')
     def tag(self, **kwargs):
         """Generate image tag using the api of the ImageField
         """
@@ -311,5 +317,6 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
                 return image
 
         return base.ATCTContent.__bobo_traverse__(self, REQUEST, name)
+
 
 registerType(MonetEvent, PROJECTNAME)

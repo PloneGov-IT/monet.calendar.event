@@ -13,6 +13,7 @@ _PROPERTIES = [
 
 INDEXES_TO_ADD = (
                   ('getEventType', 'KeywordIndex', {'indexed_attrs': 'getEventType', }),
+                  ('EventDuration', 'KeywordIndex', {'indexed_attrs': 'getISODates',},),
                   )
 
 def _addKeysToCatalog(portal):
