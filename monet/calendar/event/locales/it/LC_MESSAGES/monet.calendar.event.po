@@ -105,7 +105,7 @@ msgstr "Inserisci le date nel formato aaaa-mm-gg"
 #: ../content/base_recurring_event.py:61
 msgid "description_field_except"
 msgstr ""
-"In questo campo puoi impostare i giorni nel quale l'evento non avviene\n"
+"In questo campo puoi impostare i giorni nel quale l'evento non avviene.\n"
 "Inserisci le date nella forma aaaa-mm-gg."
 
 #. Default: "In this field you can set the list of days on which the event is additionally held, even if excluded by other filters.\nEnter dates in the form yyyy-mm-dd.\nThis field became required if you don't provide any From/To dates of the event."
