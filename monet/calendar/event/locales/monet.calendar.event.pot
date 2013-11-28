@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-08-27 13:39+0000\n"
+"POT-Creation-Date: 2013-11-28 14:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,15 +17,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: monet.calendar.event\n"
 
-#: ../content/event.py:283
+#: ../content/event.py:289
 msgid "-- Unspecified --"
 msgstr ""
 
-#: ../content/event.py:285
+#: ../content/event.py:291
 msgid "Afternoon"
 msgstr ""
 
-#: ../content/event.py:287
+#: ../content/event.py:293
 msgid "All day long"
 msgstr ""
 
@@ -37,11 +37,11 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ../content/event.py:286
+#: ../content/event.py:292
 msgid "Evening"
 msgstr ""
 
-#: ../content/base_recurring_event.py:115
+#: ../content/base_recurring_event.py:117
 msgid "Friday"
 msgstr ""
 
@@ -53,66 +53,66 @@ msgstr ""
 msgid "Migrate events images"
 msgstr ""
 
-#: ../content/base_recurring_event.py:111
+#: ../content/base_recurring_event.py:113
 msgid "Monday"
 msgstr ""
 
-#: ../content/event.py:284
+#: ../content/event.py:290
 msgid "Morning"
 msgstr ""
 
-#: ../content/base_recurring_event.py:116
+#: ../content/base_recurring_event.py:118
 msgid "Saturday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:117
+#: ../content/base_recurring_event.py:119
 msgid "Sunday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:114
+#: ../content/base_recurring_event.py:116
 msgid "Thursday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:112
+#: ../content/base_recurring_event.py:114
 msgid "Tuesday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:113
+#: ../content/base_recurring_event.py:115
 msgid "Wednesday"
 msgstr ""
 
 #. Default: "The end date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:412
+#: ../content/base_recurring_event.py:447
 msgid "cadence_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:408
+#: ../content/base_recurring_event.py:443
 msgid "cadence_bound_except_start"
 msgstr ""
 
 #. Default: "You can set the actual days of the event in the date range specified above.\nIf you don't set this field the event takes place every day of the week."
-#: ../content/base_recurring_event.py:43
+#: ../content/base_recurring_event.py:48
 msgid "description_cadence"
 msgstr ""
 
 #. Default: "Enter the dates in the form yyyy-mm-dd"
-#: ../content/base_recurring_event.py:365
+#: ../content/base_recurring_event.py:411
 msgid "description_except"
 msgstr ""
 
 #. Default: "In this field you can set the list of days on which the event is not held.\nEnter dates in the form yyyy-mm-dd."
-#: ../content/base_recurring_event.py:56
+#: ../content/base_recurring_event.py:61
 msgid "description_field_except"
 msgstr ""
 
-#. Default: "In this field you can set the list of days on which the event is additionally held, even if excluded by other filters.\nEnter dates in the form yyyy-mm-dd."
-#: ../content/base_recurring_event.py:69
+#. Default: "In this field you can set the list of days on which the event is additionally held, even if excluded by other filters.\nEnter dates in the form yyyy-mm-dd.\nThis field became required if you don't provide any From/To dates of the event."
+#: ../content/base_recurring_event.py:74
 msgid "description_field_including"
 msgstr ""
 
 #. Default: "Entrance free:"
-#: ../browser/event_view.pt:216
+#: ../browser/event_view.pt:179
 msgid "event_cost_details"
 msgstr ""
 
@@ -142,7 +142,7 @@ msgid "event_time"
 msgstr ""
 
 #. Default: "Event type:"
-#: ../browser/event_view.pt:205
+#: ../browser/event_view.pt:168
 msgid "event_types_classification"
 msgstr ""
 
@@ -162,23 +162,18 @@ msgid "event_where"
 msgstr ""
 
 #. Default: "The end date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:426
+#: ../content/base_recurring_event.py:430
 msgid "except_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:422
+#: ../content/base_recurring_event.py:425
 msgid "except_bound_except_start"
 msgstr ""
 
 #. Default: "Add event to calendar"
-#: ../browser/event_view.pt:166
-msgid "heading_add_to_calendar"
-msgstr ""
-
-#. Default: "Attachments"
 #: ../browser/event_view.pt:129
-msgid "heading_attachments"
+msgid "heading_add_to_calendar"
 msgstr ""
 
 #. Default: "Enter here your notes about the event. This field is only for use by the operator and doesn't appear on the site."
@@ -192,7 +187,7 @@ msgid "help_cost"
 msgstr ""
 
 #. Default: "A short description of the event"
-#: ../content/event.py:199
+#: ../content/event.py:198
 msgid "help_description_event"
 msgstr ""
 
@@ -211,8 +206,13 @@ msgstr ""
 msgid "help_slots"
 msgstr ""
 
+#. Default: "Start/End dates of the event are commonly required, but you can simply provide single dates using the \"Including\" field below"
+#: ../content/event.py:224
+msgid "help_startDate"
+msgstr ""
+
 #. Default: "Enter all other information about the event."
-#: ../content/event.py:250
+#: ../content/event.py:259
 msgid "help_text"
 msgstr ""
 
@@ -222,17 +222,17 @@ msgid "help_time"
 msgstr ""
 
 #. Default: "One or more dates are not in the previous range [Start event - End event]"
-#: ../content/base_recurring_event.py:389
+#: ../content/base_recurring_event.py:416
 msgid "interval_except"
 msgstr ""
 
 #. Default: "iCal"
-#: ../browser/event_view.pt:179
+#: ../browser/event_view.pt:142
 msgid "label_add_to_ical"
 msgstr ""
 
 #. Default: "vCal"
-#: ../browser/event_view.pt:173
+#: ../browser/event_view.pt:136
 msgid "label_add_to_vcal"
 msgstr ""
 
@@ -247,7 +247,7 @@ msgid "label_annotations"
 msgstr ""
 
 #. Default: "Cadence"
-#: ../content/base_recurring_event.py:42
+#: ../content/base_recurring_event.py:47
 msgid "label_cadence"
 msgstr ""
 
@@ -272,7 +272,7 @@ msgid "label_country"
 msgstr ""
 
 #. Default: "To"
-#: ../content/event.py:224
+#: ../content/event.py:229
 msgid "label_endDate"
 msgstr ""
 
@@ -287,7 +287,7 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Except"
-#: ../content/base_recurring_event.py:55
+#: ../content/base_recurring_event.py:60
 msgid "label_except"
 msgstr ""
 
@@ -307,7 +307,7 @@ msgid "label_imagedevent_image"
 msgstr ""
 
 #. Default: "Including"
-#: ../content/base_recurring_event.py:68
+#: ../content/base_recurring_event.py:73
 msgid "label_including"
 msgstr ""
 
@@ -327,12 +327,12 @@ msgid "label_slots"
 msgstr ""
 
 #. Default: "From"
-#: ../content/event.py:222
+#: ../content/event.py:223
 msgid "label_startDate"
 msgstr ""
 
 #. Default: "Event body text"
-#: ../content/event.py:249
+#: ../content/event.py:258
 msgid "label_text"
 msgstr ""
 
@@ -347,8 +347,13 @@ msgid "label_zipcode"
 msgstr ""
 
 #. Default: "Reference organization:"
-#: ../browser/event_view.pt:231
+#: ../browser/event_view.pt:194
 msgid "list_of_reference_entities"
+msgstr ""
+
+#. Default: "Start and End date are required, or you must provide the \"Include\" field"
+#: ../content/base_recurring_event.py:469
+msgid "required_datefields_error"
 msgstr ""
 
 #. Default: "Event details"
@@ -357,12 +362,12 @@ msgid "summary_event_details"
 msgstr ""
 
 #. Default: "Download this event in iCal format"
-#: ../browser/event_view.pt:174
+#: ../browser/event_view.pt:137
 msgid "title_add_to_ical"
 msgstr ""
 
 #. Default: "Download this event in vCal format"
-#: ../browser/event_view.pt:168
+#: ../browser/event_view.pt:131
 msgid "title_add_to_vcal"
 msgstr ""
 
