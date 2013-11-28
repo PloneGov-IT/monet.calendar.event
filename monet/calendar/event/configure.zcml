@@ -16,6 +16,9 @@
   <include package=".browser" />
   <include package=".content" />
 
+  <adapter name="start" factory=".indexers.start" />
+  <adapter name="end" factory=".indexers.end" />
+
   <configure zcml:condition="installed plone.app.blob">
     <include package="archetypes.schemaextender" />
     <adapter name="image_on_event" 
