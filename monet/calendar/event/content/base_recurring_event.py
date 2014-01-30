@@ -463,8 +463,8 @@ class RecurringEvent(ATEvent):
             enddate = enddate.split(' ')[0].split('-')
             enddate = datetime(int(enddate[0]),int(enddate[1]),int(enddate[2])).date()
 
-        # Required field validation
-        if (not startdate or not enddate) and not including:
+        # Required field validation (there's an hack for LinguaPlone usage)
+        if (not startdate or not enddate) and not including and '/translate_item' not in REQUEST.ACTUAL_URL:
             errors['startDate'] = errors['endDate'] = \
                     _("required_datefields_error",
                       default=u'Start and End date are required, or you must provide the "Include" field')
