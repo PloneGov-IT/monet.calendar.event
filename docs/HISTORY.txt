@@ -9,10 +9,10 @@ Plone 4.3 compatibility while dropped Plone 3 support
 * images now stored on blob (plone.app.blob support).
   Also added the ``monetevent-blob-migration`` migration view
   [keul]
-* end date is always at the end of the day
+* end date is always at the end of the day (near to the midnight)
   [keul]
 * start and end date are not required anymore; you can simply provide
-  "Including" dates [keul]
+  one or more "Including" dates [keul]
 
 0.4.3 (2012-04-17)
 ------------------

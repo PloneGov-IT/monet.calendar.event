@@ -101,6 +101,9 @@ EventSchema.moveField('location', before='startDate')
 EventSchema['subject'].widget.visible = {'edit': 'visible'}
 EventSchema['subject'].mode = 'wr'
 
+del EventSchema['startDate'].default_method
+del EventSchema['endDate'].default_method
+
 
 class RecurringEvent(ATEvent):
     """Description of the Example Type"""
