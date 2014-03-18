@@ -10,8 +10,7 @@ def start(context):
     start_date = context.start()
     including = context.getIncluding()
     if not start_date and including:
-        foo = DateTime()
-        return DateTime('%s 00:00:00 %s' % (min(including), foo.timezone()))
+        return DateTime('%s 00:00:00' % min(including).replace('-', '/'))
     return start_date
 
 @indexer(IMonetEvent)
@@ -20,6 +19,5 @@ def end(context):
     end_date = context.end()
     including = context.getIncluding()
     if not end_date and including:
-        foo = DateTime()
-        return DateTime('%s 23:55:00 %s' % (max(including), foo.timezone()))
+        return DateTime('%s 23:55:00' % max(including).replace('-', '/'))
     return end_date
