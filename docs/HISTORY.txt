@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5.1 (unreleased)
+0.5.1 (2014-03-24)
 ------------------
 
 - Fixed GMT timezone error while converting DateTime object
