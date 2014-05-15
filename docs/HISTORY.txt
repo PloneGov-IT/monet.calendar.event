@@ -4,8 +4,7 @@ Changelog
 0.5.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fixed module import issue that make iCal/vCal export to fail [keul]
 
 0.5.1 (2014-03-24)
 ------------------
