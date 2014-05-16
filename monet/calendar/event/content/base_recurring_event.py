@@ -16,7 +16,6 @@ from monet.calendar.event import eventMessageFactory as _
 from monet.calendar.event import utils
 from rt.calendarinandout.widget import CalendarInAndOutWidget
 from types import StringType
-import time
 
 try:
     # turn off

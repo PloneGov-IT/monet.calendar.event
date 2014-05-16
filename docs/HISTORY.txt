@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 - Fixed module import issue that make iCal/vCal export to fail [keul]
+- Some Pyflakes cleanup [keul]
 
 0.5.1 (2014-03-24)
 ------------------
