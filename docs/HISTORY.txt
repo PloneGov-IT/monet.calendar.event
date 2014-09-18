@@ -4,8 +4,7 @@ Changelog
 0.5.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Fix to italian translation: day-of-week in lowercase format [keul]
 
 0.5.2 (2014-05-16)
 ------------------

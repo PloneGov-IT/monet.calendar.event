@@ -41,7 +41,7 @@ msgstr "sera"
 
 #: ../content/base_recurring_event.py:117
 msgid "Friday"
-msgstr "Venerdì"
+msgstr "venerdì"
 
 #: ../browser/migrateblobs.py:21
 msgid "Migrate all events images, making them use plone.app.blob"
@@ -53,7 +53,7 @@ msgstr "Migra immagini degli eventi"
 
 #: ../content/base_recurring_event.py:113
 msgid "Monday"
-msgstr "Lunedì"
+msgstr "lunedì"
 
 #: ../content/event.py:290
 msgid "Morning"
@@ -61,23 +61,23 @@ msgstr "mattino"
 
 #: ../content/base_recurring_event.py:118
 msgid "Saturday"
-msgstr "Sabato"
+msgstr "sabato"
 
 #: ../content/base_recurring_event.py:119
 msgid "Sunday"
-msgstr "Domenica"
+msgstr "domenica"
 
 #: ../content/base_recurring_event.py:116
 msgid "Thursday"
-msgstr "Giovedì"
+msgstr "giovedì"
 
 #: ../content/base_recurring_event.py:114
 msgid "Tuesday"
-msgstr "Martedì"
+msgstr "martedì"
 
 #: ../content/base_recurring_event.py:115
 msgid "Wednesday"
-msgstr "Mercoledì"
+msgstr "mercoledì"
 
 #. Default: "The end date is not a valid date because is not in the cadence set."
 #: ../content/base_recurring_event.py:447
