@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-11-28 14:15+0000\n"
+"POT-Creation-Date: 2014-10-22 16:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Evening"
 msgstr ""
 
-#: ../content/base_recurring_event.py:117
+#: ../content/base_recurring_event.py:119
 msgid "Friday"
 msgstr ""
 
@@ -53,7 +53,7 @@ msgstr ""
 msgid "Migrate events images"
 msgstr ""
 
-#: ../content/base_recurring_event.py:113
+#: ../content/base_recurring_event.py:115
 msgid "Monday"
 msgstr ""
 
@@ -61,54 +61,64 @@ msgstr ""
 msgid "Morning"
 msgstr ""
 
-#: ../content/base_recurring_event.py:118
+#: ../content/base_recurring_event.py:120
 msgid "Saturday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:119
+#: ../content/base_recurring_event.py:121
 msgid "Sunday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:116
+#: ../content/base_recurring_event.py:118
 msgid "Thursday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:114
+#: ../content/base_recurring_event.py:116
 msgid "Tuesday"
 msgstr ""
 
-#: ../content/base_recurring_event.py:115
+#: ../content/base_recurring_event.py:117
 msgid "Wednesday"
 msgstr ""
 
 #. Default: "The end date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:447
+#: ../content/base_recurring_event.py:457
 msgid "cadence_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because is not in the cadence set."
-#: ../content/base_recurring_event.py:443
+#: ../content/base_recurring_event.py:453
 msgid "cadence_bound_except_start"
 msgstr ""
 
 #. Default: "You can set the actual days of the event in the date range specified above.\nIf you don't set this field the event takes place every day of the week."
-#: ../content/base_recurring_event.py:48
+#: ../content/base_recurring_event.py:47
 msgid "description_cadence"
 msgstr ""
 
 #. Default: "Enter the dates in the form yyyy-mm-dd"
-#: ../content/base_recurring_event.py:411
+#: ../content/base_recurring_event.py:417
 msgid "description_except"
 msgstr ""
 
 #. Default: "In this field you can set the list of days on which the event is not held.\nEnter dates in the form yyyy-mm-dd."
-#: ../content/base_recurring_event.py:61
+#: ../content/base_recurring_event.py:60
 msgid "description_field_except"
 msgstr ""
 
 #. Default: "In this field you can set the list of days on which the event is additionally held, even if excluded by other filters.\nEnter dates in the form yyyy-mm-dd.\nThis field became required if you don't provide any From/To dates of the event."
-#: ../content/base_recurring_event.py:74
+#: ../content/base_recurring_event.py:73
 msgid "description_field_including"
+msgstr ""
+
+#. Default: "Start and end date not provided. Cadence days are not allowed in that case."
+#: ../content/base_recurring_event.py:443
+msgid "do_not_provide_cadence"
+msgstr ""
+
+#. Default: "Start and end date not provided. Except days are not allowed in that case."
+#: ../content/base_recurring_event.py:409
+msgid "do_not_provide_except"
 msgstr ""
 
 #. Default: "Entrance free:"
@@ -162,12 +172,12 @@ msgid "event_where"
 msgstr ""
 
 #. Default: "The end date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:430
+#: ../content/base_recurring_event.py:436
 msgid "except_bound_except_end"
 msgstr ""
 
 #. Default: "The start date is not a valid date because an except entry invalidate it."
-#: ../content/base_recurring_event.py:425
+#: ../content/base_recurring_event.py:431
 msgid "except_bound_except_start"
 msgstr ""
 
@@ -222,7 +232,7 @@ msgid "help_time"
 msgstr ""
 
 #. Default: "One or more dates are not in the previous range [Start event - End event]"
-#: ../content/base_recurring_event.py:416
+#: ../content/base_recurring_event.py:422
 msgid "interval_except"
 msgstr ""
 
@@ -247,7 +257,7 @@ msgid "label_annotations"
 msgstr ""
 
 #. Default: "Cadence"
-#: ../content/base_recurring_event.py:47
+#: ../content/base_recurring_event.py:46
 msgid "label_cadence"
 msgstr ""
 
@@ -287,7 +297,7 @@ msgid "label_event_type"
 msgstr ""
 
 #. Default: "Except"
-#: ../content/base_recurring_event.py:60
+#: ../content/base_recurring_event.py:59
 msgid "label_except"
 msgstr ""
 
@@ -307,7 +317,7 @@ msgid "label_imagedevent_image"
 msgstr ""
 
 #. Default: "Including"
-#: ../content/base_recurring_event.py:73
+#: ../content/base_recurring_event.py:72
 msgid "label_including"
 msgstr ""
 
@@ -352,7 +362,7 @@ msgid "list_of_reference_entities"
 msgstr ""
 
 #. Default: "Start and End date are required, or you must provide the \"Include\" field"
-#: ../content/base_recurring_event.py:469
+#: ../content/base_recurring_event.py:484
 msgid "required_datefields_error"
 msgstr ""
 

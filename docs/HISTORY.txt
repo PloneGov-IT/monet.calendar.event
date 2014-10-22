@@ -4,8 +4,8 @@ Changelog
 0.5.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- Both start and End date are now required if no "including" is provided [keul]
+- No not allow usage of including or except when start/end dates are not used [keul]
 
 0.5.3 (2014-09-18)
 ------------------

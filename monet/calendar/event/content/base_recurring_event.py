@@ -405,6 +405,10 @@ class RecurringEvent(ATEvent):
 #        return field.get(self)
 
     def _validate_blacklist(self, errors, blacklist, startdate, enddate):
+        if blacklist and not startdate and not enddate:
+                errors['except'] = _("do_not_provide_except",
+                                     default=u'Start and end date not provided. '
+                                             u'Except days are not allowed in that case.')            
         for black in blacklist:
             try:
                 black = black.split('-')
@@ -435,6 +439,10 @@ class RecurringEvent(ATEvent):
 
 
     def _validate_cadence(self, errors, cadence, startdate, enddate):
+        if cadence and not startdate and not enddate:
+                errors['cadence'] = _("do_not_provide_cadence",
+                                     default=u'Start and end date not provided. '
+                                             u'Cadence days are not allowed in that case.')            
         startOk = False
         endOk = False
         if startdate and startdate.weekday() in cadence:
@@ -452,6 +460,9 @@ class RecurringEvent(ATEvent):
 
     def post_validate(self, REQUEST, errors):
         """Check to make sure that the user give date in the right format/range"""
+        # LinguaPlone hack usage; do not run validation when translating
+        if '/translate_item' in REQUEST.ACTUAL_URL:
+            return errors
         
         blacklist = set(REQUEST.get('except', []))
         cadence = [int(x) for x in REQUEST.get('cadence', []) if x]
@@ -465,8 +476,10 @@ class RecurringEvent(ATEvent):
             enddate = enddate.split(' ')[0].split('-')
             enddate = datetime(int(enddate[0]),int(enddate[1]),int(enddate[2])).date()
 
-        # Required field validation (there's an hack for LinguaPlone usage)
-        if (not startdate or not enddate) and not including and '/translate_item' not in REQUEST.ACTUAL_URL:
+        # Required field validation. Provide both start and end date, or including
+        if (startdate and not enddate) or \
+                (not startdate and enddate) or \
+                (not startdate and not enddate and not including):
             errors['startDate'] = errors['endDate'] = \
                     _("required_datefields_error",
                       default=u'Start and End date are required, or you must provide the "Include" field')
@@ -478,8 +491,9 @@ class RecurringEvent(ATEvent):
             return blacklist_errors
 
         # Check if cadence fill event start and end
-        if cadence and (startdate or enddate):
+        if cadence:
             cadence_errors = self._validate_cadence(errors, cadence, startdate, enddate)
             if cadence_errors:
                 return cadence_errors
 
+        return errors
