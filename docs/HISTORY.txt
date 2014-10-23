@@ -1,7 +1,7 @@
 Changelog
 =========
 
-0.5.4 (unreleased)
+0.5.4 (2014-10-23)
 ------------------
 
 - Both start and End date are now required if no "including" is provided [keul]
