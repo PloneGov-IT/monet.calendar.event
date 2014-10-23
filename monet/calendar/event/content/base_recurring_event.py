@@ -405,6 +405,8 @@ class RecurringEvent(ATEvent):
 #        return field.get(self)
 
     def _validate_blacklist(self, errors, blacklist, startdate, enddate):
+        if not blacklist:
+            return
         if blacklist and not startdate and not enddate:
                 errors['except'] = _("do_not_provide_except",
                                      default=u'Start and end date not provided. '
@@ -416,7 +418,7 @@ class RecurringEvent(ATEvent):
             except:
                 errors['except'] = _("description_except",
                                      default=u'Enter the dates in the form yyyy-mm-dd')
-                return errors
+                return
 
             if startdate and datee < startdate:
                 errors['except'] = _("interval_except",
@@ -425,20 +427,21 @@ class RecurringEvent(ATEvent):
             if enddate and datee > enddate:
                 errors['except'] = _("interval_except",
                                      default=u'One or more dates are not in the previous range [Start event - End event]')
-                return errors
+                return
 
             if startdate and datee==startdate:
                 errors['startDate'] = _("except_bound_except_start",
                                      default=u'The start date is not a valid date because an except entry invalidate it.')
-                return errors
+                return
 
             if enddate and datee==enddate:
                 errors['endDate'] = _("except_bound_except_end",
                                      default=u'The end date is not a valid date because an except entry invalidate it.')
-                return errors
-
+                return
 
     def _validate_cadence(self, errors, cadence, startdate, enddate):
+        if not cadence:
+            return
         if cadence and not startdate and not enddate:
                 errors['cadence'] = _("do_not_provide_cadence",
                                      default=u'Start and end date not provided. '
@@ -462,8 +465,8 @@ class RecurringEvent(ATEvent):
         """Check to make sure that the user give date in the right format/range"""
         # LinguaPlone hack usage; do not run validation when translating
         if '/translate_item' in REQUEST.ACTUAL_URL:
-            return errors
-        
+            return
+
         blacklist = set(REQUEST.get('except', []))
         cadence = [int(x) for x in REQUEST.get('cadence', []) if x]
         including = set(REQUEST.get('including', []))
@@ -483,17 +486,9 @@ class RecurringEvent(ATEvent):
             errors['startDate'] = errors['endDate'] = \
                     _("required_datefields_error",
                       default=u'Start and End date are required, or you must provide the "Include" field')
-            return errors
+            return
 
         # blacklist validation
-        blacklist_errors = self._validate_blacklist(errors, blacklist, startdate, enddate)
-        if blacklist_errors:
-            return blacklist_errors
-
+        self._validate_blacklist(errors, blacklist, startdate, enddate)
         # Check if cadence fill event start and end
-        if cadence:
-            cadence_errors = self._validate_cadence(errors, cadence, startdate, enddate)
-            if cadence_errors:
-                return cadence_errors
-
-        return errors
+        self._validate_cadence(errors, cadence, startdate, enddate)
