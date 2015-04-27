@@ -42,7 +42,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         format = 'checkbox',
                         label = _(u'label_event_type', default=u'Event Type(s)')
                         )),
-    
+
     StringField('slots',
                 required=True,
                 searchable=False,
@@ -54,7 +54,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_slots', default=u'Time slots'),
                         description = _(u'help_slots', default=u'Select the time of day on which the event takes place.')
                         )),
-                        
+
     TextField('time',
               required=True,
               searchable=False,
@@ -67,7 +67,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         rows = 25,
                         allow_file_upload = zconf.ATDocument.allow_document_upload
                         )),
-                        
+
     TextField('cost',
                 required=False,
                 searchable=False,
@@ -76,7 +76,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         description = _(u'help_cost', default=u'Indicate whether the event is free or not (in this case indicate the cost and any reductions/discounts).'),
                         rows=3,
                         )),
-    
+
     TextField('location',
                required=False,
                searchable=False,
@@ -84,17 +84,17 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                widget=TextAreaWidget(
                         label = _(u'label_location', default=u'Where'),
                         rows=2,
-                        )),       
-    
+                        )),
+
     StringField('address',
                 required=True,
                 searchable=False,
-                languageIndependent=True,
+                languageIndependent=False,
                 widget=StringWidget(
                         label = _(u'label_address', default=u'Address'),
                         size=80
                         )),
-                        
+
     StringField('country',
                 required=False,
                 searchable=False,
@@ -103,7 +103,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_country', default=u'Nation'),
                         size=40
                         )),
-                        
+
     StringField('zipcode',
                 required=False,
                 searchable=False,
@@ -113,7 +113,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_zipcode', default=u'ZIP code'),
                         size=20
                         )),
-                                            
+
     LinesField('contactPhone',
                 required=False,
                 searchable=False,
@@ -133,7 +133,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_fax', default=u'Fax'),
                         size= 45,
                         )),
-                        
+
     LinesField('eventUrl',
                 required=False,
                 searchable=False,
@@ -145,7 +145,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         label = _(u'label_eventUrl',default=u'Web site'),
                         cols = 60,
                         )),
-                        
+
     LinesField('contactEmail',
                 required=False,
                 searchable=False,
@@ -164,7 +164,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                widget=LinesWidget(
                         label = _(u'label_referenceentities', default=u'Reference organization'),
                         )),
-                        
+
     TextField('annotations',
               required=False,
               searchable=False,
@@ -186,7 +186,7 @@ EventSchema = RecurringEventSchema.copy() + Schema((
                         description = _(u'help_imagealt', default=(u'If the image is significant for understanding the event, '
                                                                    u'you must enter there the alternative text (ALT) for accessibility reason. '
                                                                    u'Keep this field empty if the image has only layout purpose.')),
-                        )), 
+                        )),
 
 ))
 
@@ -275,7 +275,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
     schema = EventSchema
 
     security = ClassSecurityInfo()
-    
+
     def getEventTypeVocab(self):
         mp = getToolByName(self,'portal_properties')
         items = mp.monet_calendar_event_properties.event_types
@@ -283,7 +283,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
         for item in items:
             vocab.add(item,_(item))
         return vocab
-    
+
     def getSlotsVocab(self):
         vocab = DisplayList()
         vocab.add('', _(u'-- Unspecified --'))
@@ -292,7 +292,7 @@ class MonetEvent(RecurringEvent, ATCTImageTransform):
         vocab.add('night', _(u'Evening'))
         vocab.add('allday', _(u'All day long'))
         return vocab
-    
+
     security.declareProtected(permissions.View, 'tag')
     def tag(self, **kwargs):
         """Generate image tag using the api of the ImageField
